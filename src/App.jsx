@@ -1,12 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Route, Routes } from "react-router-dom";
 
-import Page from './layouts/Page'
+
+import Navbar from './components/Navbar'
+import PublicPage from './layouts/PublicPage'
+import AllProducts from './views/AllProducts'
+
 
 function App() {
 
   return (
     <>
-      <Page />
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<PublicPage />} />
+        <Route path="/products" element={<AllProducts />} />
+      </Routes>
     </>
   )
 }

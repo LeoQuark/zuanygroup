@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
 
@@ -47,7 +48,9 @@ const Navbar = () => {
                             <a className="nav-link text-center" href="#Logistics">Logistics</a>
                         </li>
                         <li className="nav-item btn-zg-nav">
-                            <a className="nav-link text-center" href="#Products-section">Products</a>
+                            <a className="nav-link text-center"
+                                href='#Products-section'
+                            >Products</a>
                         </li>
                         <li className="nav-item btn-zg-nav">
                             <a className="nav-link text-center" href="#Services">Services</a>

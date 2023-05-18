@@ -15,7 +15,7 @@ const Services = () => {
                     </h2>
                 </div>
             </div>
-            <div className="row bg-white justify-content-center justify-content-md-start mx-md-2 mt-4">
+            <div className="row bg-white justify-content-center justify-content-md-start mt-4">
                 <CircleService
                     tittle="Provisions"
                     imgUrl='../public/img/provision_service.png'

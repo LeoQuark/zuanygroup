@@ -13,11 +13,10 @@ import Services from '../views/Services'
 import Contacts from '../views/Contacts'
 import ButtonUp from '../components/ButtonUp'
 
-const Page = () => {
+const PublicPage = () => {
 
     return (
         <>
-            <Navbar />
             <Home />
             <AboutUs />
             <Logistics />
@@ -30,4 +29,4 @@ const Page = () => {
     )
 }
 
-export default Page;
+export default PublicPage;

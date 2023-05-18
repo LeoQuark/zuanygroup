@@ -4,7 +4,7 @@ const Home = () => {
 
     return (
         <section id='Home'>
-            <div className='container-fluid img-zg-home' >
+            <div className='container-fluid img-zg-home p-0 m-0' >
                 <div className='container d-flex justify-content-start align-items-center h-100'>
                     <div className="col-12 col-md-8 col-lg-6 px-4 px-md-0">
                         <div className="d-flex justify-content-start mb-5">
@@ -17,7 +17,7 @@ const Home = () => {
                             <a type='button' className='btn-zg-lg _btn-blue' href='#Services'>
                                 Services
                             </a>
-                            <a type='button' className='btn-zg-lg _btn-white' href='#Products'>
+                            <a type='button' className='btn-zg-lg _btn-white' href='#Products-section'>
                                 Products
                             </a>
                         </div>
