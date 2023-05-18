@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import GoogleMapsContact from '../components/GoogleMapsContact'
 
 
 const Contacts = () => {
@@ -82,9 +81,6 @@ const Contacts = () => {
                 </div>
                 <div className="col-12 col-md-6 col-lg-6">
                     <div className="d-flex justify-content-center align-items-center h-100 w-100 ">
-                        {/* <div className='gmaps-contact'>
-                            <GoogleMapsContact />
-                        </div> */}
                         <iframe src="https://maps.google.cl/maps?q=-33.592927,-71.611596&num=1&t=h&ie=UTF8&ll=-33.592449,-71.61365&spn=0.004022,0.009645&z=17&output=embed" frameborder="0" className='iframe-gmaps'></iframe>
                     </div>
                 </div>

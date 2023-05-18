@@ -18,25 +18,25 @@ const Services = () => {
             <div className="row bg-white justify-content-center justify-content-md-start mt-4">
                 <CircleService
                     tittle="Provisions"
-                    imgUrl='../public/img/provision_service.png'
+                    imgUrl='/img/provision_service.png'
                 />
                 <CircleService
                     tittle="Engines"
-                    imgUrl='../public/img/engine_service.png'
+                    imgUrl='/img/engine_service.png'
                 />
                 <CircleService
                     tittle="Repairs"
-                    imgUrl='../public/img/repairs_service.png'
+                    imgUrl='/img/repairs_service.png'
                 />
             </div>
             <div className="row bg-white justify-content-center mx-md-2">
                 <CircleService
                     tittle="Laundry"
-                    imgUrl='../public/img/laundry_service.png'
+                    imgUrl='/img/laundry_service.png'
                 />
                 <CircleService
                     tittle="Chemical"
-                    imgUrl='../public/img/chemical_service.png'
+                    imgUrl='/img/chemical_service.png'
                 />
             </div>
         </section>

@@ -20,22 +20,22 @@ const Products = () => {
                     <CardProduct
                         tittle='Name Product 1'
                         description=' Description of product here'
-                        urlImg='../public/img/Rectangle 20.png'
+                        urlImg='/img/Rectangle 20.png'
                     />
                     <CardProduct
                         tittle='Name Product 2'
                         description=' Description of product here'
-                        urlImg='../public/img/Rectangle 19.png'
+                        urlImg='/img/Rectangle 19.png'
                     />
                     <CardProduct
                         tittle='Name Product 3'
                         description=' Description of product here'
-                        urlImg='../public/img/Rectangle 20.png'
+                        urlImg='/img/Rectangle 20.png'
                     />
                     <CardProduct
                         tittle='Name Product 4'
                         description=' Description of product here'
-                        urlImg='../public/img/Rectangle 19.png'
+                        urlImg='/img/Rectangle 19.png'
                     />
                 </div>
                 <div className="d-flex justify-content-center mt-5">
