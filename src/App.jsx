@@ -14,7 +14,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<PublicPage />} />
-        <Route path="/products" element={<AllProducts />} />
+        {/* <Route path="/products" element={<AllProducts />} /> */}
       </Routes>
     </>
   )
