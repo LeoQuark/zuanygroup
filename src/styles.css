@@ -1,0 +1,622 @@
+:root {
+  /* MY GLOBAL CSS */
+  --blue-dark: #001243;
+  --purple-normal: #6A6FD2;
+  --gray-normal: #E2E2E2;
+  --gray-dark: #444444;
+  --red-normal: #C20707;
+  --yellow-normal: #D6C000;
+}
+
+body {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+  scroll-snap-stop: always;
+  scroll-padding-top: 100px;
+}
+
+/* ---------------------------- */
+/* ALL */
+/* ---------------------------- */
+a:link {
+  text-decoration: none;
+  color: white;
+}
+
+.text-zg-blue {
+  color: var(--blue-dark);
+}
+
+.fs-lg {
+  font-size: 24px;
+}
+
+.fs-our-company {
+  font-size: 44px;
+  font-weight: bold;
+  letter-spacing: 8px;
+  text-shadow: 0.1em 0.1em #555AAC
+    /* font-style: italic; */
+}
+
+.text-section {
+  font-size: 24px;
+  font-style: italic;
+  font-weight: 300;
+}
+
+.text-section-services {
+  font-size: 16px;
+}
+
+.font-sm {
+  font-size: 12px;
+}
+
+/* ---------------------------- */
+/* BACKGROUND */
+/* ---------------------------- */
+.bg-zg-blue {
+  background: var(--blue-dark);
+  color: white;
+}
+
+.bg-zg-pink {
+  background: var(--purple-normal);
+}
+
+.bg-zg-gray {
+  background: var(--gray-normal);
+}
+
+/* ---------------------------- */
+/* NAVBAR */
+/* ---------------------------- */
+.navbar-hidden {
+  transform: translateY(-100%);
+}
+
+.navbar-visible {
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transform: translateY(0);
+}
+
+.btn-zg-open-nav {
+  color: white !important;
+  border: 2px solid white !important;
+  padding: 10px 16px !important;
+}
+
+.btn-zg-open-nav:hover {
+  background: white;
+  color: var(--blue-dark) !important;
+}
+
+.btn-zg-open-nav:active {
+  background: white;
+  color: var(--blue-dark) !important;
+}
+
+.btn-zg-nav {
+  background: var(--blue-dark);
+  color: white;
+  border-radius: 4px;
+}
+
+.btn-zg-nav a {
+  color: white;
+}
+
+.btn-zg-nav:hover {
+  background: white;
+}
+
+.icons-md {
+  width: 100px;
+  height: 80px;
+}
+
+/* SECTION */
+/* ---------------------------- */
+/* SECTION HOME*/
+/* ---------------------------- */
+#Home {
+  height: 100vh;
+  width: 100vw;
+}
+
+.img-zg-home {
+  position: relative;
+  /* top: 82px; */
+  background-image: url(../public/img/home.png);
+  background-size: cover;
+  background-position: center;
+  height: 85%;
+  width: 85%;
+  z-index: 0;
+
+}
+
+.circle-service::after {
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 220px;
+  width: 220px;
+  border-radius: 50%;
+  box-shadow: 220px 220px rgba(0, 0, 0, 0.3) inset;
+}
+
+
+.text-after-home {
+  height: 145px;
+}
+
+/* ---------------------------- */
+/* SECTION ABOUT US */
+/* ---------------------------- */
+/* #AboutUs {
+  padding-top: 90px !important;
+  height: 100vh;
+  width: 100vw;
+  top: 90px !important;
+} */
+
+.img-aboutus {
+  background-image: url(../public/img/company_ellipse.svg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100vh;
+  margin: auto;
+}
+
+.card-aboutus {
+  border-radius: 50px;
+  background: var(--purple-normal);
+}
+
+/* ---------------------------- */
+/* SECTION LOGISTICS */
+/* ---------------------------- */
+#Logistics {
+  /* padding-top: 90px !important;
+  height: calc(100vh);
+  width: 100vw; */
+  padding: 50px 0px !important;
+}
+
+.tittle-logistics {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.carrusel-zg {
+  height: 100%;
+}
+
+/* ---------------------------- */
+/* SECTION PRODUCTS */
+/* ---------------------------- */
+#Products-section {
+  /* padding-top: 90px !important;
+  width: 100vw; */
+  padding: 50px 0px !important;
+}
+
+.card-product {
+  padding: 8px;
+  border: 2px solid var(--gray-normal);
+  border-radius: 20px;
+}
+
+.card-product:hover {
+  box-shadow: 1px 2px 14px var(--gray-normal);
+}
+
+.tittle-product-card {
+  font-size: 1rem;
+}
+
+.card-product p {
+  font-size: 16px;
+}
+
+.btn-card-product {
+  background: var(--blue-dark);
+  color: white;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 2px solid var(--blue-dark);
+}
+
+.btn-card-product:hover {
+  background: white;
+  color: var(--blue-dark);
+  font-weight: bold;
+}
+
+/* ---------------------------- */
+/* SECTION SERVICES */
+/* ---------------------------- */
+#Services {
+  padding: 50px 0px !important;
+}
+
+.circle-service {
+  border-radius: 50%;
+  position: relative;
+  height: 220px;
+  width: 220px;
+  border-style: none;
+  z-index: 0;
+}
+
+.circle-service::after {
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 220px;
+  width: 220px;
+  border-radius: 50%;
+  box-shadow: 220px 220px rgba(0, 0, 0, 0.3) inset;
+}
+
+.circle-service:hover {
+  transition: all .2s;
+  transform: scale(1.1);
+}
+
+.img-circle-service {
+  position: absolute;
+  height: 220px;
+  width: 220px;
+  object-fit: cover;
+  border-radius: 50%;
+  z-index: 0;
+  top: 0px;
+  left: 0px;
+}
+
+.text-circle-services {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  font-size: 26px;
+  font-weight: bold;
+  color: white;
+  z-index: 5;
+}
+
+/* ---------------------------- */
+/* SECTION CONTACTS */
+/* ---------------------------- */
+#Contacts {
+  padding: 50px 0px !important;
+}
+
+.fs-contact {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.text-contact {
+  font-size: 1rem;
+}
+
+.btn-zg-pink {
+  color: white;
+  border-radius: 08px;
+  padding: 6px 30px;
+  background: var(--purple-normal);
+  border-radius: 08px;
+  padding: 6px 30px;
+  border: 1px solid var(--purple-normal);
+}
+
+.btn-zg-pink:hover {
+  color: white;
+  transition: all .2s;
+  transform: scale(1.1);
+}
+
+.iframe-gmaps {
+  padding: 2rem 2rem;
+  border-radius: 2rem;
+  height: 100%;
+  width: 100%;
+}
+
+/* ---------------------------- */
+/* ALL PRODUCTS */
+/* ---------------------------- */
+.all-products {
+  padding-top: 80px !important;
+}
+
+/* ---------------------------- */
+/* FOOTER */
+/* ---------------------------- */
+.footer-menu li {
+  list-style: none;
+  margin: 10px;
+  padding: 4px;
+}
+
+.footer-menu li:hover {
+  background: white;
+  color: var(--blue-dark);
+}
+
+.icon-footer {
+  font-size: 30px;
+}
+
+.divider-footer {
+  content: '';
+  width: 1px !important;
+  background: var(--gray-normal);
+  padding: 0px !important;
+  margin: 0px !important;
+}
+
+/* ---------------------------- */
+/* BOTTON UP */
+/* ---------------------------- */
+.scroll-button {
+  bottom: 20px;
+  right: 20px;
+  opacity: 0;
+  transform: translateY(20px);
+  /* Mueve el botón hacia abajo 20px */
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  /* Transiciones para opacidad y transform */
+}
+
+.scroll-button.show {
+  opacity: 1;
+  transform: translateY(0);
+  /* Mueve el botón hacia arriba (posición inicial) */
+}
+
+.button-zg-up {
+  position: fixed;
+  z-index: 10;
+  border-radius: 50%;
+  background: linear-gradient(120deg, var(--purple-normal), var(--blue-dark));
+  ;
+  margin: 20px;
+  border-style: none;
+  height: 60px;
+  width: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  box-shadow: 2px 2px 10px var(--blue-dark);
+}
+
+.button-zg-up:hover {
+  color: white;
+  transition: .1s ease-in-out;
+  transform: scale(1.1);
+}
+
+/* ---------------------------- */
+/* BUTTON */
+/* ---------------------------- */
+.btn-zg-lg {
+  color: white;
+  border-radius: 08px;
+  padding: 6px 30px;
+}
+
+._btn-blue {
+  background: var(--blue-dark);
+  border: 2px solid white;
+}
+
+._btn-blue:hover {
+  background: white;
+  color: var(--blue-dark);
+  border: 2px solid var(--blue-dark);
+}
+
+._btn-white {
+  background: white;
+  color: var(--blue-dark);
+  border: 2px solid white;
+}
+
+._btn-white:hover {
+  background: var(--blue-dark);
+  color: white;
+  border: 2px solid white;
+}
+
+._btn-white-pink {
+  background: white;
+  color: var(--purple-normal);
+  border: 2px solid white;
+}
+
+._btn-white-pink:hover {
+  background: var(--purple-normal);
+  color: white;
+  border: 2px solid white;
+}
+
+._btn-white-tt {
+  background: white;
+  color: var(--purple-normal);
+  border: 2px solid var(--purple-normal);
+  font-weight: bold;
+}
+
+._btn-white-tt:hover {
+  transition: .1s ease-in-out;
+  transform: scale(1.1);
+  color: var(--purple-normal);
+}
+
+._btn-pink-tt {
+  background: var(--purple-normal);
+  color: white;
+  border: 2px solid var(--purple-normal);
+  font-weight: bold;
+}
+
+._btn-pink-tt:hover {
+  transition: .1s ease-in-out;
+  transform: scale(1.1);
+  color: white;
+}
+
+/* ---------------------------- */
+/* MODAL */
+/* ---------------------------- */
+.modal-tittle {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.modal-text {
+  font-size: 14px;
+}
+
+.modal-body {
+  position: relative;
+  width: 100% !important;
+}
+
+.btn-modal-close {
+  position: absolute;
+  top: 0;
+  right: 10px;
+}
+
+.modal-img {
+  width: 100%;
+  height: 120px;
+}
+
+.btn-modal-close button {
+  border-radius: 50%;
+  padding: 8px 10px;
+  border-style: none;
+  background: #444444;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-modal-close button:hover {
+  transition: .1s ease-in-out;
+  transform: scale(1.1);
+}
+
+/* ---------------------------- */
+/* RESPONSIVE SM ≥576px */
+/* ---------------------------- */
+@media (max-width: 576px) {
+  .img-company {
+    margin: 6px;
+    width: 40%;
+    height: 40%;
+  }
+
+  .fs-our-company {
+    font-size: 36px;
+    font-weight: bold;
+    letter-spacing: 2px;
+  }
+
+  /* SERVICES */
+
+  .circle-service {
+    border-radius: 50%;
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border-style: none;
+    z-index: 0;
+  }
+
+  .circle-service::after {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    box-shadow: 220px 220px rgba(0, 0, 0, 0.3) inset;
+  }
+
+  .img-circle-service {
+    position: absolute;
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    z-index: 0;
+    top: 0px;
+    left: 0px;
+  }
+
+  /* PRODUCT */
+  .tittle-product-card {
+    font-size: 18px;
+  }
+
+  /* CONTACT */
+  .iframe-gmaps {
+    margin: 4rem 0rem;
+    border-radius: 2rem;
+  }
+}
+
+/* RESPONSIVE MEDIUM ≥768px */
+@media (max-width: 768px) {
+
+  /* PRODUCT */
+  .tittle-product-card {
+    font-size: 14px;
+  }
+
+  .text-button-product {
+    font-size: 14px;
+  }
+
+  .card-product p {
+    font-size: 14px;
+  }
+}
+
+/* RESPONSIVE LARGE ≥992px */
+@media (max-width: 992px) {
+
+  .text-contact {
+    font-size: .8rem;
+  }
+}
+
+/* * {
+  border: 1px solid red;
+} */
