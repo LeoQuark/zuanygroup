@@ -1,5 +1,10 @@
 import React from 'react';
 
+// IMG
+import CarruselImg1 from '../assets/img/carrusel1.png'
+import CarruselImg2 from '../assets/img/carrusel2.jpg'
+import CarruselImg3 from '../assets/img/carrusel3.jpg'
+
 const Logistics = () => {
 
     return (
@@ -25,14 +30,14 @@ const Logistics = () => {
                             </div>
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img src="/img/img1.png" class="d-block w-100" alt="..." />
-                                </div>
-                                {/* <div class="carousel-item">
-                                    <img src="..." class="d-block w-100" alt="..." />
+                                    <img src={CarruselImg1} class="d-block w-100 img-carrusel" alt="..." />
                                 </div>
                                 <div class="carousel-item">
-                                    <img src="..." class="d-block w-100" alt="..." />
-                                </div> */}
+                                    <img src={CarruselImg2} class="d-block w-100 img-carrusel" alt="..." />
+                                </div>
+                                <div class="carousel-item">
+                                    <img src={CarruselImg3} class="d-block w-100 img-carrusel" alt="..." />
+                                </div>
                             </div>
                             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>

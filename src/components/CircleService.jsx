@@ -24,7 +24,7 @@ const CircleService = ({
                 show={show}
                 onHide={handleClose}
                 tittle={tittle}
-                imgUrl={imgUrl}
+                imageUrl={imgUrl}
             />
         </div>
     )

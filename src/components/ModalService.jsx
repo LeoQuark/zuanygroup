@@ -10,7 +10,6 @@ const ModalService = (props) => {
             size="xl"
             aria-labelledby="contained-modal-title-vcenter"
             centered
-        // style={{ width: '100vw' }}
         >
             <Modal.Body>
                 <div className="container h-100 modal-body">
@@ -24,7 +23,7 @@ const ModalService = (props) => {
                     <div className="row my-2">
                         <div className="col-12 col-lg-6">
                             <div className="d-flex justify-content-center">
-                                <img src={props.imgUrl} className='modal-img' />
+                                <img src={props.imageUrl} className='modal-img' />
                             </div>
                             <div className="d-flex justify-content-center my-4">
                                 <h5 className='modal-tittle'>{props.tittle}</h5>

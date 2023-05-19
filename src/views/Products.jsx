@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import CardProduct from '../components/CardProduct'
 
+// IMG
+import Product1 from '../assets/img/product1.png'
+import Product2 from '../assets/img/product2.png'
+
 const Products = () => {
 
     return (
@@ -20,22 +24,22 @@ const Products = () => {
                     <CardProduct
                         tittle='Name Product 1'
                         description=' Description of product here'
-                        urlImg='/img/Rectangle 20.png'
+                        urlImg={Product1}
                     />
                     <CardProduct
                         tittle='Name Product 2'
                         description=' Description of product here'
-                        urlImg='/img/Rectangle 19.png'
+                        urlImg={Product2}
                     />
                     <CardProduct
                         tittle='Name Product 3'
                         description=' Description of product here'
-                        urlImg='/img/Rectangle 20.png'
+                        urlImg={Product1}
                     />
                     <CardProduct
                         tittle='Name Product 4'
                         description=' Description of product here'
-                        urlImg='/img/Rectangle 19.png'
+                        urlImg={Product2}
                     />
                 </div>
                 <div className="d-flex justify-content-center mt-5">

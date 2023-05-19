@@ -3,10 +3,10 @@ import CircleService from '../components/CircleService'
 
 // IMG
 import ProvisionImg from '../assets/img/provision_service.png'
-import EngineImg from '../assets/img/engine_service.png'
-import RepairsImg from '../assets/img/repairs_service.png'
-import LaundryImg from '../assets/img/laundry_service.png'
-import ChemicalImg from '../assets/img/chemical_service.png'
+import EngineImg from '../assets/img/engine_service.jpg'
+import RepairsImg from '../assets/img/repairs_service.jpg'
+import LaundryImg from '../assets/img/laundry_service.jpg'
+import ChemicalImg from '../assets/img/chemical_service.jpg'
 
 
 const Services = () => {

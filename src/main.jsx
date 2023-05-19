@@ -6,7 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import "bootstrap/dist/js/bootstrap"
 import "bootstrap-icons/font/bootstrap-icons.css";
 
-import { HashRouter } from 'react-router-dom';
+import { HashRouter, BrowserRouter } from 'react-router-dom';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

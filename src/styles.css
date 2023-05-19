@@ -26,9 +26,13 @@ html {
 /* ALL */
 /* ---------------------------- */
 a:link {
-  text-decoration: none;
-  color: white;
+  text-decoration: none !important;
+  /* color: white; */
 }
+
+/* button {
+  text-decoration: none;
+} */
 
 .text-zg-blue {
   color: var(--blue-dark);
@@ -112,6 +116,12 @@ a:link {
 
 .btn-zg-nav a {
   color: white;
+}
+
+.btn-zg-nav-active {
+  color: white;
+  /* color: var(--blue-dark) !important; */
+  /* background: white; */
 }
 
 .btn-zg-nav:hover {
@@ -201,6 +211,12 @@ a:link {
 
 .carrusel-zg {
   height: 100%;
+}
+
+.img-carrusel {
+  width: 20rem !important;
+  height: 40rem !important;
+  transition: 1s ease-in-out;
 }
 
 /* ---------------------------- */
@@ -424,6 +440,7 @@ a:link {
   color: white;
   border-radius: 08px;
   padding: 6px 30px;
+  text-decoration: none;
 }
 
 ._btn-blue {
@@ -513,6 +530,7 @@ a:link {
 .modal-img {
   width: 100%;
   height: 120px;
+  object-fit: cover;
 }
 
 .btn-modal-close button {
