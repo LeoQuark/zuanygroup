@@ -1,6 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import CircleService from '../components/CircleService'
 
+// IMG
+import ProvisionImg from '../assets/img/provision_service.png'
+import EngineImg from '../assets/img/engine_service.png'
+import RepairsImg from '../assets/img/repairs_service.png'
+import LaundryImg from '../assets/img/laundry_service.png'
+import ChemicalImg from '../assets/img/chemical_service.png'
+
+
 const Services = () => {
 
     return (
@@ -18,25 +26,25 @@ const Services = () => {
             <div className="row bg-white justify-content-center justify-content-md-start mt-4">
                 <CircleService
                     tittle="Provisions"
-                    imgUrl='/img/provision_service.png'
+                    imgUrl={ProvisionImg}
                 />
                 <CircleService
                     tittle="Engines"
-                    imgUrl='/img/engine_service.png'
+                    imgUrl={EngineImg}
                 />
                 <CircleService
                     tittle="Repairs"
-                    imgUrl='/img/repairs_service.png'
+                    imgUrl={RepairsImg}
                 />
             </div>
             <div className="row bg-white justify-content-center mx-md-2">
                 <CircleService
                     tittle="Laundry"
-                    imgUrl='/img/laundry_service.png'
+                    imgUrl={LaundryImg}
                 />
                 <CircleService
                     tittle="Chemical"
-                    imgUrl='/img/chemical_service.png'
+                    imgUrl={ChemicalImg}
                 />
             </div>
         </section>
