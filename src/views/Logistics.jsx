@@ -30,13 +30,13 @@ const Logistics = () => {
                             </div>
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <img src={CarruselImg1} class="d-block w-100 img-carrusel" alt="..." />
+                                    <img src={CarruselImg1} class="d-block w-100 img-carrusel img-fluid" alt="..." />
                                 </div>
                                 <div class="carousel-item">
-                                    <img src={CarruselImg2} class="d-block w-100 img-carrusel" alt="..." />
+                                    <img src={CarruselImg2} class="d-block w-100 img-carrusel img-fluid" alt="..." />
                                 </div>
                                 <div class="carousel-item">
-                                    <img src={CarruselImg3} class="d-block w-100 img-carrusel" alt="..." />
+                                    <img src={CarruselImg3} class="d-block w-100 img-carrusel img-fluid" alt="..." />
                                 </div>
                             </div>
                             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">

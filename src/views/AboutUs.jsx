@@ -1,5 +1,7 @@
 import React from 'react';
 
+import ImgCompany from '../assets/img/img-company.png'
+
 const AboutUs = () => {
 
     return (
@@ -8,7 +10,7 @@ const AboutUs = () => {
                 <div className="row d-flex justify-content-center py-5 gap-4">
                     <div className="col-12 col-md-5 col-lg-5">
                         <div className='d-flex align-items-center justify-content-center h-100'>
-                            <img src="/img/img-company.png" alt="" className='img-fluid img-company' />
+                            <img src={ImgCompany} alt="" className='img-fluid img-company' />
                         </div>
                     </div>
                     <div className="col-12 col-md-5 col-lg-5 my-3 my-md-0">
