@@ -21,7 +21,7 @@ const Home = () => {
                                 smooth={true}
                                 duration={100}
                                 type='button'
-                                className='btn-zg-lg _btn-blue'
+                                className='btn-zg-lg btn_blue_zg_v2'
                             >Services</Link>
                             <Link
                                 to="Products-section"
@@ -29,14 +29,8 @@ const Home = () => {
                                 smooth={true}
                                 duration={100}
                                 type='button'
-                                className='btn-zg-lg _btn-blue'
+                                className='btn-zg-lg btn_blue_zg_v2'
                             >Products</Link>
-                            {/* <a type='button' className='btn-zg-lg _btn-blue' href='#Services'>
-                                Services
-                            </a>
-                            <a type='button' className='btn-zg-lg _btn-white' href='#Products-section'>
-                                Products
-                            </a> */}
                         </div>
                     </div>
                 </div>

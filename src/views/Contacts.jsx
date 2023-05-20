@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-
+import { Link } from 'react-scroll'
 
 const Contacts = () => {
 
@@ -75,7 +75,14 @@ const Contacts = () => {
                             <textarea type="text" className='form-control' placeholder='Write your message ...' />
                         </div>
                         <div className="d-flex justify-content-center mt-4">
-                            <button className='btn-zg-pink'>Send <i class="bi bi-send-fill"></i></button>
+                            <Link
+                                // to="Products-section"
+                                spy={true}
+                                smooth={true}
+                                duration={100}
+                                type='button'
+                                className='btn-zg-lg btn_pink_zg'
+                            >Send <i class="fa-solid fa-paper-plane text-white"></i></Link>
                         </div>
                     </div>
                 </div>

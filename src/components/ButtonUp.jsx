@@ -3,6 +3,7 @@ import { Link } from 'react-scroll'
 
 const ButtonUp = () => {
     const [showButton, setShowButton] = useState(false);
+    // const [prevPageY, setPrevPageY] = useState(window.pageYOffset || document.documentElement.scrollTop)
 
     useEffect(() => {
         const handleScroll = () => {
@@ -13,6 +14,8 @@ const ButtonUp = () => {
             } else {
                 setShowButton(false);
             }
+
+            // console.log(window.pageYOffset, window.pageYOffset || document.documentElement.scrollTop)
         };
 
         window.addEventListener('scroll', handleScroll);
@@ -27,11 +30,7 @@ const ButtonUp = () => {
             smooth={true}
             duration={100}
             className={`text-white button-zg-up scroll-button ${showButton ? 'show' : ''}`}
-        // activeClass='nav-link btn-zg-nav-active'
         ><i class="fa-solid fa-chevron-up"></i></Link>
-        // <a href='#Home' className={`text-white button-zg-up scroll-button ${showButton ? 'show' : ''}`}>
-        //     <i class="fa-solid fa-chevron-up"></i>
-        // </a>
     )
 }
 

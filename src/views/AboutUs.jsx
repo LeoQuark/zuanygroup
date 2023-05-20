@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-scroll'
 
 import ImgCompany from '../assets/img/img-company.png'
 
@@ -29,9 +30,13 @@ const AboutUs = () => {
                                     The ZUANY GROUP concern is its customers receive the services and products according to the formality request, considering the quality, weight and prompt delivery, supplying 365 days a year, 24/7 a week.</p>
                             </div>
                             <div className='mt-5 mt-md-3'>
-                                <a type='button' className='btn-zg-lg _btn-white-pink' href='#Contacts'>
-                                    Contact Us!
-                                </a>
+                                <Link
+                                    spy={true}
+                                    smooth={true}
+                                    duration={100}
+                                    type='button'
+                                    className='btn-zg-lg btn_white_zg'
+                                >Contact Us!</Link>
                             </div>
                         </div>
                     </div>

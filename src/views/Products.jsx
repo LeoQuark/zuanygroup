@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import CardProduct from '../components/CardProduct'
+import { Link } from 'react-router-dom'
 
 // IMG
 import Product1 from '../assets/img/product1.png'
@@ -44,7 +45,7 @@ const Products = () => {
                 </div>
                 <div className="d-flex justify-content-center mt-5">
                     <div className='mt-2'>
-                        <a href='' className='btn-zg-pink'>All products</a>
+                        <Link to='' className='btn-zg-lg btn_pink_zg'>All Product</Link>
                     </div>
                 </div>
             </div>

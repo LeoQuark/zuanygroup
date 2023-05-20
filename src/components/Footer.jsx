@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-scroll'
 
 const Footer = () => {
 
@@ -14,9 +15,30 @@ const Footer = () => {
                             <p className='fst-italic text-center'>“Connecting your business with the world: quality shipping and integrated cargo management”</p>
                         </div>
                         <div className="d-flex justify-content-around my-4">
-                            <a href='#Services' className='btn-zg-pink'>Services</a>
-                            <a href='#Products-section' className='btn-zg-pink'>Products</a>
-                            <a href='#AboutUs' className='btn-zg-pink'>About Us</a>
+                            <Link
+                                to="Services"
+                                spy={true}
+                                smooth={true}
+                                duration={100}
+                                type='button'
+                                className='btn-zg-lg btn_pink_zg'
+                            >Services</Link>
+                            <Link
+                                to="Products-section"
+                                spy={true}
+                                smooth={true}
+                                duration={100}
+                                type='button'
+                                className='btn-zg-lg btn_pink_zg'
+                            >Products</Link>
+                            <Link
+                                to="AboutUs"
+                                spy={true}
+                                smooth={true}
+                                duration={100}
+                                type='button'
+                                className='btn-zg-lg btn_pink_zg'
+                            >About Us</Link>
                         </div>
                     </div>
                     <div className="col-1 text-center divider-footer"></div>

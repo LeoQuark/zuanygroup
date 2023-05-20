@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Modal from 'react-bootstrap/Modal';
-import Button from 'react-bootstrap/Button';
+import { Link } from 'react-scroll'
 
 const ModalService = (props) => {
 
@@ -42,8 +42,24 @@ const ModalService = (props) => {
                                 <br />
                             </div>
                             <div className="d-flex justify-content-around">
-                                <a href="#Contacts" className='btn-zg-lg _btn-white-tt' onClick={() => props.onHide()}>Contact Us !</a>
-                                <a href='' className='btn-zg-lg _btn-pink-tt' onClick={() => props.onHide()}>View Products</a>
+                                <Link
+                                    to="Contacts"
+                                    spy={true}
+                                    smooth={true}
+                                    duration={100}
+                                    type='button'
+                                    className='btn-zg-lg btn_white_zg'
+                                    onClick={() => props.onHide()}
+                                >Contacts</Link>
+                                <Link
+                                    to="Products-section"
+                                    spy={true}
+                                    smooth={true}
+                                    duration={100}
+                                    type='button'
+                                    className='btn-zg-lg btn_pink_zg'
+                                    onClick={() => props.onHide()}
+                                >View Products</Link>
                             </div>
                         </div>
                     </div>
