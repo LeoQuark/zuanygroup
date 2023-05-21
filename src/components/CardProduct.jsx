@@ -8,7 +8,7 @@ const CardProduct = ({
 }) => {
 
     return (
-        <div className="col-5 col-md-6 col-lg-2 my-3 my-lg-0">
+        <div className="col-5 col-md-3 col-lg-2 my-3 my-lg-0">
             <div className='card-product'>
                 <div className='d-block'>
                     <div className="d-flex justify-content-center">
@@ -30,8 +30,8 @@ const CardProduct = ({
                             smooth={true}
                             duration={100}
                             type='button'
-                            className='btn-zg-lg btn_blue_zg'
-                        >Add to <i class="fa-solid fa-cart-shopping text-white"></i></Link>
+                            className='btn-zg-lg btn_blue_zg text-button-product'
+                        >Add to <i class="fa-solid fa-cart-shopping text-white "></i></Link>
                     </div>
                 </div>
             </div>

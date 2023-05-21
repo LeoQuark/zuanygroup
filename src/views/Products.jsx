@@ -45,7 +45,7 @@ const Products = () => {
                 </div>
                 <div className="d-flex justify-content-center mt-5">
                     <div className='mt-2'>
-                        <Link to='' className='btn-zg-lg btn_pink_zg'>All Product</Link>
+                        <Link className='btn-zg-lg btn_pink_zg'>All Product</Link>
                     </div>
                 </div>
             </div>

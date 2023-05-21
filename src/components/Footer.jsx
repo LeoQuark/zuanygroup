@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-scroll'
 
 const Footer = () => {
+
+    const getDateYear = () => {
+        return new Date().getFullYear()
+    }
 
     return (
         <footer className='bg-zg-blue'>
@@ -49,27 +53,61 @@ const Footer = () => {
                         <div className='row d-flex justify-content-between my-2'>
                             <div className="col-5">
                                 <ul className='footer-menu'>
-                                    <li>Home</li>
-                                    <li>Company</li>
-                                    <li>Logistics</li>
-                                    <li>Contacts</li>
+                                    <li><Link
+                                        to="Home"
+                                        spy={true}
+                                        smooth={true}
+                                        duration={100}>Home</Link></li>
+                                    <li><Link
+                                        to="AboutUs"
+                                        spy={true}
+                                        smooth={true}
+                                        duration={100}>Company</Link></li>
+                                    <li><Link
+                                        to="Logistics"
+                                        spy={true}
+                                        smooth={true}
+                                        duration={100}>Logistics</Link></li>
+                                    <li><Link
+                                        to="Contacts"
+                                        spy={true}
+                                        smooth={true}
+                                        duration={100}>Contacts</Link></li>
                                 </ul>
                             </div>
-                            <div className='col-6'>
-                                <div className="d-flex justify-content-center">
-                                    <i class="bi bi-geo-alt-fill icon-footer"></i>
-                                    <div className='mx-4 text-start'>
-                                        <strong>Address</strong>
-                                        <p className='font-sm'>Esperidión Vera 1522 San Antonio, Chile</p>
+                            <div className='col-7'>
+                                <div className="row">
+                                    <div className="col-12">
+                                        <div className="row">
+                                            <div className="col-2">
+                                                <div className="d-flex justify-content-center pt-2">
+                                                    <i className="fa-solid fa-location-dot text-white fa-2x"></i>
+                                                </div>
+                                            </div>
+                                            <div className="col-10">
+                                                <strong>Address</strong>
+                                                <p className='font-sm'>Esperidión Vera 1522 San Antonio, Chile</p>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div className="d-flex justify-content-center">
-                                    <i class="bi bi-envelope-fill icon-footer"></i>
-                                    <div className='mx-4 text-start'>
-                                        <strong>Email</strong>
-                                        <p className='font-sm'>zuanygroup@zuanygroup.cl
-                                            zuanydominguez@zuanygroup.cl
-                                            secretaria@zuanygroup.cl</p>
+                                <div className="row">
+                                    <div className="col-12">
+                                        <div className="row">
+                                            <div className="col-2">
+                                                <div className="d-flex justify-content-center pt-2">
+                                                    <i className="fa-solid fa-envelope text-white fa-2x"></i>
+                                                </div>
+                                            </div>
+                                            <div className="col-10">
+                                                <strong>Email</strong>
+                                                <p className='font-sm'>zuanygroup@zuanygroup.cl
+                                                    <br />
+                                                    zuanydominguez@zuanygroup.cl
+                                                    <br />
+                                                    secretaria@zuanygroup.cl</p>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -78,7 +116,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className="d-flex justify-content-center mt-5">
-                <p>Copyright <i class="fa-regular fa-copyright"></i> 2023  - All rights reserver by <strong>Zuany Group</strong></p>
+                <p>Copyright <i class="fa-regular fa-copyright"></i> {getDateYear()}  - All rights reserver by <strong>Zuany Group</strong></p>
             </div>
         </footer>
     )

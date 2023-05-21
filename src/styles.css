@@ -25,9 +25,14 @@ html {
 /* ---------------------------- */
 /* ALL */
 /* ---------------------------- */
-a:link {
+a:link,
+a.active {
   text-decoration: none !important;
-  /* color: white; */
+  color: white;
+}
+
+a.active:hover {
+  color: var(--blue-dark);
 }
 
 /* button {
@@ -120,8 +125,6 @@ a:link {
 
 .btn-zg-nav-active {
   color: white;
-  /* color: var(--blue-dark) !important; */
-  /* background: white; */
 }
 
 .btn-zg-nav:hover {
@@ -144,7 +147,6 @@ a:link {
 
 .img-zg-home {
   position: relative;
-  /* top: 82px; */
   background-image: url(../public/img/home.png);
   background-size: cover;
   background-position: center;
@@ -181,7 +183,7 @@ a:link {
 } */
 
 .img-aboutus {
-  background-image: url(../public/img/company_ellipse.svg);
+  background-image: url(/img/company_ellipse.svg);
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -198,9 +200,6 @@ a:link {
 /* SECTION LOGISTICS */
 /* ---------------------------- */
 #Logistics {
-  /* padding-top: 90px !important;
-  height: calc(100vh);
-  width: 100vw; */
   padding: 50px 0px !important;
 }
 
@@ -219,24 +218,10 @@ a:link {
   /* Transición suave de opacidad */
 }
 
-.carrusel-item {
-  width: 60rem !important;
-  height: 30rem !important;
-  border-radius: 20px;
-  transition: opacity 1s ease-in-out !important;
-  /* transition: 1s ease-in-out;
-  object-fit: cover; */
-}
-
 .carrusel-item img {
   width: 60rem !important;
   height: 30rem !important;
-  /* object-fit: cover; */
-}
-
-.active {
-  opacity: 1;
-  /* La imagen activa se muestra con opacidad completa */
+  object-fit: cover;
 }
 
 /* ---------------------------- */
@@ -254,6 +239,7 @@ a:link {
 
 .card-product:hover {
   box-shadow: 1px 2px 14px var(--gray-normal);
+  transform: scale(1.05)
 }
 
 .tittle-product-card {
@@ -261,7 +247,7 @@ a:link {
 }
 
 .card-product p {
-  font-size: 16px;
+  font-size: .8rem;
 }
 
 .btn-card-product {
@@ -567,6 +553,17 @@ a:link {
 /* RESPONSIVE SM ≥576px */
 /* ---------------------------- */
 @media (max-width: 576px) {
+
+  /* ALL BUTTON */
+  .btn-zg-lg {
+    /* color: white;
+    border-radius: .8px;
+    padding: 6px 30px;
+    text-decoration: none; */
+    font-size: .7rem;
+  }
+
+  /* ABOUT US */
   .img-company {
     margin: 6px;
     width: 40%;
@@ -577,6 +574,13 @@ a:link {
     font-size: 36px;
     font-weight: bold;
     letter-spacing: 2px;
+  }
+
+  /* LOGISTICS */
+  .carrusel-item img {
+    width: 30rem !important;
+    height: 18rem !important;
+    object-fit: cover;
   }
 
   /* SERVICES */
@@ -629,15 +633,23 @@ a:link {
 
   /* PRODUCT */
   .tittle-product-card {
-    font-size: 14px;
+    font-size: .8rem;
   }
 
   .text-button-product {
-    font-size: 14px;
+    font-size: .7rem;
   }
 
   .card-product p {
-    font-size: 14px;
+    font-size: .8rem;
+  }
+
+  /* LOGISTICS */
+  /* LOGISTICS */
+  .carrusel-item img {
+    width: 40rem !important;
+    height: 24rem !important;
+    object-fit: cover;
   }
 }
 

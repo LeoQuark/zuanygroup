@@ -15,7 +15,6 @@ const Logistics = () => {
         const interval = setInterval(() => {
             setActiveIndex((prevIndex) => (prevIndex + 1) % images.length);
         }, 3000); // Cambia la imagen cada 3 segundos
-
         return () => clearInterval(interval);
     }, []);
 
@@ -28,36 +27,31 @@ const Logistics = () => {
                     </div>
                 </div>
                 <div className="d-flex justify-content-center">
-                    <div className='text-section'>
+                    <div className='text-section text-center'>
                         <p>"We are experts in logistics services for the import of industrial products, ensuring an efficient management."</p>
                     </div>
                 </div>
                 <div className="d-flex justify-content-center mx-4 py-5">
                     <div className='carrusel-zg'>
-                        <div id="carouselExampleIndicators" class="carousel slide">
-                            <div class="carousel-indicators">
-                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                            </div>
-                            <div class="carousel-inner carrusel-zg-content">
+                        <div id="carouselExampleAutoplaying" className="carousel slide" data-bs-ride="carousel">
+                            <div className="carousel-inner">
                                 {
                                     images.map((image, index) => (
                                         <div key={index} className={`carousel-item carrusel-item ${index === activeIndex ? 'active' : ''}`}
                                         >
-                                            <img src={image} class="d-block w-100 img-carrusel img-fluid" />
+                                            <img src={image} className="d-block w-100 img-carrusel img-fluid" />
                                         </div>
                                     ))
                                 }
                             </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                            {/* <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                 <span class="visually-hidden">Previous</span>
                             </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
                                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                 <span class="visually-hidden">Next</span>
-                            </button>
+                            </button> */}
                         </div>
                     </div>
                 </div>
