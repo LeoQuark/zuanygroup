@@ -25,27 +25,32 @@ const Products = () => {
                     <CardProduct
                         tittle='Name Product 1'
                         description=' Description of product here'
-                        urlImg={Product1}
+                        imgUrl={Product1}
                     />
                     <CardProduct
                         tittle='Name Product 2'
                         description=' Description of product here'
-                        urlImg={Product2}
+                        imgUrl={Product2}
                     />
                     <CardProduct
                         tittle='Name Product 3'
                         description=' Description of product here'
-                        urlImg={Product1}
+                        imgUrl={Product1}
                     />
                     <CardProduct
                         tittle='Name Product 4'
                         description=' Description of product here'
-                        urlImg={Product2}
+                        imgUrl={Product2}
                     />
                 </div>
                 <div className="d-flex justify-content-center mt-5">
                     <div className='mt-2'>
-                        <Link className='btn-zg-lg btn_pink_zg'>All Product</Link>
+                        <Link
+                            // to='/products'
+                            className='btn-zg-lg btn_pink_zg'
+                        >
+                            All Product
+                        </Link>
                     </div>
                 </div>
             </div>

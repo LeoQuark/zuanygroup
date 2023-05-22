@@ -25,7 +25,7 @@ const Footer = () => {
                                 smooth={true}
                                 duration={100}
                                 type='button'
-                                className='btn-zg-lg btn_pink_zg'
+                                className='btn-zg-md btn_pink_zg'
                             >Services</Link>
                             <Link
                                 to="Products-section"
@@ -33,7 +33,7 @@ const Footer = () => {
                                 smooth={true}
                                 duration={100}
                                 type='button'
-                                className='btn-zg-lg btn_pink_zg'
+                                className='btn-zg-md btn_pink_zg'
                             >Products</Link>
                             <Link
                                 to="AboutUs"
@@ -41,7 +41,7 @@ const Footer = () => {
                                 smooth={true}
                                 duration={100}
                                 type='button'
-                                className='btn-zg-lg btn_pink_zg'
+                                className='btn-zg-md btn_pink_zg'
                             >About Us</Link>
                         </div>
                     </div>
@@ -116,7 +116,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className="d-flex justify-content-center mt-5">
-                <p>Copyright <i class="fa-regular fa-copyright"></i> {getDateYear()}  - All rights reserver by <strong>Zuany Group</strong></p>
+                <p className='text-center font-sm'>Copyright <i class="fa-regular fa-copyright"></i> {getDateYear()}  - All rights reserver by <strong>Zuany Group</strong></p>
             </div>
         </footer>
     )

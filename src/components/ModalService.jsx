@@ -48,7 +48,7 @@ const ModalService = (props) => {
                                     smooth={true}
                                     duration={100}
                                     type='button'
-                                    className='btn-zg-lg btn_white_zg'
+                                    className='btn-zg-md btn_white_zg'
                                     onClick={() => props.onHide()}
                                 >Contacts</Link>
                                 <Link
@@ -57,7 +57,7 @@ const ModalService = (props) => {
                                     smooth={true}
                                     duration={100}
                                     type='button'
-                                    className='btn-zg-lg btn_pink_zg'
+                                    className='btn-zg-md btn_pink_zg'
                                     onClick={() => props.onHide()}
                                 >View Products</Link>
                             </div>

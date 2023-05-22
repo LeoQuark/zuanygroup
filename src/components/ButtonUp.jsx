@@ -14,8 +14,6 @@ const ButtonUp = () => {
             } else {
                 setShowButton(false);
             }
-
-            // console.log(window.pageYOffset, window.pageYOffset || document.documentElement.scrollTop)
         };
 
         window.addEventListener('scroll', handleScroll);
@@ -29,7 +27,7 @@ const ButtonUp = () => {
             spy={true}
             smooth={true}
             duration={100}
-            className={`text-white button-zg-up scroll-button ${showButton ? 'show' : ''}`}
+            className={`button-zg-up text-white scroll-button ${showButton ? 'show' : ''}`}
         ><i class="fa-solid fa-chevron-up"></i></Link>
     )
 }

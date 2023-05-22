@@ -35,10 +35,6 @@ a.active:hover {
   color: var(--blue-dark);
 }
 
-/* button {
-  text-decoration: none;
-} */
-
 .text-zg-blue {
   color: var(--blue-dark);
 }
@@ -52,7 +48,6 @@ a.active:hover {
   font-weight: bold;
   letter-spacing: 8px;
   text-shadow: 0.1em 0.1em #555AAC
-    /* font-style: italic; */
 }
 
 .text-section {
@@ -66,7 +61,7 @@ a.active:hover {
 }
 
 .font-sm {
-  font-size: 12px;
+  font-size: .8rem;
 }
 
 /* ---------------------------- */
@@ -141,35 +136,17 @@ a.active:hover {
 /* SECTION HOME*/
 /* ---------------------------- */
 #Home {
-  height: 100vh;
-  width: 100vw;
+  padding: 5rem 0 0 0 !important;
 }
 
+
 .img-zg-home {
-  position: relative;
   background-image: url(../public/img/home.png);
   background-size: cover;
   background-position: center;
-  height: 85%;
-  width: 85%;
+  height: 48rem !important;
+  width: 100vw !important;
   z-index: 0;
-
-}
-
-.circle-service::after {
-  content: '';
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  height: 220px;
-  width: 220px;
-  border-radius: 50%;
-  box-shadow: 220px 220px rgba(0, 0, 0, 0.3) inset;
-}
-
-
-.text-after-home {
-  height: 145px;
 }
 
 /* ---------------------------- */
@@ -192,7 +169,7 @@ a.active:hover {
 }
 
 .card-aboutus {
-  border-radius: 50px;
+  border-radius: 3rem;
   background: var(--purple-normal);
 }
 
@@ -366,7 +343,22 @@ a.active:hover {
 /* ALL PRODUCTS */
 /* ---------------------------- */
 .all-products {
-  padding-top: 80px !important;
+  padding: 5rem 0 0 0 !important;
+}
+
+.nav-product {
+  background: white;
+  height: 5rem;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  /* border-bottom: 1px solid var(--gray-dark); */
+  box-shadow: 0 .5rem .6rem -.2rem var(--gray-normal);
+}
+
+.breadcumb-product ol li a {
+  color: #444444 !important;
+  font-weight: bold !important;
 }
 
 /* ---------------------------- */
@@ -399,12 +391,12 @@ a.active:hover {
 /* BOTTON UP */
 /* ---------------------------- */
 .scroll-button {
-  bottom: 20px;
-  right: 20px;
+  bottom: 2rem;
+  right: 2.5rem;
   opacity: 0;
   transform: translateY(20px);
   /* Mueve el botón hacia abajo 20px */
-  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transition: opacity 0.5s ease-in-out, transform 0.3s ease-in-out;
   /* Transiciones para opacidad y transform */
 }
 
@@ -420,14 +412,14 @@ a.active:hover {
   border-radius: 50%;
   background: linear-gradient(120deg, var(--purple-normal), var(--blue-dark));
   ;
-  margin: 20px;
+  /* margin: 1rem; */
   border-style: none;
-  height: 60px;
-  width: 60px;
+  height: 4.5rem;
+  width: 4.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 24px;
+  font-size: 2rem;
   box-shadow: 2px 2px 10px var(--blue-dark);
 }
 
@@ -469,6 +461,18 @@ a.active:hover {
   /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); */
 }
 
+.btn_blue_zg_product {
+  background: var(--blue-dark);
+  color: white;
+  border: 3px solid var(--blue-dark);
+}
+
+.btn_blue_zg_product:focus,
+.btn_blue_zg_product:hover {
+  color: white;
+}
+
+
 .btn_pink_zg {
   background: var(--purple-normal);
   color: var(--purple-normal);
@@ -497,11 +501,20 @@ a.active:hover {
   /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); */
 }
 
+.btn-zg-md {
+  color: white;
+  border-radius: .6rem;
+  padding: .3rem 1.5rem;
+  text-decoration: none;
+  font-size: .8rem !important;
+}
+
 .btn-zg-lg {
   color: white;
-  border-radius: 08px;
-  padding: 6px 30px;
+  border-radius: .6rem;
+  padding: .7rem 2.5rem;
   text-decoration: none;
+  font-size: 1rem !important;
 }
 
 /* ---------------------------- */
@@ -564,6 +577,10 @@ a.active:hover {
   }
 
   /* ABOUT US */
+  .card-aboutus {
+    border-radius: 2rem;
+  }
+
   .img-company {
     margin: 6px;
     width: 40%;

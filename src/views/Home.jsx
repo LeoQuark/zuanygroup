@@ -5,9 +5,9 @@ const Home = () => {
 
     return (
         <section id='Home'>
-            <div className='container-fluid img-zg-home p-0 m-0' >
+            <div className='container-fluid img-zg-home' >
                 <div className='container d-flex justify-content-start align-items-center h-100'>
-                    <div className="col-12 col-md-8 col-lg-6 px-4 px-md-0">
+                    <div className="col-12 col-md-8 col-lg-6 px-1 px-md-0">
                         <div className="d-flex justify-content-start mb-5">
                             <h1 className='text-white fw-bold'>Efficient ports for a connected world</h1>
                         </div>
@@ -35,7 +35,7 @@ const Home = () => {
                     </div>
                 </div>
             </div >
-            <div className='container bg-white text-after-home'>
+            <div className='container-fluid bg-white'>
                 <div className="d-flex justify-content-center py-4 py-lg-5">
                     <p className='text-zg-blue text-center fs-lg fst-italic fw-light'>“Connecting your business with the world: quality shipping and integrated cargo management”</p>
                 </div>

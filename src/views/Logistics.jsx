@@ -19,7 +19,7 @@ const Logistics = () => {
     }, []);
 
     return (
-        <section className="container-fluid p-0" id='Logistics'>
+        <section className="container-fluid" id='Logistics'>
             <div className='bg-zg-gray px-4'>
                 <div className="d-flex justify-content-center">
                     <div className='mt-2 pb-3 pb-md-5'>

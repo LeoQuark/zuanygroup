@@ -1,56 +1,90 @@
 import React, { useState, useEffect, useContext } from 'react';
-import Navbar from '../components/Navbar'
+import NavProduct from '../components/NavProduct'
+import CardProduct from '../components/CardProduct'
+
+// IMG
+import Product1 from '../assets/img/product1.png'
+import Product2 from '../assets/img/product2.png'
 
 
 const AllProducts = () => {
 
     return (
-        <div className='all-products container-fluid bg-warning'>
+        <div className='all-products container-fluid'>
+            <NavProduct />
+            <nav className='breadcumb-product pt-3 mx-3 mx-md-5' aria-label="breadcrumb">
+                <ol className="breadcrumb">
+                    <li className="breadcrumb-item"><a href="#">Home</a></li>
+                    <li className="breadcrumb-item active" aria-current="page">Library</li>
+                </ol>
+            </nav>
             <div className='container'>
-                <div className="row d-flex justify-content-between bg-secondary my-2">
-                    <div className="col-12 col-md-6">
-                        <div className="d-flex justify-content-around">
-                            <div>
-                                <input type="text" className='form-control-sm' placeholder='Search Product' />
-                            </div>
-                            <div>
-                                <div class="dropdown">
-                                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                        Select Category
-                                    </button>
-                                    <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="#">Action</a></li>
-                                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="dropdown">
-                                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                        Order By
-                                    </button>
-                                    <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="#">Action</a></li>
-                                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                                        <li><a class="dropdown-item" href="#">Something else here</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="col-12 col-md-2">
-                        My order
-                    </div>
+                <div className="row d-flex justify-content-center mt-2 ">
+                    <CardProduct
+                        tittle='Name Product 1'
+                        description=' Description of product here'
+                        imgUrl={Product1}
+                    />
+                    <CardProduct
+                        tittle='Name Product 2'
+                        description=' Description of product here'
+                        imgUrl={Product2}
+                    />
+                    <CardProduct
+                        tittle='Name Product 1'
+                        description=' Description of product here'
+                        imgUrl={Product1}
+                    />
+                    <CardProduct
+                        tittle='Name Product 2'
+                        description=' Description of product here'
+                        imgUrl={Product2}
+                    />
+                    <CardProduct
+                        tittle='Name Product 1'
+                        description=' Description of product here'
+                        imgUrl={Product1}
+                    />
+                    <CardProduct
+                        tittle='Name Product 2'
+                        description=' Description of product here'
+                        imgUrl={Product2}
+                    />
                 </div>
-                <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Library</li>
-                    </ol>
-                </nav>
-            </div>
-        </div>
+                <div className="row d-flex justify-content-center">
+                    <CardProduct
+                        tittle='Name Product 1'
+                        description=' Description of product here'
+                        imgUrl={Product1}
+                    />
+                    <CardProduct
+                        tittle='Name Product 2'
+                        description=' Description of product here'
+                        imgUrl={Product2}
+                    />
+                    <CardProduct
+                        tittle='Name Product 1'
+                        description=' Description of product here'
+                        imgUrl={Product1}
+                    />
+                    <CardProduct
+                        tittle='Name Product 2'
+                        description=' Description of product here'
+                        imgUrl={Product2}
+                    />
+                    <CardProduct
+                        tittle='Name Product 1'
+                        description=' Description of product here'
+                        imgUrl={Product1}
+                    />
+                    <CardProduct
+                        tittle='Name Product 2'
+                        description=' Description of product here'
+                        imgUrl={Product2}
+                    />
+                </div>
+            </div >
+        </div >
     )
 }
 
