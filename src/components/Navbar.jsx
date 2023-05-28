@@ -26,8 +26,8 @@ const Navbar = () => {
     }, [prevScrollPos]);
 
     return (
-        <nav className={`navbar navbar-expand-lg bg-zg-blue py-3 fixed-top ${isNavbarVisible ? 'navbar-visible' : 'navbar-hidden'}`}>
-            <div className="container">
+        <nav className={`navbar navbar-expand-lg bg-zg-blue py-3 navbar-zg fixed-top ${isNavbarVisible ? 'navbar-visible' : 'navbar-hidden'}`}>
+            <div className="container-fluid">
                 <div className="d-flex">
                     <div className="navbar-brand" href="#">
                         <Link

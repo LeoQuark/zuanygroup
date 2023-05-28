@@ -12,6 +12,7 @@ import Products from '../views/Products'
 import Services from '../views/Services'
 import Contacts from '../views/Contacts'
 import ButtonUp from '../components/ButtonUp'
+// import Certification from '../views/Certification';
 
 const PublicPage = () => {
 
@@ -19,6 +20,7 @@ const PublicPage = () => {
         <>
             <Home />
             <AboutUs />
+            {/* <Certification /> */}
             <Logistics />
             <Products />
             <Services />

@@ -8,10 +8,20 @@
   --yellow-normal: #D6C000;
 }
 
+* {
+  /* border: 1px solid red; */
+  /* margin: 0 !important; */
+}
+
+. {
+  /* margin: 0 !important; */
+  /* width: 100vw !important; */
+}
+
 body {
   position: relative;
-  padding: 0;
-  margin: 0;
+  padding: 0 !important;
+  margin: 0 !important;
   overflow-x: hidden;
 }
 
@@ -145,7 +155,7 @@ a.active:hover {
   background-size: cover;
   background-position: center;
   height: 48rem !important;
-  width: 100vw !important;
+  width: 100% !important;
   z-index: 0;
 }
 
@@ -171,6 +181,29 @@ a.active:hover {
 .card-aboutus {
   border-radius: 3rem;
   background: var(--purple-normal);
+}
+
+.img-certification-content {
+  background: white;
+  border-radius: 50%;
+  height: 9rem;
+  width: 9rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+}
+
+.img-certification {
+  height: 7rem;
+  width: 7rem;
+  z-index: 2;
+}
+
+.tittle-certification {
+  font-size: 2rem;
+  font-style: italic;
+  font-weight: bold;
 }
 
 /* ---------------------------- */
@@ -247,6 +280,7 @@ a.active:hover {
 /* ---------------------------- */
 #Services {
   padding: 50px 0px !important;
+  margin: 0px;
 }
 
 .circle-service {
@@ -677,7 +711,3 @@ a.active:hover {
     font-size: .8rem;
   }
 }
-
-/* * {
-  border: 1px solid red;
-} */

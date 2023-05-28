@@ -9,7 +9,7 @@ import Product2 from '../assets/img/product2.png'
 const Products = () => {
 
     return (
-        <section className="container-fluid p-0" id='Products-section'>
+        <section className="container-fluid" id='Products-section'>
             <div className='px-0 px-sm-5 px-md-0'>
                 <div className="d-flex justify-content-center">
                     <div className='mt-2 pb-3 pb-md-5'>
