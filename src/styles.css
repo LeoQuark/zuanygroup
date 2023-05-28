@@ -8,28 +8,43 @@
   --yellow-normal: #D6C000;
 }
 
-* {
-  /* border: 1px solid red; */
-  /* margin: 0 !important; */
-}
-
-. {
-  /* margin: 0 !important; */
-  /* width: 100vw !important; */
-}
-
-body {
-  position: relative;
-  padding: 0 !important;
-  margin: 0 !important;
-  overflow-x: hidden;
-}
-
-html {
+/* html {
   scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
   scroll-snap-stop: always;
   scroll-padding-top: 100px;
+} */
+
+/* * {
+  border: 1px solid red;
+} */
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  /* border: 1px solid red; */
+}
+
+html,
+body {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden !important;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+  scroll-snap-stop: always;
+  scroll-padding-top: 100px;
+}
+
+.navbar-zg {
+  width: 100vw !important;
+  padding: 0px !important;
+  margin: 0px !important;
 }
 
 /* ---------------------------- */
@@ -147,15 +162,17 @@ a.active:hover {
 /* ---------------------------- */
 #Home {
   padding: 5rem 0 0 0 !important;
+  /* padding: 50px 0px !important; */
+
 }
 
 
 .img-zg-home {
-  background-image: url(../public/img/home.png);
+  background-image: url(/img/home.png);
   background-size: cover;
   background-position: center;
   height: 48rem !important;
-  width: 100% !important;
+  width: 100vw !important;
   z-index: 0;
 }
 
@@ -174,8 +191,8 @@ a.active:hover {
   background-size: cover;
   background-position: center;
   height: 100vh;
-  width: 100vh;
-  margin: auto;
+  width: 100% !important;
+  /* margin: auto; */
 }
 
 .card-aboutus {
@@ -186,24 +203,16 @@ a.active:hover {
 .img-certification-content {
   background: white;
   border-radius: 50%;
-  height: 9rem;
-  width: 9rem;
+  height: 8rem;
+  width: 8rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 0;
 }
 
 .img-certification {
-  height: 7rem;
-  width: 7rem;
-  z-index: 2;
-}
-
-.tittle-certification {
-  font-size: 2rem;
-  font-style: italic;
-  font-weight: bold;
+  height: 6rem;
+  width: 6rem;
 }
 
 /* ---------------------------- */
@@ -280,7 +289,6 @@ a.active:hover {
 /* ---------------------------- */
 #Services {
   padding: 50px 0px !important;
-  margin: 0px;
 }
 
 .circle-service {
@@ -711,3 +719,7 @@ a.active:hover {
     font-size: .8rem;
   }
 }
+
+/* * {
+  border: 1px solid red;
+} */

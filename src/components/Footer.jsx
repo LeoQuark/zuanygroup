@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-scroll'
+import Certification from '../assets/img/certificacion.png'
+
 
 const Footer = () => {
 
@@ -9,11 +11,18 @@ const Footer = () => {
 
     return (
         <footer className='bg-zg-blue'>
-            <div className="container pt-5">
+            <div className="container pt-4 pt-md-5">
                 <div className="row d-flex justify-content-between">
                     <div className="col-12 col-lg-5">
-                        <div className="d-flex justify-content-center">
-                            <h3>Zuany Group Chile</h3>
+                        <div className="d-block d-md-flex justify-content-center align-items-center gap-4">
+                            {/* <div className="d-flex justify-content-center">
+                                <a href='https://shipsupply.org/' target="_blank" className="img-fluid">
+                                    <img src={Certification} alt="" className='img-certification' />
+                                </a>
+                            </div> */}
+                            <div className="d-flex justify-content-center">
+                                <h3 className='text-center'>Zuany Group Chile</h3>
+                            </div>
                         </div>
                         <div className='my-4'>
                             <p className='fst-italic text-center'>“Connecting your business with the world: quality shipping and integrated cargo management”</p>
