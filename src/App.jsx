@@ -1,24 +1,31 @@
 import React, { useState } from 'react';
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Navigate } from "react-router-dom";
 import { HashRouter, BrowserRouter } from 'react-router-dom';
 
+import LandingPage from './Pages/LandingPage'
+import ProductPage from './Pages/ProductPage'
 
-
-import Navbar from './components/Navbar'
-import PublicPage from './layouts/PublicPage'
-import AllProducts from './views/AllProducts'
-
+import Auth from './Pages/Auth'
+import Admin from './Pages/Admin'
 
 function App() {
 
   return (
-    <>
-      <Navbar />
-      <Routes>
-        <Route path="/" element={<PublicPage />} />
-        <Route path="/products" element={<AllProducts />} />
-      </Routes>
-    </>
+    <Routes>
+      {/* RUTAS PUBLICAS */}
+      <Route path='/' element={<LandingPage />} />
+      <Route path='/all-products' element={<ProductPage />} />
+      {/* RUTAS PRIVADAS */}
+      <Route
+        path='/admin/*'
+        element={
+          <Auth>
+            <Admin />
+          </Auth>
+        }
+      />
+      {/* <Route path='*' element={<h1>NOT FOUND</h1>} /> */}
+    </Routes>
   )
 }
 

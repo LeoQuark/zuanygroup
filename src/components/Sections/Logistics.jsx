@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 
 // IMG
-import CarruselImg1 from '../assets/img/carrusel1.png'
-import CarruselImg2 from '../assets/img/carrusel2.jpg'
-import CarruselImg3 from '../assets/img/carrusel3.jpg'
+import CarruselImg1 from '../../assets/img/carrusel1.png'
+import CarruselImg2 from '../../assets/img/carrusel2.jpg'
+import CarruselImg3 from '../../assets/img/carrusel3.jpg'
 
 const Logistics = () => {
 

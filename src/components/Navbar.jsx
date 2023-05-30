@@ -43,7 +43,7 @@ const Navbar = () => {
                 <button className="navbar-toggler btn-zg-open-nav" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                     <i className="bi bi-list"></i>
                 </button>
-                <div className="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+                <div className="collapse navbar-collapse justify-content-end mx-0 mx-lg-5" id="navbarNavDropdown">
                     <ul className="navbar-nav gap-2 pt-4 pt-lg-0">
                         <li className="nav-item btn-zg-nav">
                             <Link

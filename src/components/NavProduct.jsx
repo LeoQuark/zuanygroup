@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom'
 
 const NavProduct = () => {
 
@@ -37,7 +38,7 @@ const NavProduct = () => {
                     </div>
                 </div>
                 <div className="col-12 col-md-2">
-                    <div>My Order</div>
+                    <Link to='/shoppingCart' className='text-dark'>My Order</Link>
                 </div>
             </div>
         </div>

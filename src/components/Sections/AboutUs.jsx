@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-scroll'
 
-import ImgCompany from '../assets/img/img-company.png'
-import Certification from '../assets/img/certificacion.png'
+import ImgCompany from '../../assets/img/img-company.png'
+import Certification from '../../assets/img/certificacion.png'
 
 const AboutUs = () => {
 
     const [seeMore, setSeeMore] = useState(false)
     const [show, setShow] = useState(false)
-    console.log(show)
+    // console.log(show)
 
     useEffect(() => {
         const handleResize = () => {
