@@ -51,7 +51,8 @@ body {
 /* ALL */
 /* ---------------------------- */
 a:link,
-a.active {
+a.active,
+a:hover {
   text-decoration: none !important;
   color: white;
 }
@@ -222,8 +223,13 @@ a.active:hover {
   padding: 50px 0px !important;
 }
 
-.tittle-logistics {
-  font-size: 40px;
+.tittle-section {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.tittle-cart {
+  font-size: 2rem;
   font-weight: bold;
 }
 
@@ -282,6 +288,11 @@ a.active:hover {
   background: white;
   color: var(--blue-dark);
   font-weight: bold;
+}
+
+.card-description {
+  overflow-x: hidden;
+  width: 100% !important;
 }
 
 /* ---------------------------- */
@@ -406,13 +417,75 @@ a.active:hover {
 /* ---------------------------- */
 /* SHOPPING CART */
 /* ---------------------------- */
-.shopping-cart {
+/* .shopping-cart {
   padding: 5rem 0 0 0 !important;
 }
 
 .shopping-div {
   border-radius: 1rem;
   border: 1px solid var(--gray-dark);
+} */
+
+.card-order {
+  height: 70vh !important;
+  width: 100% !important;
+  border: 2px solid var(--gray-normal);
+  border-radius: 1rem;
+}
+
+/* .cart-table tr td {
+  height: 100% !important;
+} */
+
+.cart-table tr td img {
+  height: 5rem;
+  width: 5rem;
+}
+
+.cart-table tr td h5 {
+  font-size: .8rem;
+  font-weight: bold;
+}
+
+.cart-table tr td .description {
+  font-size: .7rem;
+}
+
+.cart-table tr td .amount {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.cart-divider {
+  content: '';
+  width: 2px !important;
+  background: var(--gray-normal);
+  padding: 0px !important;
+  margin: 0px !important;
+}
+
+.btn-order {
+  border-radius: 5px;
+  padding: .4rem 2rem;
+  font-weight: bold;
+}
+
+.btn-zg-red {
+  background: var(--red-normal);
+  border: 2px solid var(--red-normal);
+  color: white;
+}
+
+.bg-zg-white {
+  background: white;
+  border: 2px solid var(--gray-normal);
+}
+
+.amount-cart {
+  background: var(--red-normal);
+  border-radius: 50%;
+  padding: 1px 8px;
+  color: white;
 }
 
 /* ---------------------------- */
@@ -533,11 +606,28 @@ a.active:hover {
   border: 3px solid var(--purple-normal);
 }
 
-.btn_pink_zg:focus,
-.btn_pink_zg:hover {
+.btn_pink_zg:focus {
   color: white;
   transition: .1s ease-in-out;
   transform: scale(1.1);
+}
+
+.btn_pink_zg:hover {
+  color: white !important;
+  /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); */
+}
+
+.btn_pink_zg_inverse {
+  background: var(--gray-normal);
+  color: var(--gray-dark) !important;
+  font-weight: bold;
+  border: 3px solid var(--gray-normal);
+}
+
+.btn_pink_zg_inverse:focus,
+.btn_pink_zg_inverse:hover {
+  color: white;
+  background: white;
   /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); */
 }
 
@@ -570,6 +660,15 @@ a.active:hover {
   text-decoration: none;
   font-size: 1rem !important;
 }
+
+.btn-zg-cart {
+  color: white;
+  border-radius: .6rem;
+  padding: .7rem 2.5rem;
+  text-decoration: none;
+  font-size: 1rem !important;
+}
+
 
 /* ---------------------------- */
 /* MODAL */
@@ -634,11 +733,19 @@ a.active:hover {
 
   /* ALL BUTTON */
   .btn-zg-lg {
-    /* color: white;
-    border-radius: .8px;
-    padding: 6px 30px;
+    /* color: white; */
+    /* border-radius: .6rem;
+    padding: .7rem 1rem;
     text-decoration: none; */
-    font-size: .7rem;
+    font-size: .7rem !important;
+  }
+
+  .btn-zg-cart {
+    /* color: white; */
+    border-radius: .6rem;
+    padding: .7rem 1rem;
+    text-decoration: none;
+    font-size: .7rem !important;
   }
 
   /* ABOUT US */

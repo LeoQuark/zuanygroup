@@ -23,7 +23,7 @@ const Logistics = () => {
             <div className='bg-zg-gray px-4'>
                 <div className="d-flex justify-content-center">
                     <div className='mt-2 pb-3 pb-md-5'>
-                        <h2 className='tittle-logistics'>Logistics</h2>
+                        <h2 className='tittle-section'>Logistics</h2>
                     </div>
                 </div>
                 <div className="d-flex justify-content-center">

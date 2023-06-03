@@ -7,11 +7,12 @@ import "bootstrap/dist/js/bootstrap"
 import "bootstrap-icons/font/bootstrap-icons.css";
 
 import { HashRouter, BrowserRouter } from 'react-router-dom';
+import CartState from './context/cart/CartState'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <HashRouter>
+  <CartState>
+    <BrowserRouter>
       <App />
-    </HashRouter>
-  </React.StrictMode>,
+    </BrowserRouter>
+  </CartState>,
 )

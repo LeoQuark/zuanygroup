@@ -15,7 +15,7 @@ const Services = () => {
         <section className='container-fluid' id='Services' >
             <div className="row bg-zg-pink mx-0">
                 <div className='d-flex justify-content-center my-4'>
-                    <h2 className='tittle-logistics text-white'>Services</h2>
+                    <h2 className='tittle-section text-white'>Services</h2>
                 </div>
                 <div className='d-flex justify-content-center mb-5'>
                     <h2 className='text-section-services text-white text-center w-75'>

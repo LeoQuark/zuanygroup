@@ -1,50 +1,59 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-scroll'
+import React, { useState, useEffect, useContext } from 'react'
+import CartContext from '../context/cart/CartContext'
 
 import ModalProducts from './ModalProducts'
 
 const CardProduct = ({
-    info
+    info,
+    addProduct
 }) => {
 
-    const [show, setShow] = useState(false);
+    const { cart, addProduct } = useContext(CartContext)
+    const [show, setShow] = useState(false)
 
     const handleClose = () => setShow(false)
 
+    // console.log(cart)
+
+    // useEffect(() => {
+
+    // }, [])
+
     return (
-        <div className="col-5 col-sm-4 col-lg-2 my-3 my-lg-0">
-            <div className='card-product' onClick={() => setShow(true)}>
+        <div>
+            <div
+                className='card-product'
+                onClick={() => setShow(true)}
+            >
                 <div className='d-block'>
                     <div className="d-flex justify-content-center">
                         <img src={info.image} alt="" className='img-product-card img-fluid' />
                     </div>
                     <div className='my-2'>
-                        <h5 className='tittle-product-card'><strong>{info.tittle}</strong></h5>
+                        <h5 className='tittle-product-card'><strong>{info.title}</strong></h5>
                         <hr />
                     </div>
                     <div className='w-100'>
-                        <p className='p-0 m-0'>
+                        <p className='card-description p-0 m-0'>
                             {info.description}
                         </p>
                     </div>
                     <div className='d-flex justify-content-center mt-2 mt-md-3'>
-                        <Link
-                            // to="Products-section"
-                            spy={true}
-                            smooth={true}
-                            duration={100}
+                        <button
                             type='button'
                             className='btn-zg-md btn_blue_zg_product text-button-product'
-                        >Add to <i className="fa-solid fa-cart-shopping text-white "></i></Link>
+                        // onClick={() => addProduct(info)}
+                        >Add to <i className="fa-solid fa-cart-shopping text-white "></i></button>
                     </div>
                 </div>
             </div>
             <ModalProducts
-                infoProduct={info}
+                info={info}
                 show={show}
                 onHide={handleClose}
+                addProduct={addProduct}
             />
-        </div>
+        </div >
 
     )
 }

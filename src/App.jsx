@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Route, Routes, Navigate } from "react-router-dom";
+import { Route, Routes, Navigate, useLocation } from "react-router-dom";
 import { HashRouter, BrowserRouter } from 'react-router-dom';
 
 import LandingPage from './Pages/LandingPage'
@@ -10,6 +10,10 @@ import Admin from './Pages/Admin'
 
 function App() {
 
+  const location = useLocation()
+  console.log(location)
+
+
   return (
     <Routes>
       {/* RUTAS PUBLICAS */}
@@ -17,11 +21,12 @@ function App() {
       <Route path='/all-products' element={<ProductPage />} />
       {/* RUTAS PRIVADAS */}
       <Route
-        path='/admin/*'
+        path='/admin'
         element={
-          <Auth>
-            <Admin />
-          </Auth>
+          // <Auth>
+          //   <Admin />
+          // </Auth>
+          <Admin />
         }
       />
       {/* <Route path='*' element={<h1>NOT FOUND</h1>} /> */}
