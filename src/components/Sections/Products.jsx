@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import CardProduct from '../CardProduct'
 import { Link } from 'react-router-dom'
 
 // IMG
 import Product1 from '../../assets/img/product1.png'
 import Product2 from '../../assets/img/Product2.png'
+
+import CardProduct from '../Products/CardProduct'
 
 const ProductMockup = [
     {

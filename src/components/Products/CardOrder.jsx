@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import Table from 'react-bootstrap/Table';
 
 // IMG
-import Product1 from '../assets/img/product1.png'
-import Product2 from '../assets/img/Product2.png'
+import Product1 from '../../assets/img/Product1.png'
+import Product2 from '../../assets/img/Product2.png'
 
 const ProductMockup = [
     {
@@ -60,6 +60,11 @@ const CardOrder = ({
                                             <td>
                                                 <div className='h-100'>
                                                     <p className='d-flex align-content-center description'>{product.description}</p>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div className='h-100'>
+                                                    <p className='d-flex justify-content-center align-items-center amount'>2</p>
                                                 </div>
                                             </td>
                                             <td>

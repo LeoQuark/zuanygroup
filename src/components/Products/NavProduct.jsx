@@ -49,7 +49,7 @@ const NavProduct = ({
                         className={`btn-order ${!openOrder ? 'bg-zg-white' : 'bg-zg-red'}`}
                         onClick={() => handleOpenOrder()}
                     >
-                        My Order <span className='amount-cart'>{cart.shoppingCart.length}</span>
+                        My Order <span className={` ${!openOrder ? 'amount-cart-red' : 'amount-cart-white'}`}>{cart.shoppingCart.length}</span>
                     </button>
                 </div>
             </div>

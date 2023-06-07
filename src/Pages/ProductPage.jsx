@@ -1,12 +1,9 @@
 import React, { useState, useEffect, useContext } from 'react';
-import { Route, Routes } from "react-router-dom";
 import CartContext from '../context/cart/CartContext';
 
 import Navbar from '../components/Navbar'
-import NavProduct from '../components/NavProduct'
-
-import ShoppingCart from '../components/CardOrder';
-import AllProducts from '../components/AllProducts';
+import NavProduct from '../components/Products/NavProduct'
+import AllProducts from '../components/Products/AllProducts';
 
 const ProductPage = () => {
 
@@ -15,7 +12,7 @@ const ProductPage = () => {
     const [openOrder, setOpenOrder] = useState(false)
 
     const handleOpenOrder = () => setOpenOrder(!openOrder)
-    // console.log(openOrder)
+    console.log(cart)
     return (
         <div>
             <Navbar />

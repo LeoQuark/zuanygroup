@@ -3,18 +3,26 @@ import CartContext from "./CartContext.js";
 import CartReducer from "./CartReducer.js";
 import { types } from "./types.js";
 
+
 //Creación del estado global Carrito, donde se hará uso de useContext y useReducer.
 export const CartState = (props) => {
     const initialState = {
         shoppingCart: []
     };
 
+    // shoppingCart: 
+    // id,
+    // name,
+    // description,
+    // category,
+    // amount,
+
     const [cart, dispatch] = useReducer(CartReducer, initialState);
 
-    const addProduct = (dato) => {
+    const addProduct = (data) => {
         dispatch({
             type: types.ADD_TO_CART,
-            payload: dato,
+            payload: data,
         });
     };
 

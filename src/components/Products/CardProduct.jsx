@@ -1,19 +1,17 @@
 import React, { useState, useEffect, useContext } from 'react'
-import CartContext from '../context/cart/CartContext'
+import CartContext from '../../context/cart/CartContext'
 
 import ModalProducts from './ModalProducts'
 
 const CardProduct = ({
     info,
-    addProduct
+    clearCart
 }) => {
 
-    const { cart, addProduct } = useContext(CartContext)
+    const { addProduct } = useContext(CartContext)
     const [show, setShow] = useState(false)
 
     const handleClose = () => setShow(false)
-
-    // console.log(cart)
 
     // useEffect(() => {
 

@@ -4,8 +4,8 @@ import CardProduct from './CardProduct'
 import CardOrder from './CardOrder'
 
 // IMG
-import Product1 from '../assets/img/product1.png'
-import Product2 from '../assets/img/Product2.png'
+import Product1 from '../../assets/img/product1.png'
+import Product2 from '../../assets/img/Product2.png'
 
 const ProductMockup = [
     {
@@ -24,10 +24,10 @@ const ProductMockup = [
     }
 ]
 
-const DivProduct = ({ info, clearCart }) => {
+const DivProduct = ({ info }) => {
     return (
         <div className='col-6 col-sm-6 col-md-3 col-lg-3 my-3 my-lg-4'>
-            <CardProduct info={info} clearCart />
+            <CardProduct info={info} />
         </div>
     )
 }
@@ -38,18 +38,18 @@ const AllProducts = ({ cart, openOrder, clearCart }) => {
         <div>
             {!openOrder ? (
                 <div className="row d-flex justify-content-around justify-content-md-center my-0 my-md-4 mx-0 px-0">
-                    <DivProduct info={ProductMockup[0]} clearCart />
-                    <DivProduct info={ProductMockup[0]} clearCart />
-                    <DivProduct info={ProductMockup[0]} clearCart />
-                    <DivProduct info={ProductMockup[0]} clearCart />
-                    <DivProduct info={ProductMockup[0]} clearCart />
-                    <DivProduct info={ProductMockup[0]} clearCart />
-                    <DivProduct info={ProductMockup[0]} clearCart />
-                    <DivProduct info={ProductMockup[0]} clearCart />
-                    <DivProduct info={ProductMockup[0]} clearCart />
-                    <DivProduct info={ProductMockup[0]} clearCart />
-                    <DivProduct info={ProductMockup[0]} clearCart />
-                    <DivProduct info={ProductMockup[0]} clearCart />
+                    <DivProduct info={ProductMockup[0]} />
+                    <DivProduct info={ProductMockup[0]} />
+                    <DivProduct info={ProductMockup[0]} />
+                    <DivProduct info={ProductMockup[0]} />
+                    <DivProduct info={ProductMockup[0]} />
+                    <DivProduct info={ProductMockup[0]} />
+                    <DivProduct info={ProductMockup[0]} />
+                    <DivProduct info={ProductMockup[0]} />
+                    <DivProduct info={ProductMockup[0]} />
+                    <DivProduct info={ProductMockup[0]} />
+                    <DivProduct info={ProductMockup[0]} />
+                    <DivProduct info={ProductMockup[0]} />
                 </div>
             ) : (
                 <CardOrder cart={cart} clearCart />
