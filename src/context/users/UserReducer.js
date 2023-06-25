@@ -3,6 +3,8 @@ import { types } from "./types.js";
 export default (state, action) => {
     const { payload, type } = action;
     const { id, name, email } = payload;
+
+    console.log(id, name, email)
     switch (type) {
         case types.LOGIN_USER:
             return {

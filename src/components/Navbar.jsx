@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-scroll'
+// import { Link } from 'react-router-dom'
 
 // IMG
 import Logo from '../assets/img/logo_zuany_group.png'
@@ -8,12 +9,16 @@ const Navbar = () => {
 
     const [isNavbarVisible, setIsNavbarVisible] = useState(true);
     const [prevScrollPos, setPrevScrollPos] = useState(window.pageYOffset);
+    const [upPage, setUpPage] = useState(window.pageYOffset);
 
     useEffect(() => {
         const handleScroll = () => {
             const currentScrollPos = window.pageYOffset;
             const isScrollingUp = prevScrollPos > currentScrollPos;
 
+
+            // console.log(currentScrollPos, isScrollingUp)
+            setUpPage(isScrollingUp)
             setIsNavbarVisible(isScrollingUp);
             setPrevScrollPos(currentScrollPos);
         };
@@ -40,7 +45,7 @@ const Navbar = () => {
                         ><img src={Logo} alt="Logo" width="40" height="40" className="align-text-center text-white fw-bold mx-3" />Zuany Group</Link>
                     </div>
                 </div>
-                <button className="navbar-toggler btn-zg-open-nav" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <button className="navbar-toggler btn-zg-open-nav" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle Navigation">
                     <i className="bi bi-list"></i>
                 </button>
                 <div className="collapse navbar-collapse justify-content-end mx-0 mx-lg-5" id="navbarNavDropdown">

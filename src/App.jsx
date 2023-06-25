@@ -9,11 +9,12 @@ import ProductPage from './Pages/ProductPage'
 
 import Auth from './Pages/Auth'
 import Login from './Pages/Login'
+import Dashboard from './Pages/Dashboard'
 
 function App() {
 
   const location = useLocation()
-  console.log(location)
+  // console.log(location)
 
 
   return (
@@ -27,6 +28,12 @@ function App() {
           path='/admin'
           element={
             <Login />
+          }
+        />
+        <Route
+          path='/admin/dashboard'
+          element={
+            <Dashboard />
           }
         />
         {/* <Route path='*' element={<h1>NOT FOUND</h1>} /> */}

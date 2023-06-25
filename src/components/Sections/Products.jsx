@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom'
 
 // IMG
-import Product1 from '../../assets/img/product1.png'
+import Product1 from '../../assets/img/Product1.png'
 import Product2 from '../../assets/img/Product2.png'
 
 import CardProduct from '../Products/CardProduct'
@@ -10,19 +10,37 @@ import CardProduct from '../Products/CardProduct'
 const ProductMockup = [
     {
         tittle: 'Name Products 1',
-        // price: '149.00',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
         category: 'engines',
         image: Product1
     },
     {
         tittle: 'Name Products 2',
-        // price: '149.00',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+        category: 'Repairs',
+        image: Product2
+    },
+    {
+        tittle: 'Name Products 1',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+        category: 'engines',
+        image: Product1
+    },
+    {
+        tittle: 'Name Products 2',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
         category: 'Repairs',
         image: Product2
     }
 ]
+
+const DivProduct = ({ product }) => {
+    return (
+        <div className='col-5 col-sm-6 col-md-3 col-lg-2 my-3 my-lg-0'>
+            <CardProduct product={product} />
+        </div>
+    )
+}
 
 const Products = () => {
 
@@ -40,18 +58,10 @@ const Products = () => {
                     </div>
                 </div>
                 <div className="row justify-content-center align-items-center mt-4 mx-2 mx-md-0">
-                    <div className='col-5 col-sm-6 col-md-3 col-lg-2 my-3 my-lg-0'>
-                        <CardProduct info={ProductMockup[0]} size='md' />
-                    </div>
-                    <div className='col-5 col-sm-6 col-md-3 col-lg-2 my-3 my-lg-0'>
-                        <CardProduct info={ProductMockup[1]} size='md' />
-                    </div>
-                    <div className='col-5 col-sm-6 col-md-3 col-lg-2 my-3 my-lg-0'>
-                        <CardProduct info={ProductMockup[0]} size='md' />
-                    </div>
-                    <div className='col-5 col-sm-6 col-md-3 col-lg-2 my-3 my-lg-0'>
-                        <CardProduct info={ProductMockup[1]} size='md' />
-                    </div>
+                    {ProductMockup && ProductMockup.map((product, index) => (
+                        <DivProduct key={index} product={product} />
+                        // console.log(product, index)
+                    ))}
                 </div>
                 <div className="d-flex justify-content-center mt-5">
                     <div className='mt-2'>

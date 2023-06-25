@@ -12,7 +12,7 @@ export const UserState = (props) => {
 
     const [user, dispatch] = useReducer(UserReducer, initialState);
 
-    const loginUserContext = (data) => {
+    const setUserContext = (data) => {
         dispatch({
             type: types.ADD_TO_CART,
             payload: data,
@@ -30,7 +30,7 @@ export const UserState = (props) => {
         <UserContext.Provider
             value={{
                 userName: user,
-                loginUserContext,
+                setUserContext,
                 logoutUserContext,
             }}
         >
