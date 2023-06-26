@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Table from 'react-bootstrap/Table';
 
-const TableCart = ({ cart }) => {
+const TableCart = ({ cart, deleteProduct }) => {
+
+    useEffect(() => { }, [cart])
 
     return (
         <Table className='cart-table'>
@@ -15,30 +17,27 @@ const TableCart = ({ cart }) => {
             </thead>
             <tbody>
                 {cart.shoppingCart.map((product, index) => (
-                    <tr>
+                    <tr key={product.id}>
+                        {console.log('productss', product)}
                         <td>{index + 1}</td>
                         <td>
                             <div className="d-flex justify-content-start h-100">
-                                <img src={product.image} alt="" />
+                                <img src={product.image} />
                                 <div className='d-flex align-items-center mx-2 mx-md-4'>
-                                    <h5>{product.title}</h5>
+                                    <p>{product.title}</p>
                                 </div>
                             </div>
                         </td>
-                        {/* <td>
-                            <div className='h-100'>
-                                <p className='d-flex align-content-center description'>{product.description}</p>
-                            </div>
-                        </td> */}
                         <td>
-                            <div className='h-100'>
-                                <p className='d-flex justify-content-center align-items-center amount'>2</p>
-                            </div>
+                            {product.amount}
                         </td>
                         <td>
-                            <div className='h-100'>
-                                <p className='d-flex justify-content-center align-items-center amount'>2</p>
-                            </div>
+                            <button
+                                className='btn-delete-item'
+                                onClick={() => deleteProduct(product.id)}
+                            >
+                                <i class="fa-solid fa-xmark"></i>
+                            </button>
                         </td>
                     </tr>
                 ))}

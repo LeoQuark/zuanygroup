@@ -11,11 +11,11 @@ const Navbar = () => {
     const [prevScrollPos, setPrevScrollPos] = useState(window.pageYOffset);
     const [upPage, setUpPage] = useState(window.pageYOffset);
 
+
     useEffect(() => {
         const handleScroll = () => {
             const currentScrollPos = window.pageYOffset;
             const isScrollingUp = prevScrollPos > currentScrollPos;
-
 
             // console.log(currentScrollPos, isScrollingUp)
             setUpPage(isScrollingUp)

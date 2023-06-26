@@ -14,100 +14,73 @@ const DivProduct = ({ product }) => {
 const ProductsContent = ({
     ProductMockup
 }) => {
-    console.log('ProductMockup', ProductMockup)
 
     const totalProduct = ProductMockup.length
-    console.log(totalProduct)
-
-
-    const [currentPage, setCurrentPage] = useState(1)
+    const [productos, setProductos] = useState([])
     const [pageSize, setPageSize] = useState(8)
+    const [currentPage, setCurrentPage] = useState(1)
 
-    const totalPage = totalProduct / pageSize
+    const lastIndex = currentPage * pageSize
+    const firstIndex = lastIndex - pageSize
 
-    const handlePageChange = (pageNumber) => {
-        setCurrentPage(pageNumber)
+
+    const onPreviusPage = () => {
+        if (currentPage != 1) {
+            setCurrentPage(currentPage - 1)
+        }
     }
 
+    const onNextPage = () => {
+        setCurrentPage(currentPage + 1)
+    }
 
-    // const firstPage = () => setCurrentPage(1)
-    // const netxPage = () => setCurrentPage(1)
+    const onSpecificPage = (page) => {
+        setCurrentPage(page)
+    }
 
-    // const filterData = () => {
-    //     if (filtro.length === 0) {
-    //         return ventas.slice(paginacion, paginacion + 5);
-    //     }
-    //     //si hay un nombre para filtrar
-    //     const productoFiltrado = ventas.filter((prod) => {
-    //         return prod.fecha.includes(filtro);
-    //     });
-    //     return productoFiltrado.slice(paginacion, paginacion + 5);
-    // }
-
-    //funciones para la paginacion
-    const nextPage = () => {
-        setPaginacion(paginacion + 5);
-    };
-
-    const backPage = () => {
-        if (paginacion > 0) setPaginacion(paginacion - 5);
-    };
-
-
-
-    // const previusPage = () => {
-    //     if (pagActive > 0) setCurrentPage()
-    // }
-    // console.log('ProductMockup')
-
-    useEffect(() => {
-        console.log('ProductMockup', ProductMockup)
-    }, [])
-
+    const filterData = () => {
+        console.log(ProductMockup.slice(firstIndex, lastIndex))
+        return ProductMockup.slice(firstIndex, lastIndex)
+    }
 
     let items = [];
-    for (let number = 1; number <= (totalProduct / 3); number++) {
+    for (let number = 1; number <= Math.ceil(totalProduct / pageSize); number++) {
         items.push(
             <button
                 key={number}
                 className={`btn-pagination-page ${number == currentPage ? 'btn-pagination-active' : ''}`}
+                onClick={() => onSpecificPage(number)}
             >
                 {number}
             </button>
         );
     }
 
-    // useEffect(() => {
-    //     let items = [];
-    //     for (let number = 1; number <= (totalProduct / 3); number++) {
-    //         items.push(
-    //             <Pagination.Item key={number} active={number === pagActive}>
-    //                 {number}
-    //             </Pagination.Item>,
-    //         );
-    //     }
-    // }, [])
+    useEffect(() => {
+
+    }, [])
 
     return (
         <div className='p-0'>
             <div className="row d-flex justify-content-around justify-content-md-center my-0 mx-0 px-0">
-                {ProductMockup && ProductMockup.map((product, index) => (
+                {ProductMockup && filterData().map((product, index) => (
                     <DivProduct key={index} product={product} />
                 ))}
             </div>
             <div className='d-flex justify-content-center py-5'>
-                {/* <Pagination>
-                    <Pagination.First onClick={firstPage} />
-                    <Pagination.Prev />
-                    {items}
-                    <Pagination.Next />
-                    <Pagination.Last />
-                </Pagination> */}
-                <button className='btn-pagination-move'>
+                <button
+                    className={`btn-pagination-move ${currentPage == 1 ? 'btn-pagination-disabled' : ''}`}
+                    onClick={onPreviusPage}
+                    disabled={currentPage == 1 ? true : false}
+                >
                     <i class="fa-solid fa-angle-left"></i>
                 </button>
                 {items}
-                <button className='btn-pagination-move'>
+                <button
+                    className={`btn-pagination-move ${currentPage >= items.length ? 'btn-pagination-disabled' : ''}`}
+                    onClick={onNextPage}
+                    disabled={currentPage >= items.length ? true : false}
+                >
                     <i class="fa-solid fa-angle-right"></i>
                 </button>
 

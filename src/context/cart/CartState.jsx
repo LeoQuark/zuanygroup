@@ -3,7 +3,6 @@ import CartContext from "./CartContext.js";
 import CartReducer from "./CartReducer.js";
 import { types } from "./types.js";
 
-
 //Creación del estado global Carrito, donde se hará uso de useContext y useReducer.
 export const CartState = (props) => {
     const initialState = {
@@ -33,6 +32,13 @@ export const CartState = (props) => {
         });
     };
 
+    const deleteProduct = (id) => {
+        dispatch({
+            type: types.REMOVE_ONE_FROM_CART,
+            payload: id,
+        });
+    };
+
     //Se retorna el CarritoContext.Provider para que los hijos de este componente puedan acceder a los valores del state global carrito y sus metodos o funciones.
     return (
         <CartContext.Provider
@@ -40,6 +46,7 @@ export const CartState = (props) => {
                 cart,
                 addProduct,
                 clearCart,
+                deleteProduct
             }}
         >
             {props.children}

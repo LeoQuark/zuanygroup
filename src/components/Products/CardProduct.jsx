@@ -12,9 +12,6 @@ const CardProduct = ({
     const [show, setShow] = useState(false)
 
     const handleClose = () => setShow(false)
-    useEffect(() => {
-        console.log('aa', product)
-    }, [])
 
     return (
         <div>

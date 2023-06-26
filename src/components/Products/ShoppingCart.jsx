@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react';
 import TableCart from '../TableCart';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 
+// COMPONENT
+import ModalEmail from './ModalEmail';
+
 // IMG
 import Product1 from '../../assets/img/Product1.png'
 import Product2 from '../../assets/img/Product2.png'
@@ -24,20 +27,27 @@ const ProductMockup = [
     }
 ]
 
-const CardOrder = ({
+const ShoppingCart = ({
     cart,
     show,
-    onHide
+    onHide,
+    deleteProduct
 }) => {
 
+    // console.log('cartt', cart)
+
     const [existData, setExistData] = useState(false)
+    const [showModal, setShowModal] = useState(false)
+
+    const handleShow = () => setShowModal(!showModal)
+    const handleClose = () => setShowModal(false)
 
     useEffect(() => {
+        // console.log('existe', cart.shoppingCart.length)
         const handleExistData = () => cart.shoppingCart.length == 0 ? setExistData(false) : setExistData(true)
         handleExistData()
-    }, [])
+    }, [cart])
 
-    console.log(cart)
     return (
         <Offcanvas
             show={show}
@@ -47,7 +57,7 @@ const CardOrder = ({
             backdrop={true}
         >
             <Offcanvas.Header closeButton>
-                <Offcanvas.Title>My Order <span class="badge bg-danger text-bg-secondary">{cart.shoppingCart.length}</span></Offcanvas.Title>
+                <Offcanvas.Title>My Order <span className="badge bg-danger text-bg-secondary">{cart.shoppingCart.length}</span></Offcanvas.Title>
             </Offcanvas.Header>
             <Offcanvas.Body>
                 <div className='d-flex justify-content-start
@@ -56,7 +66,12 @@ const CardOrder = ({
                 </div>
                 <div className='position-relative' style={{ height: '95%' }}>
                     {existData ?
-                        <TableCart cart={cart} /> : (
+                        (
+                            <TableCart
+                                cart={cart}
+                                deleteProduct={deleteProduct}
+                            />
+                        ) : (
                             <div className='position-absolute top-50'>
                                 <p>Your cart is empty</p>
                             </div>
@@ -68,14 +83,23 @@ const CardOrder = ({
                             </p>
                         </div>
                         <div className="d-flex justify-content-between">
-                            <button className='btn-zg-cart btn_pink_zg_inverse'>Download Quote <i class="fa-solid fa-circle-down fa-lg"></i></button>
-                            <button className='btn-zg-cart btn_pink_zg'>Quote by Email</button>
+                            <button className='btn-zg-cart btn_pink_zg_inverse'>
+                                Download Quote <i className="fa-solid fa-circle-down fa-lg"></i>
+                            </button>
+                            <button
+                                className='btn-zg-cart btn_pink_zg'
+                                onClick={() => handleShow()}
+                            >Quote by Email</button>
                         </div>
                     </div>
                 </div>
             </Offcanvas.Body>
+            <ModalEmail
+                show={showModal}
+                onHide={handleClose}
+            />
         </Offcanvas>
     )
 }
 
-export default CardOrder
+export default ShoppingCart

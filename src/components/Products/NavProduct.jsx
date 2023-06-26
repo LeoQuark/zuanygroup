@@ -1,150 +1,111 @@
 import React, { useState, useEffect, useContext } from 'react';
-import CardOrder from './CardOrder'
+import CartContext from '../../context/cart/CartContext';
+
+import ShoppingCart from './ShoppingCart'
 
 const NavProduct = ({
-    cart,
     searchProduct,
     handleSearch,
     categories,
+    orderBy,
     selectCategories,
     handleCategory
 }) => {
 
+    const { cart, clearCart, deleteProduct } = useContext(CartContext)
+
     const [showCanvas, setShowCanvas] = useState(false)
+    // const [cartShopping, setCartShopping] = useState([])
 
     const handleClose = () => setShowCanvas(false);
     const handleShow = () => setShowCanvas(true);
 
+    const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+
+    // console.log(screenWidth)
+
     useEffect(() => {
+        // Función para actualizar las dimensiones de la pantalla cuando se cambia el tamaño de la ventana
+        const handleResize = () => {
+            setScreenWidth(window.innerWidth);
+        };
 
-    }, [])
+        window.addEventListener('resize', handleResize);
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
 
-    // console.log(searchProduct)
-    // console.log(selectCategories)
+    useEffect(() => {
+        console.log('CART', cart)
+        // setCartShopping(cart.ShoppingCart)
+    }, [cart])
 
     return (
-        // <div className='container-fluid nav-product p-0 m-0'>
-        //     <div className="row" id='np-1'>
-        //         <div className="col-12 col-md-6">
-        //             <input
-        //                 value={searchProduct}
-        //                 onChange={(event) => handleSearch(event)}
-        //                 type="text"
-        //                 className='form-control w-100'
-        //                 placeholder='Search Product'
-        //             />
-        //         </div>
-        //         <div className="col-6 col-md-3">
-        //             <div className="dropdown">
-        //                 <button
-        //                     className="btn btn-secondary dropdown-toggle" type="button"
-        //                     data-bs-toggle="dropdown"
-        //                     aria-expanded="false"
-        //                     value={selectCategories}
-        //                     onChange={(event) => handleCategory(event)}
-        //                 >
-        //                     Select Category
-        //                 </button>
-        //                 <ul className="dropdown-menu">
-        //                     {categories.length != 0 ? (
-        //                         categories.map((category, index) => (
-        //                             <li key={index}>
-        //                                 <p className="dropdown-item m-0">
-        //                                     {category}
-        //                                 </p>
-        //                             </li>
-        //                         ))
-        //                     ) : (
-        //                         <li><a className="dropdown-item" href="#">Action</a></li>
-        //                     )}
-        //                 </ul>
-        //             </div>
-        //         </div>
-        //         <div className="col-6 col-md-3">
-        //             <div className="dropdown">
-        //                 <button className="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-        //                     Order By
-        //                 </button>
-        //                 <ul className="dropdown-menu">
-        //                     <li><a className="dropdown-item" href="#">Action</a></li>
-        //                     /                             <li><a className="dropdown-item" href="#">Another action</a></li>
-        //                     <li><a className="dropdown-item" href="#">Something else here</a></li>
-        //                 </ul>
-        //             </div>
-        //         </div>
-        //     </div>
-        //     <div className="row" id='np-2'>
-        //         asa
-        //     </div>
-        // </div >
         <div className='container-fluid nav-product p-0 m-0'>
-            <div className="row d-flex justify-content-between my-3 my-md-3 mx-0 mx-md-5 w-100">
-                <div className="col-12 col-sm-8">
-                    <div className="row d-flex justify-content-around">
-                        <div className="col-12 col-md-6">
-                            <input
-                                value={searchProduct}
-                                onChange={(event) => handleSearch(event)}
-                                type="text"
-                                className='form-control w-100 py-1'
-                                placeholder='Search Product'
-                            />
-                        </div>
-                        <div className="col-6 col-md-3">
-                            <div className="dropdown">
-                                <button
-                                    className="btn btn-secondary dropdown-toggle" type="button"
-                                    data-bs-toggle="dropdown"
-                                    aria-expanded="false"
-                                    value={selectCategories}
-                                    onChange={(event) => handleCategory(event)}
-                                >
-                                    Select Category
-                                </button>
-                                <ul className="dropdown-menu">
-                                    {categories.length != 0 ? (
-                                        categories.map((category, index) => (
-                                            <li key={index}>
-                                                <p className="dropdown-item m-0">
-                                                    {category}
-                                                </p>
-                                            </li>
-                                        ))
-                                    ) : (
-                                        <li><a className="dropdown-item" href="#">Action</a></li>
-                                    )}
-                                </ul>
-                            </div>
-                        </div>
-                        <div className="col-6 col-md-3">
-                            <div className="dropdown">
-                                <button className="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    Order By
-                                </button>
-                                <ul className="dropdown-menu">
-                                    <li><a className="dropdown-item" href="#">Action</a></li>
-                                    <li><a className="dropdown-item" href="#">Another action</a></li>
-                                    <li><a className="dropdown-item" href="#">Something else here</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+            <div className="filter-grid">
+                <div className="item-1">
+                    <input
+                        value={searchProduct}
+                        onChange={(event) => handleSearch(event)}
+                        type="text"
+                        className='form-control w-100'
+                        placeholder='Search Product'
+                    />
                 </div>
-                <div className="col-12 col-sm-3">
+                <div className="item-2">
+                    <select className='form-select'>
+                        {categories.length != 0 ? (
+                            categories.map((category, index) => (
+                                <option key={index}>
+                                    {category}
+                                </option>
+                            ))
+                        ) : (
+                            <li><a className="dropdown-item" href="#">Action</a></li>
+                        )}
+                    </select>
+                </div>
+                <div className="item-3">
+                    <select className='form-select'>
+                        {orderBy && orderBy.map((order, index) => (
+                            <option key={index}>
+                                {order}
+                            </option>
+                        ))}
+                    </select>
+                </div>
+                <div className="item-4">
                     <div className="d-flex justify-content-end">
-                        <button
-                            className='btn-order bg-zg-white'
-                            onClick={() => handleShow()}
-                        >
-                            My Order <span class="badge bg-danger text-bg-secondary">{cart.shoppingCart.length}</span>
-                        </button>
+                        <div>
+                            <button
+                                className='btn-order'
+                                onClick={() => handleShow()}
+                            >
+                                {
+                                    screenWidth >= 768 ?
+                                        (
+                                            <p className='m-0'>My Order</p>
+                                        ) :
+                                        (
+                                            <div>
+                                                <i className="fa-solid fa-cart-shopping mx-2"></i>
+                                            </div>
+                                        )
+                                }
+                                <span className="badge bg-danger text-bg-secondary">
+                                    {cart.shoppingCart.length}
+                                </span>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
-            <CardOrder
+            <ShoppingCart
                 cart={cart}
                 show={showCanvas}
                 onHide={handleClose}
+                deleteProduct={deleteProduct}
             />
         </div >
     )

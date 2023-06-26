@@ -6,7 +6,7 @@ import Offcanvas from 'react-bootstrap/Offcanvas';
 
 const ModalProducts = (props) => {
 
-    const [amount, setAmount] = useState(0)
+    const [amount, setAmount] = useState(1)
 
     // controladores para aumentar la cantidad de un producto
     const higherAmount = () => setAmount(amount + 1)
@@ -14,12 +14,15 @@ const ModalProducts = (props) => {
 
     const toggleShow = () => setShowCanvas(!showCanvas);
 
-
     // console.log(props)
 
     const BtnAddProduct = (product, amount) => {
-        props.addProduct(product, amount)
-        // toggleShow()
+        // console.log('add product', product, amount)
+        const dataProduct = {
+            ...product,
+            amount
+        }
+        props.addProduct(dataProduct)
     }
 
 
@@ -63,7 +66,7 @@ const ModalProducts = (props) => {
                                                 type='button'
                                                 className='btn-zg-amount'
                                                 onClick={() => smallerAmount()}
-                                            ><i class="fa-solid fa-minus"></i></button>
+                                            ><i className="fa-solid fa-minus"></i></button>
                                             <span className='product-amount'>
                                                 {amount}
                                             </span>
@@ -71,7 +74,7 @@ const ModalProducts = (props) => {
                                                 type='button'
                                                 className='btn-zg-amount'
                                                 onClick={() => higherAmount()}
-                                            ><i class="fa-solid fa-plus"></i></button>
+                                            ><i className="fa-solid fa-plus"></i></button>
                                         </div>
                                         <button
                                             id="openToast"

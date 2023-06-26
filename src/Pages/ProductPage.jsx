@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { Link } from 'react-router-dom'
-import CartContext from '../context/cart/CartContext';
 
 import Navbar from '../components/Navbar'
 import NavProduct from '../components/Products/NavProduct'
@@ -13,112 +12,114 @@ import Product2 from '../assets/img/product2.png'
 
 const ProductMockup = [
     {
+        id: '1',
         title: 'Name Products 1',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non purus feugiat, lacinia ex eget, lacinia risus.',
         category: 'Engines',
         image: Product1
     },
     {
+        id: '2',
         title: 'Name Products 2',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non purus feugiat, lacinia ex eget, lacinia risus.',
         category: 'Repairs',
         image: Product2
     },
     {
-        title: 'Name Products 1',
+        id: '3',
+        title: 'Name Products 3',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non purus feugiat, lacinia ex eget, lacinia risus.',
         category: 'Engines',
         image: Product1
     },
     {
-        title: 'Name Products 2',
+        id: '4',
+        title: 'Name Products 4',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non purus feugiat, lacinia ex eget, lacinia risus.',
         category: 'Repairs',
         image: Product2
     },
     {
-        title: 'Name Products 1',
+        id: '5',
+        title: 'Name Products 5',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non purus feugiat, lacinia ex eget, lacinia risus.',
         category: 'Engines',
         image: Product1
     },
     {
-        title: 'Name Products 2',
+        id: '6',
+        title: 'Name Products 6',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non purus feugiat, lacinia ex eget, lacinia risus.',
         category: 'Repairs',
         image: Product2
     },
     {
-        title: 'Name Products 1',
+        id: '7',
+        title: 'Name Products 7',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non purus feugiat, lacinia ex eget, lacinia risus.',
         category: 'Engines',
         image: Product1
     },
     {
-        title: 'Name Products 2',
+        id: '8',
+        title: 'Name Products 8',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non purus feugiat, lacinia ex eget, lacinia risus.',
         category: 'Repairs',
         image: Product2
     },
     {
-        title: 'Name Products 1',
+        id: '9',
+        title: 'Name Products 9',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non purus feugiat, lacinia ex eget, lacinia risus.',
         category: 'Engines',
         image: Product1
     },
     {
-        title: 'Name Products 2',
+        id: '10',
+        title: 'Name Products 10',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non purus feugiat, lacinia ex eget, lacinia risus.',
         category: 'Repairs',
         image: Product2
     },
     {
-        title: 'Name Products 1',
+        id: '11',
+        title: 'Name Products 11',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non purus feugiat, lacinia ex eget, lacinia risus.',
         category: 'Engines',
         image: Product1
     },
     {
-        title: 'Name Products 2',
+        id: '12',
+        title: 'Name Products 12',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non purus feugiat, lacinia ex eget, lacinia risus.',
         category: 'Repairs',
         image: Product2
     }
 ]
 
-// const CategoriesMockup = ['Category 1', 'Category 2', 'Category 3']
-
-// console.log('ProductMockup2', ProductMockup)
-
 const ProductPage = () => {
-    // console.log('ProductMockup1', ProductMockup)
-
-    const { cart, clearCart } = useContext(CartContext)
 
     // nav products state
     const [searchProduct, setSearchProduct] = useState('')
-    const [categories, setCategories] = useState(['Category 1', 'Category 2', 'Category 3'])
+    const [categories, setCategories] = useState(['Select Categories', 'Category 1', 'Category 2', 'Category 3'])
+    const [orderBy, setOrderBy] = useState(['Order By', 'Most Popular', 'A-Z', 'Z-A'])
+
     const [selectCategories, setSelectcategories] = useState('')
 
     const handleSearch = (event) => setSearchProduct(event.target.value)
     const handleCategory = (event) => setSelectcategories(event.target.value)
 
-    // console.log(cart)
-
-
-
     // API lectura de los productos aquiiiii
-
 
     return (
         <div>
             <Navbar />
-            <div className='all-products container-fluid mt-4 mt-md-0'>
+            <div className='all-products container-fluid mt-2 mt-md-0'>
                 <NavProduct
-                    cart={cart}
                     searchProduct={searchProduct}
                     handleSearch={handleSearch}
                     categories={categories}
+                    orderBy={orderBy}
                     selectCategories={selectCategories}
                     handleCategory={handleCategory}
                 />
