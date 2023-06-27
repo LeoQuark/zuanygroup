@@ -15,14 +15,10 @@ const NavProduct = ({
     const { cart, clearCart, deleteProduct } = useContext(CartContext)
 
     const [showCanvas, setShowCanvas] = useState(false)
-    // const [cartShopping, setCartShopping] = useState([])
+    const [screenWidth, setScreenWidth] = useState(window.innerWidth);
 
     const handleClose = () => setShowCanvas(false);
     const handleShow = () => setShowCanvas(true);
-
-    const [screenWidth, setScreenWidth] = useState(window.innerWidth);
-
-    // console.log(screenWidth)
 
     useEffect(() => {
         // Función para actualizar las dimensiones de la pantalla cuando se cambia el tamaño de la ventana
@@ -37,8 +33,7 @@ const NavProduct = ({
     }, []);
 
     useEffect(() => {
-        console.log('CART', cart)
-        // setCartShopping(cart.ShoppingCart)
+        console.log('CAMBIOSSS', cart.shoppingCart)
     }, [cart])
 
     return (
@@ -106,6 +101,7 @@ const NavProduct = ({
                 show={showCanvas}
                 onHide={handleClose}
                 deleteProduct={deleteProduct}
+                clearCart={clearCart}
             />
         </div >
     )

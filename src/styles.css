@@ -149,9 +149,9 @@ a.active:hover {
   color: white;
 }
 
-.btn-zg-nav-active {
+/* .btn-zg-nav-active {
   color: white;
-}
+} */
 
 .btn-zg-nav:hover {
   background: white;
@@ -168,8 +168,6 @@ a.active:hover {
 /* ---------------------------- */
 #Home {
   padding: 5rem 0 0 0 !important;
-  /* padding: 50px 0px !important; */
-
 }
 
 
@@ -178,7 +176,7 @@ a.active:hover {
   background-size: cover;
   background-position: center;
   height: 48rem !important;
-  width: 100vw !important;
+  width: 100% !important;
   z-index: 0;
 }
 
@@ -499,7 +497,7 @@ a.active:hover {
 /* ---------------------------- */
 .cart-table tbody {
   position: relative;
-  height: 400px !important;
+  /* height: 400px !important; */
   /* overflow-y: scroll; */
 }
 
@@ -660,6 +658,11 @@ a.active:hover {
   color: white;
 }
 
+.btn-add-succes {
+  background: #157347;
+  border: 3px solid #157347;
+}
+
 
 .btn_pink_zg {
   background: var(--purple-normal);
@@ -678,15 +681,15 @@ a.active:hover {
   /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); */
 }
 
-.btn_pink_zg_inverse {
+.btn_gray_zg_inverse {
   background: var(--gray-normal);
   color: var(--gray-dark) !important;
   font-weight: bold;
   border: 3px solid var(--gray-normal);
 }
 
-.btn_pink_zg_inverse:focus,
-.btn_pink_zg_inverse:hover {
+.btn_gray_zg_inverse:focus,
+.btn_gray_zg_inverse:hover {
   color: white;
   background: white;
   /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); */
@@ -728,6 +731,14 @@ a.active:hover {
   padding: .5rem 1rem;
   text-decoration: none;
   font-size: 1rem !important;
+}
+
+.btn-zg-cart-remove {
+  color: white;
+  border-radius: .2rem;
+  padding: 0 .5rem;
+  text-decoration: none;
+  font-size: .8rem !important;
 }
 
 .btn-zg-amount {

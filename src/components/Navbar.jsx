@@ -41,8 +41,11 @@ const Navbar = () => {
                             smooth={true}
                             duration={100}
                             className='text-white fw-bold'
-                            activeClass='nav-link btn-zg-nav-active'
-                        ><img src={Logo} alt="Logo" width="40" height="40" className="align-text-center text-white fw-bold mx-3" />Zuany Group</Link>
+                            activeClass='nav-link'
+                        >
+                            <img src={Logo} alt="Logo" width="40" height="40" className="align-text-center text-white fw-bold mx-3" />
+                            Zuany Group
+                        </Link>
                     </div>
                 </div>
                 <button className="navbar-toggler btn-zg-open-nav" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle Navigation">
@@ -57,7 +60,7 @@ const Navbar = () => {
                                 smooth={true}
                                 duration={100}
                                 className='nav-link btn-zg-nav text-center'
-                                activeClass='nav-link btn-zg-nav-active'
+                                activeClass='nav-link'
                             >Home</Link>
                         </li>
                         <li className="nav-item btn-zg-nav">
@@ -67,7 +70,7 @@ const Navbar = () => {
                                 smooth={true}
                                 duration={100}
                                 className='nav-link btn-zg-nav text-center'
-                                activeClass='nav-link btn-zg-nav-active'
+                                activeClass='nav-link'
                             >Company</Link>
                         </li>
                         <li className="nav-item btn-zg-nav">
@@ -77,7 +80,7 @@ const Navbar = () => {
                                 smooth={true}
                                 duration={100}
                                 className='nav-link btn-zg-nav text-center'
-                                activeClass='nav-link btn-zg-nav-active'
+                                activeClass='nav-link'
                             >Logistics</Link>
                         </li>
                         <li className="nav-item btn-zg-nav">
@@ -87,7 +90,7 @@ const Navbar = () => {
                                 smooth={true}
                                 duration={100}
                                 className='nav-link btn-zg-nav text-center'
-                                activeClass='nav-link btn-zg-nav-active'
+                                activeClass='nav-link'
                             >Products</Link>
                         </li>
                         <li className="nav-item btn-zg-nav">
@@ -97,7 +100,7 @@ const Navbar = () => {
                                 smooth={true}
                                 duration={100}
                                 className='nav-link btn-zg-nav text-center'
-                                activeClass='nav-link btn-zg-nav-active'
+                                activeClass='nav-link'
                             >Services</Link>
                         </li>
                         <li className="nav-item btn-zg-nav">
@@ -107,7 +110,7 @@ const Navbar = () => {
                                 smooth={true}
                                 duration={100}
                                 className='nav-link btn-zg-nav text-center'
-                                activeClass='nav-link btn-zg-nav-active'
+                                activeClass='nav-link'
                             >Contacts</Link>
                         </li>
                     </ul>

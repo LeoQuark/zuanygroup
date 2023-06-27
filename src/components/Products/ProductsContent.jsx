@@ -73,7 +73,7 @@ const ProductsContent = ({
                     onClick={onPreviusPage}
                     disabled={currentPage == 1 ? true : false}
                 >
-                    <i class="fa-solid fa-angle-left"></i>
+                    <i className="fa-solid fa-angle-left"></i>
                 </button>
                 {items}
                 <button
@@ -81,7 +81,7 @@ const ProductsContent = ({
                     onClick={onNextPage}
                     disabled={currentPage >= items.length ? true : false}
                 >
-                    <i class="fa-solid fa-angle-right"></i>
+                    <i className="fa-solid fa-angle-right"></i>
                 </button>
 
             </div>

@@ -25,7 +25,7 @@ export const CartState = (props) => {
         });
     };
 
-    const clearCart = (initialState) => {
+    const clearCart = () => {
         dispatch({
             type: types.CLEAR_CART,
             payload: initialState,

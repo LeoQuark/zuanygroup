@@ -1,29 +1,56 @@
 import React, { useState, useEffect } from 'react';
 import Modal from 'react-bootstrap/Modal';
-import Toast from 'react-bootstrap/Toast'
 import Spinner from 'react-bootstrap/Spinner';
-import Offcanvas from 'react-bootstrap/Offcanvas';
+
+const LoadSpinner = () => {
+    return (
+        <div className='d-flex justify-content-center mx-5'>
+            <Spinner animation="border" variant="success" />
+        </div>
+    )
+}
+
+const AddCompleted = () => {
+    return (
+        <div className='d-flex justify-content-center mx-5'>
+            <i className="fa-regular fa-thumbs-up bg-succes"></i>
+        </div>
+    )
+}
 
 const ModalProducts = (props) => {
 
     const [amount, setAmount] = useState(1)
+    const [loading, setLoading] = useState(false)
+    const [completed, setCompleted] = useState(false)
+
 
     // controladores para aumentar la cantidad de un producto
     const higherAmount = () => setAmount(amount + 1)
     const smallerAmount = () => amount > 0 && setAmount(amount - 1)
 
-    const toggleShow = () => setShowCanvas(!showCanvas);
+    const btnAddProduct = (product, amount) => {
+        setLoading(true)
 
-    // console.log(props)
-
-    const BtnAddProduct = (product, amount) => {
-        // console.log('add product', product, amount)
         const dataProduct = {
             ...product,
             amount
         }
         props.addProduct(dataProduct)
+        // setPressBtnAdd(true)
+        setTimeout(() => {
+            setLoading(false)
+            setCompleted(true)
+        }, 800)
+        setTimeout(() => {
+            setCompleted(false)
+        }, 5000)
     }
+
+    useEffect(() => {
+        setLoading(false)
+        setCompleted(false)
+    }, [])
 
 
     return (
@@ -76,12 +103,27 @@ const ModalProducts = (props) => {
                                                 onClick={() => higherAmount()}
                                             ><i className="fa-solid fa-plus"></i></button>
                                         </div>
-                                        <button
-                                            id="openToast"
-                                            type='button'
-                                            className='btn-zg-md btn_blue_zg_product text-button-product'
-                                            onClick={() => BtnAddProduct(props.product, amount)}
-                                        >Add to <i className="fa-solid fa-cart-shopping text-white "></i></button>
+                                        <div className='d-flex'>
+                                            {
+                                                loading && (<LoadSpinner />)
+                                            }
+                                            <button
+                                                id="openToast"
+                                                type='button'
+                                                className={`btn-zg-md btn_blue_zg_product text-button-product ${completed ? 'btn-add-succes' : ''}`}
+                                                onClick={() => btnAddProduct(props.product, amount)}
+                                            >
+                                                {!completed ? (
+                                                    <p className='m-0'>
+                                                        <div>
+                                                            Add to <i className="fa-solid fa-cart-shopping text-white"></i>
+                                                        </div>
+                                                    </p>
+                                                ) : (
+                                                    <p className='m-0'>Success !</p>
+                                                )}
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -89,12 +131,6 @@ const ModalProducts = (props) => {
                     </div>
                 </div>
             </Modal.Body>
-            {/* <Toast show={openToast} animation={false} className=''>
-                <div className='d-flex justify-content-center py-2'>
-                    <Spinner animation="border" variant="success" />
-                </div>
-                <Toast.Body>Adding product to quote</Toast.Body>
-            </Toast> */}
         </Modal>
     )
 }
