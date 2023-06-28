@@ -119,7 +119,7 @@ const ShoppingCart = ({
                             <button
                                 className='btn-zg-cart btn_pink_zg'
                                 onClick={() => handleShow()}
-                            >Quote by Email</button>
+                            >Quote by Email <i className="fa-solid fa-paper-plane text-white"></i></button>
                         </div>
                     </div>
                 </div>

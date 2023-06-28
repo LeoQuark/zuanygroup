@@ -1,7 +1,23 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-scroll'
 
 const Contacts = () => {
+
+    const [name, setName] = useState('')
+    const [email, setEmail] = useState('')
+    const [phone, setPhone] = useState('')
+    const [message, setMessage] = useState('')
+
+    const handleName = (event) => setName(event.target.value)
+    const handleEmail = (event) => setEmail(event.target.value)
+    const handlePhone = (event) => setPhone(event.target.value)
+    const handleMessage = (event) => setMessage(event.target.value)
+
+
+    const sendEmail = () => {
+        event.preventDefault()
+        console.log('send email')
+        console.log(name, email, phone, message)
+    }
 
     return (
         <section className='container-fluid' id='Contacts' >
@@ -54,36 +70,58 @@ const Contacts = () => {
                                         <br />
                                         zuanydominguez@zuanygroup.cl
                                         <br />
-                                        secretaria@zuanygroup.cl</p>
+                                        secretaria@zuanygroup.cl
+                                    </p>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div className="row my-md-5 mx-2">
-                        <div className="d-flex justify-content-center mb-3">
-                            <input type="text" className='form-control' placeholder='Name' />
-                        </div>
-                        <div className="d-flex justify-content-between mb-3">
-                            <div className="col-6">
-                                <input type="text" className='form-control' placeholder='Email' />
+                        <form onSubmit={sendEmail}>
+                            <div className="mb-3">
+                                <input
+                                    type="text"
+                                    className='form-control'
+                                    placeholder='Name'
+                                    onChange={(event) => handleName(event)}
+                                />
                             </div>
-                            <div className="col-5">
-                                <input type="text" className='form-control' placeholder='Phone' />
+                            <div className="d-flex justify-content-between mb-3">
+                                <div className="col-5">
+                                    <input
+                                        type="email"
+                                        className='form-control'
+                                        placeholder='Enter your email'
+                                        onChange={(event) => handleEmail(event)}
+                                    />
+                                </div>
+                                <div className="col-5">
+                                    <input
+                                        type="text"
+                                        className='form-control'
+                                        placeholder='Enter your phone number'
+                                        onChange={(event) => handlePhone(event)}
+                                    />
+                                </div>
                             </div>
-                        </div>
-                        <div className="d-flex justify-content-center mb-3">
-                            <textarea type="text" className='form-control' placeholder='Write your message ...' />
-                        </div>
-                        <div className="d-flex justify-content-center mt-4">
-                            <Link
-                                // to="Products-section"
-                                spy={true}
-                                smooth={true}
-                                duration={100}
-                                type='button'
-                                className='btn-zg-lg btn_pink_zg'
-                            >Send <i class="fa-solid fa-paper-plane text-white"></i></Link>
-                        </div>
+                            <div className="d-flex justify-content-center mb-3">
+                                <textarea
+                                    type="text"
+                                    className='form-control'
+                                    placeholder='Write your message ...'
+                                    onChange={(event) => handleMessage(event)}
+                                />
+                            </div>
+                            <div className="d-flex justify-content-center mt-4">
+                                <button
+                                    type='button'
+                                    className='btn-zg-lg btn_pink_zg'
+                                // onClick={()=>}
+                                >
+                                    Send <i className="fa-solid fa-paper-plane text-white"></i>
+                                </button>
+                            </div>
+                        </form>
                     </div>
                 </div>
                 <div className="col-12 col-md-6 col-lg-6">

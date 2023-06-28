@@ -9,10 +9,6 @@ import SignUp from '../components/Login/SignUp';
 import { APIURL } from '../utils/apiData'
 import { setUserSessionStorage } from '../utils/storage'
 
-
-
-
-
 const Login = () => {
 
     const { userName, setUserContext, logoutUserContext } = useContext(UserContext)
@@ -22,7 +18,6 @@ const Login = () => {
     const [user, setUser] = useState('')
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
-    //
     const [errorLogin, setErrorLogin] = useState(false)
 
     const handleSetLoginIn = () => setLoginIn(!loginIn)
@@ -36,7 +31,6 @@ const Login = () => {
         setEmail('')
         setPassword('')
     }
-    console.log(APIURL)
 
     // inicio de sesion o creacion de una cuenta
     const handleSubmit = async (event) => {
@@ -49,8 +43,7 @@ const Login = () => {
                 password
             }
 
-            console.log(JSON.stringify(userData))
-
+            // console.log(JSON.stringify(userData))
             try {
                 const response = await axios.post(
                     `${APIURL}/auth/login`,
@@ -58,11 +51,11 @@ const Login = () => {
                 )
 
                 const data = response.data
-                console.log('aqui', response)
+                console.log('aqui', data)
 
 
-                if (response.status == 200 && data.token) {
-                    setErrorLogin(false)
+                if (response.status === 200 && data.token) {
+                    // setErrorLogin(false)
                     setUserContext(data.user)
                     setUserSessionStorage(data.token, data.user)
                     navigate('/admin/dashboard')
@@ -72,7 +65,9 @@ const Login = () => {
                 }
 
             } catch (error) {
+                // error 400 usuario o contraseña incorrecta
                 console.log(error)
+                setErrorLogin(true)
             }
         }
         // create account con user, email y password
@@ -89,7 +84,13 @@ const Login = () => {
         resetInput()
     }, [loginIn])
 
-    // console.log('test', userName, loginIn)
+    useEffect(() => {
+        if (errorLogin) {
+            setTimeout(() => {
+                setErrorLogin(false)
+            }, 5000)
+        }
+    }, [errorLogin])
 
     return (
         <div className='background-login'>
@@ -119,14 +120,13 @@ const Login = () => {
                                 />}
                         </form>
                         {errorLogin && (
-                            <div>sasa</div>
-                        )}
-                        <div className='alert-danger-zg'>
-                            <div class="alert alert-danger" role="alert">
-                                <p className='m-0 text-center'><strong>Invalid credentials</strong></p>
-                                <p className='m-0 text-center'>Check your email and password.</p>
+                            <div className='alert-danger-zg'>
+                                <div className="alert alert-danger" role="alert">
+                                    <p className='m-0 text-center'><strong>Invalid credentials</strong></p>
+                                    <p className='m-0 text-center'>Check your email and password.</p>
+                                </div>
                             </div>
-                        </div>
+                        )}
                     </div>
                 </div>
             </div>

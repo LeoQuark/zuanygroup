@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-scroll'
 
 const Home = () => {
 
@@ -15,22 +14,12 @@ const Home = () => {
                             <h4 className='text-white'>Efficient shipping solutions for global logistics. Modern infrastructure and advanced technology for safe and on-time delivery.</h4>
                         </div>
                         <div className="d-flex justify-content-between justify-content-sm-around mt-5">
-                            <Link
-                                to="Services"
-                                spy={true}
-                                smooth={true}
-                                duration={100}
-                                type='button'
-                                className='btn-zg-lg btn_blue_zg_v2'
-                            >Services</Link>
-                            <Link
-                                to="Products-section"
-                                spy={true}
-                                smooth={true}
-                                duration={100}
-                                type='button'
-                                className='btn-zg-lg btn_blue_zg_v2'
-                            >Products</Link>
+                            <a href="#Services" className='btn-zg-lg btn_blue_zg_v2'>
+                                Services
+                            </a>
+                            <a href="#Products-section" className='btn-zg-lg btn_blue_zg_v2'>
+                                Products
+                            </a>
                         </div>
                     </div>
                 </div>

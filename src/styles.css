@@ -398,6 +398,13 @@ a.active:hover {
   width: 100%;
 }
 
+#Contacts input,
+#Contacts textarea {
+  font-size: .8rem;
+  border: 2px solid var(--blue-dark);
+}
+
+
 /* ---------------------------- */
 /* ALL PRODUCTS */
 /* ---------------------------- */
@@ -556,9 +563,15 @@ a.active:hover {
   padding: 4px;
 }
 
-.footer-menu li:hover {
+.footer-menu li a {
+  /* background: white; */
+  color: white
+}
+
+.footer-menu li:hover,
+.footer-menu li a:hover {
   background: white;
-  color: var(--blue-dark);
+  color: var(--blue-dark) !important;
 }
 
 .icon-footer {
@@ -684,7 +697,6 @@ a.active:hover {
 .btn_gray_zg_inverse {
   background: var(--gray-normal);
   color: var(--gray-dark) !important;
-  font-weight: bold;
   border: 3px solid var(--gray-normal);
 }
 
@@ -720,7 +732,7 @@ a.active:hover {
 .btn-zg-lg {
   color: white;
   border-radius: .6rem;
-  padding: .7rem 2.5rem;
+  padding: .5rem 2.5rem;
   text-decoration: none;
   font-size: 1rem !important;
 }
@@ -730,7 +742,7 @@ a.active:hover {
   border-radius: .2rem;
   padding: .5rem 1rem;
   text-decoration: none;
-  font-size: 1rem !important;
+  font-size: .8rem !important;
 }
 
 .btn-zg-cart-remove {
@@ -928,7 +940,7 @@ a.active:hover {
 
   .btn-zg-cart {
     text-decoration: none;
-    font-size: 1rem !important;
+    font-size: .8rem !important;
   }
 
   /* ABOUT US */

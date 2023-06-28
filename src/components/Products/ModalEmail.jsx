@@ -10,7 +10,7 @@ const ModalEmail = (props) => {
 
     const handleName = (event) => setName(event.target.value)
     const handleEmail = (event) => setEmail(event.target.value)
-    const handletPhone = (event) => setPhone(event.target.value)
+    const handlePhone = (event) => setPhone(event.target.value)
     const handleMessage = (event) => setMessage(event.target.value)
 
 
@@ -51,7 +51,7 @@ const ModalEmail = (props) => {
                                     <input
                                         type="text"
                                         className='form-control' placeholder='+569 9934 7809'
-                                        onChange={(event) => handletPhone(event)}
+                                        onChange={(event) => handlePhone(event)}
                                     />
                                 </div>
                             </div>

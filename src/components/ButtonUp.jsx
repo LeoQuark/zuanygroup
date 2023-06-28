@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-scroll'
 
 const ButtonUp = () => {
     const [showButton, setShowButton] = useState(false);
@@ -22,14 +21,21 @@ const ButtonUp = () => {
         };
     }, []);
     return (
-        <Link
+        <a
+            href="#Home"
+            className={`button-zg-up text-white scroll-button ${showButton ? 'show' : ''}`}
+        >
+            <i className="fa-solid fa-chevron-up"></i>
+        </a>
+    )
+}
+
+export default ButtonUp
+
+{/* <Link
             to="Home"
             spy={true}
             smooth={true}
             duration={100}
             className={`button-zg-up text-white scroll-button ${showButton ? 'show' : ''}`}
-        ><i class="fa-solid fa-chevron-up"></i></Link>
-    )
-}
-
-export default ButtonUp
+        ><i class="fa-solid fa-chevron-up"></i></Link> */}

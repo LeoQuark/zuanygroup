@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-scroll'
+import { Link } from 'react-router-dom'
 import Certification from '../assets/img/certificacion.png'
 
 
@@ -28,30 +28,12 @@ const Footer = () => {
                             <p className='fst-italic text-center'>“Connecting your business with the world: quality shipping and integrated cargo management”</p>
                         </div>
                         <div className="d-flex justify-content-around my-4">
+                            <a href="/#Services" className='btn-zg-md btn_pink_zg'>Services</a>
                             <Link
-                                to="Services"
-                                spy={true}
-                                smooth={true}
-                                duration={100}
-                                type='button'
-                                className='btn-zg-md btn_pink_zg'
-                            >Services</Link>
-                            <Link
-                                to="Products-section"
-                                spy={true}
-                                smooth={true}
-                                duration={100}
-                                type='button'
+                                to="/all-products"
                                 className='btn-zg-md btn_pink_zg'
                             >Products</Link>
-                            <Link
-                                to="AboutUs"
-                                spy={true}
-                                smooth={true}
-                                duration={100}
-                                type='button'
-                                className='btn-zg-md btn_pink_zg'
-                            >About Us</Link>
+                            <a href="/#AboutUs" className='btn-zg-md btn_pink_zg'>About Us</a>
                         </div>
                     </div>
                     <div className="col-1 text-center divider-footer"></div>
@@ -62,26 +44,18 @@ const Footer = () => {
                         <div className='row d-flex justify-content-between my-2'>
                             <div className="col-5">
                                 <ul className='footer-menu'>
-                                    <li><Link
-                                        to="Home"
-                                        spy={true}
-                                        smooth={true}
-                                        duration={100}>Home</Link></li>
-                                    <li><Link
-                                        to="AboutUs"
-                                        spy={true}
-                                        smooth={true}
-                                        duration={100}>Company</Link></li>
-                                    <li><Link
-                                        to="Logistics"
-                                        spy={true}
-                                        smooth={true}
-                                        duration={100}>Logistics</Link></li>
-                                    <li><Link
-                                        to="Contacts"
-                                        spy={true}
-                                        smooth={true}
-                                        duration={100}>Contacts</Link></li>
+                                    <li>
+                                        <a href="/#Home">Home</a>
+                                    </li>
+                                    <li>
+                                        <a href="/#AboutUs">Company</a>
+                                    </li>
+                                    <li>
+                                        <a href="/#Logistics">Logistics</a>
+                                    </li>
+                                    <li>
+                                        <a href="/#Contacts">Contacts</a>
+                                    </li>
                                 </ul>
                             </div>
                             <div className='col-7'>
@@ -127,7 +101,7 @@ const Footer = () => {
             <div className="d-flex justify-content-center mt-5">
                 <p className='text-center font-sm'>Copyright <i class="fa-regular fa-copyright"></i> {getDateYear()}  - All rights reserver by <strong>Zuany Group</strong></p>
             </div>
-        </footer>
+        </footer >
     )
 }
 

@@ -1,10 +1,9 @@
 import React, { useState, useEffect, useContext } from 'react';
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 
 import Navbar from '../components/Navbar'
 import NavProduct from '../components/Products/NavProduct'
 import ProductsContent from '../components/Products/ProductsContent'
-// import AllProducts from '../components/Products/AllProducts';
 
 // IMG
 import Product1 from '../assets/img/Product1.png'
@@ -110,6 +109,10 @@ const ProductPage = () => {
     const handleCategory = (event) => setSelectcategories(event.target.value)
 
     // API lectura de los productos aquiiiii
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [])
 
     return (
         <div>

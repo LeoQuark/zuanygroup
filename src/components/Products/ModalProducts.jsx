@@ -83,7 +83,6 @@ const ModalProducts = (props) => {
                                     <h5 className='modal-tittle'>{props.product.title}</h5>
                                     <p className='modal-text'> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non purus feugiat, lacinia ex eget, lacinia risus. Curabitur cursus vehicula volutpat. Nam lacus nibh, tincidunt vitae nibh a, suscipit fringilla turpis. Vivamus mollis imperdiet sem in tempor.
                                     </p>
-                                    {/* <h5>{props.product.price}</h5> */}
                                     <p>Category: <strong>{props.product.category}</strong></p>
                                 </div>
                                 <div className="div-buttons">
