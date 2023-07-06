@@ -26,7 +26,7 @@ const ModalService = (props) => {
                                 <img src={props.imageUrl} className='modal-img' />
                             </div>
                             <div className="d-flex justify-content-center my-4">
-                                <h5 className='modal-tittle'>{props.tittle}</h5>
+                                <h5 className='modal-tittle'>{props.title}</h5>
                             </div>
                             <div className="d-flex justify-content-center my-4 mx-2">
                                 <p className='modal-text'> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non purus feugiat, lacinia ex eget, lacinia risus. Curabitur cursus vehicula volutpat. Nam lacus nibh, tincidunt vitae nibh a, suscipit fringilla turpis. Vivamus mollis imperdiet sem in tempor. Nulla lobortis dapibus ipsum in varius. Morbi nisi tortor, molestie ac urna vitae, facilisis imperdiet ligula. Maecenas bibendum lobortis odio, sit amet dignissim nunc ornare sit amet. Aenean porta sem ullamcorper rhoncus tempus. Cras sit amet nisl vehicula, venenatis augue id, accumsan tortor. Nam ultrices dapibus imperdiet.

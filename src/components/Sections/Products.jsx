@@ -42,19 +42,19 @@ const DivProduct = ({ product }) => {
     )
 }
 
-const Products = () => {
+const Products = ({ translation }) => {
 
     return (
         <section className="container-fluid" id='Products-section'>
             <div className='px-0 px-sm-5 px-md-0'>
                 <div className="d-flex justify-content-center">
                     <div className='mt-2 pb-3 pb-md-5'>
-                        <h2 className='tittle-section'>Products</h2>
+                        <h2 className='tittle-section'>{translation.products.title}</h2>
                     </div>
                 </div>
                 <div className="d-flex justify-content-center mx-2">
                     <div className='text-section text-center'>
-                        <p>Discover excellence in maritime logistics with us</p>
+                        <p>{translation.products.text}</p>
                     </div>
                 </div>
                 <div className="row justify-content-center align-items-center mt-4 mx-2 mx-md-0">
@@ -70,7 +70,7 @@ const Products = () => {
                             relative="path"
                             className='btn-zg-lg btn_pink_zg'
                         >
-                            All Product
+                            {translation.buttons.allproducts}
                         </Link>
                     </div>
                 </div>

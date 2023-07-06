@@ -5,7 +5,7 @@ import CarruselImg1 from '../../assets/img/carrusel1.png'
 import CarruselImg2 from '../../assets/img/carrusel2.jpg'
 import CarruselImg3 from '../../assets/img/carrusel3.jpg'
 
-const Logistics = () => {
+const Logistics = ({ translation }) => {
 
     const [activeIndex, setActiveIndex] = useState(0);
 
@@ -23,12 +23,12 @@ const Logistics = () => {
             <div className='bg-zg-gray px-4'>
                 <div className="d-flex justify-content-center">
                     <div className='mt-2 pb-3 pb-md-5'>
-                        <h2 className='tittle-section'>Logistics</h2>
+                        <h2 className='tittle-section'>{translation.logistics.title}</h2>
                     </div>
                 </div>
                 <div className="d-flex justify-content-center">
                     <div className='text-section text-center'>
-                        <p>"We are experts in logistics services for the import of industrial products, ensuring an efficient management."</p>
+                        <p>"{translation.logistics.text}"</p>
                     </div>
                 </div>
                 <div className="d-flex justify-content-center mx-4 py-5">

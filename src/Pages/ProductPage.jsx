@@ -1,5 +1,10 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { Link, useLocation } from 'react-router-dom'
+import LanguageContext from '../context/language/LanguageContext.js';
+
+// TRANSLATION
+import enTranslation from '../utils/en.json'
+import esTranslation from '../utils/es.json'
 
 import Navbar from '../components/Navbar'
 import NavProduct from '../components/Products/NavProduct'
@@ -98,6 +103,8 @@ const ProductMockup = [
 
 const ProductPage = () => {
 
+    const { lang } = useContext(LanguageContext)
+
     // nav products state
     const [searchProduct, setSearchProduct] = useState('')
     const [categories, setCategories] = useState(['Select Categories', 'Category 1', 'Category 2', 'Category 3'])
@@ -108,6 +115,8 @@ const ProductPage = () => {
     const handleSearch = (event) => setSearchProduct(event.target.value)
     const handleCategory = (event) => setSelectcategories(event.target.value)
 
+    const translation = lang.language === 'es' ? enTranslation : esTranslation
+
     // API lectura de los productos aquiiiii
 
     useEffect(() => {
@@ -116,7 +125,7 @@ const ProductPage = () => {
 
     return (
         <div>
-            <Navbar />
+            <Navbar translation={translation} />
             <div className='all-products container-fluid mt-2 mt-md-0'>
                 <NavProduct
                     searchProduct={searchProduct}

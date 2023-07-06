@@ -180,6 +180,28 @@ a.active:hover {
   z-index: 0;
 }
 
+.custom-bg {
+  position: relative;
+}
+
+.custom-bg .overlay {
+  position: relative;
+  z-index: 1;
+  margin-left: 8rem;
+}
+
+.custom-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 60%;
+  background: linear-gradient(to right, rgba(0, 0, 0, .6) 40%, rgba(0, 0, 0, 0) 100%);
+  z-index: 1;
+}
+
 /* ---------------------------- */
 /* SECTION ABOUT US */
 /* ---------------------------- */
@@ -1011,6 +1033,12 @@ a.active:hover {
     border-radius: 2rem;
   }
 
+  .custom-bg .overlay {
+    position: relative;
+    z-index: 1;
+    margin: 1rem !important;
+  }
+
 }
 
 /* RESPONSIVE MEDIUM ≥768px */
@@ -1079,6 +1107,12 @@ a.active:hover {
     width: 5rem;
     height: 2.2rem;
   }
+
+  .custom-bg .overlay {
+    position: relative;
+    z-index: 1;
+    margin: 5rem;
+  }
 }
 
 /* RESPONSIVE LARGE ≥992px */
@@ -1091,6 +1125,12 @@ a.active:hover {
   .modal-body-information {
     position: relative;
     height: 18rem !important;
+  }
+
+  .custom-bg .overlay {
+    position: relative;
+    z-index: 1;
+    margin-left: 5rem;
   }
 }
 

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const Contacts = () => {
+const Contacts = ({ translation }) => {
 
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
@@ -24,7 +24,7 @@ const Contacts = () => {
             <div className="row bg-zg-blue mx-2 mx-lg-5 rounded-4">
                 <div className="col-12 col-md-6 col-lg-6">
                     <div className="d-flex justify-content-center my-5">
-                        <h2 className='fs-contact'>Contact Us</h2>
+                        <h2 className='fs-contact'>{translation.contact.title}</h2>
                     </div>
                     <div className="row d-flex justify-content-between mx-2 mx-lg-5">
                         <div className="col-6">
@@ -35,7 +35,7 @@ const Contacts = () => {
                                     </div>
                                 </div>
                                 <div className="col-10 col-lg-8">
-                                    <strong>Address</strong>
+                                    <strong>{translation.contact.address}</strong>
                                     <p className='text-contact'>Esperidión Vera 1522 San Antonio, Chile</p>
                                 </div>
                             </div>
@@ -48,7 +48,7 @@ const Contacts = () => {
                                     </div>
                                 </div>
                                 <div className="col-10 col-lg-8">
-                                    <strong>Phones</strong>
+                                    <strong>{translation.contact.phones}</strong>
                                     <p className='text-contact m-0'>(56) - (35) - 2232030</p>
                                     <p className='text-contact m-0'>(56) - (35) - 2235629</p>
                                     <p className='text-contact m-0'>Fax: (56) - (35) - 2233952</p>
@@ -65,7 +65,7 @@ const Contacts = () => {
                                     </div>
                                 </div>
                                 <div className="col-10">
-                                    <strong>Email</strong>
+                                    <strong>{translation.contact.email}</strong>
                                     <p className='text-contact'>zuanygroup@zuanygroup.cl
                                         <br />
                                         zuanydominguez@zuanygroup.cl
@@ -118,7 +118,8 @@ const Contacts = () => {
                                     className='btn-zg-lg btn_pink_zg'
                                 // onClick={()=>}
                                 >
-                                    Send <i className="fa-solid fa-paper-plane text-white"></i>
+                                    {translation.buttons.send}
+                                    <i className="fa-solid fa-paper-plane text-white mx-2"></i>
                                 </button>
                             </div>
                         </form>

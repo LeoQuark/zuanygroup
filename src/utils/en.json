@@ -1,0 +1,52 @@
+{
+    "home": {
+        "title": "Efficient ports for a connected world",
+        "text": "Efficient shipping solutions for global logistics. Modern infrastructure and advanced technology for safe and on-time delivery",
+        "sentence": "Connecting your business with the world: quality shipping and integrated cargo management"
+    },
+    "about": {
+        "title": "Our Company",
+        "text1": "ZUANY GROUP is a shipchandler company , dedicated to supply from the most varied to even the most basic products and services required for proper human and technical functioning of merchant vessels transiting across chilean ports.",
+        "text2": "Since its inception in San Antonio port 1992, ZUANY GROUP has been in proximity, understanding the needs of its customers with responsibility and honesty, which has led win through the years the prestige necessary to position ZUANY GROUP on the market.",
+        "text3": "In 30 years of experience, efficiency is reached through the implementation of a modern adequate infrastructure and the formation of a team of professionals committed to the satisfaction of those who prefer ZUANY GROUP.",
+        "text4": "The ZUANY GROUP concern is its customers receive the services and products according to the formality request, considering the quality, weight and prompt delivery, supplying 365 days a year, 24/7 a week."
+    },
+    "logistics": {
+        "title": "Logistics",
+        "text": "We are experts in logistics services for the import of industrial products, ensuring an efficient management."
+    },
+    "products": {
+        "title": "Products",
+        "text": "Discover excellence in maritime logistics with us"
+    },
+    "services": {
+        "title": "Services",
+        "text": "For more than 30 years, we work exclusively in the supply of ship requisitions in port areas throughout Chile, delivering provisions, spare parts and various services.",
+        "provision": {
+            "title": "Provisions",
+            "text": "Provisions are the resources that are stored on a ship to ensure its operation and the well-being of the crew and passengers during a voyage.\nSupplies include food, beverages, medicine, clothing, tools, spare parts, emergency equipment and other necessary items.\nProvisions should be sufficient to cover the needs of all those travelling on board, taking into account the duration and destination of the journey, weather conditions and possible contingencies.\nProvisions must also be adequate for the type of vessel and the cargo it carries, respecting safety, hygiene and quality standards. Provisions must be well organised, labelled and distributed on the ship in such a way as to facilitate access, control and use.\nProvisions should be reviewed periodically for condition and validity, and replenished or discarded as appropriate."
+        }
+    },
+    "contact": {
+        "title": "Contact Us",
+        "address": "Address",
+        "phones": "Phones",
+        "email": "Emails"
+    },
+    "footer": {
+        "text1": "Connecting your business with the world: quality shipping and integrated cargo management",
+        "text2": "Keep browsing in our website!",
+        "rights": "All rights reserver by"
+    },
+    "buttons": {
+        "home": "Home",
+        "company": "Company",
+        "logistics": "Logistics",
+        "products": "Products",
+        "services": "Services",
+        "contacts1": "Contacts",
+        "contacts2": "Contacts Us!",
+        "allproducts": "All Products",
+        "send": "Send"
+    }
+}

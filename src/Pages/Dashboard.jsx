@@ -52,6 +52,10 @@ const Dashboard = () => {
 
     return (
         <div className='admin-div'>
+            <div className="btn btn-primary">das</div>
+            <div className="btn btn-secondary">das</div>
+
+
             {/* <SidebarAdmin /> */}
             <form onSubmit={uploadFile}>
                 <button className='btn btn-primary'>Load Excel</button>

@@ -1,0 +1,52 @@
+{
+    "home": {
+        "title": "Puertos eficientes para un mundo conectado",
+        "text": "Soluciones de transporte eficaces para la logística mundial. Infraestructura moderna y tecnología avanzada para entregas seguras y puntuales",
+        "sentence": "Conectando tu empresa con el mundo: transporte marítimo de calidad y gestión integrada de la carga"
+    },
+    "about": {
+        "title": "Nuestra empresa",
+        "text1": "ZUANY GROUP es una empresa shipchandler , dedicada a suministrar desde los más variados hasta los más básicos productos y servicios requeridos para el correcto funcionamiento humano y técnico de las naves mercantes que transitan por los puertos chilenos.",
+        "text2": "Desde sus inicios en el puerto de San Antonio 1992, ZUANY GROUP ha estado en la cercanía, entendiendo las necesidades de sus clientes con responsabilidad y honestidad, lo que ha llevado a ganar a través de los años el prestigio necesario para posicionar a ZUANY GROUP en el mercado.",
+        "text3": "En 30 años de experiencia, la eficiencia se alcanza a través de la implementación de una moderna infraestructura adecuada y la formación de un equipo de profesionales comprometidos con la satisfacción de quienes prefieren ZUANY GROUP.",
+        "text4": "La preocupación de ZUANY GROUP es que sus clientes reciban los servicios y productos de acuerdo con la formalidad solicitada, teniendo en cuenta la calidad, el peso y la pronta entrega, suministrando 365 días al año, 24/7 a la semana."
+    },
+    "logistics": {
+        "title": "Logística",
+        "text": "Somos expertos en servicios logísticos para la importación de productos industriales, garantizando una gestión eficiente."
+    },
+    "products": {
+        "title": "Productos",
+        "text": "Descubre con nosotros la excelencia en logística marítima"
+    },
+    "services": {
+        "title": "Servicios",
+        "text": "Por más de 30 años, trabajamos exclusivamente en el abastecimiento de las requisiciones de buques en áreas portuarias a lo largo de Chile, entregando provisiones, repuestos y servicios varios.",
+        "provision": {
+            "title": "Provisiones",
+            "text": "Las provisiones son los recursos que se almacenan en un buque para garantizar su funcionamiento y el bienestar de la tripulación y los pasajeros durante un viaje.\nLas provisiones incluyen alimentos, bebidas, medicinas, ropa, herramientas, repuestos, equipos de emergencia y otros artículos necesarios.\nLas provisiones deben ser suficientes para cubrir las necesidades de todos los que viajan a bordo, teniendo en cuenta la duración y el destino del viaje, las condiciones climáticas y las posibles contingencias.\nLas provisiones también deben ser adecuadas para el tipo de buque y la carga que transporta, respetando las normas de seguridad, higiene y calidad. Las provisiones deben estar bien organizadas, etiquetadas y distribuidas en el buque, de forma que se facilite su acceso, control y uso.\nLas provisiones deben revisarse periódicamente para verificar su estado y vigencia, y reponerse o desecharse según corresponda."
+        }
+    },
+    "contact": {
+        "title": "Contáctanos",
+        "address": "Dirección",
+        "phones": "Teléfonos",
+        "email": "Correos"
+    },
+    "footer": {
+        "text1": "Conectando tu empresa con el mundo: transporte marítimo de calidad y gestión integrada de la carga",
+        "text2": "Sigue navegando por nuestro sitio web!",
+        "rights": "Todos los derechos reservados por"
+    },
+    "buttons": {
+        "home": "Inicio",
+        "company": "Empresa",
+        "logistics": "Logística",
+        "products": "Productos",
+        "services": "Servicios",
+        "contacts1": "Contacto",
+        "contacts2": "Contáctanos",
+        "allproducts": "Todos los Productos",
+        "send": "Enviar"
+    }
+}

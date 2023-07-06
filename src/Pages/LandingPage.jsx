@@ -1,5 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { useLocation } from 'react-router-dom';
+import LanguageContext from '../context/language/LanguageContext.js';
+
+// TRANSLATION
+import enTranslation from '../utils/en.json'
+import esTranslation from '../utils/es.json'
 
 import Navbar from '../components/Navbar'
 
@@ -15,7 +20,14 @@ import Footer from '../components/Footer'
 
 const LandingPage = () => {
 
+    const { lang } = useContext(LanguageContext)
     const { hash } = useLocation()
+
+    // console.log('langgg', lang.language)
+
+    const translation = lang.language === 'es' ? enTranslation : esTranslation
+
+
     useEffect(() => {
         if (hash) {
             // Remover el símbolo '#' del ID
@@ -39,15 +51,14 @@ const LandingPage = () => {
 
     return (
         <>
-            <Navbar />
-            <Home />
-            <AboutUs />
-            {/* <Certification /> */}
-            <Logistics />
-            <Products />
-            <Services />
-            <Contacts />
-            <Footer />
+            <Navbar translation={translation} />
+            <Home translation={translation} />
+            <AboutUs translation={translation} />
+            <Logistics translation={translation} />
+            <Products translation={translation} />
+            <Services translation={translation} />
+            <Contacts translation={translation} />
+            <Footer translation={translation} />
             <ButtonUp />
         </>
     )

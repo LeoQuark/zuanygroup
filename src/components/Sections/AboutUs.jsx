@@ -4,35 +4,31 @@ import { Link } from 'react-scroll'
 import ImgCompany from '../../assets/img/img-company.png'
 import Certification from '../../assets/img/certificacion.png'
 
-const AboutUs = () => {
+const AboutUs = ({ translation }) => {
 
-    const [seeMore, setSeeMore] = useState(false)
-    const [show, setShow] = useState(false)
-    // console.log(show)
+    // useEffect(() => {
+    //     const handleResize = () => {
+    //         const width = window.innerWidth;
+    //         // console.log(width)
 
-    useEffect(() => {
-        const handleResize = () => {
-            const width = window.innerWidth;
-            // console.log(width)
+    //         if (width <= 576) {
+    //             setSeeMore(true)
+    //         } else {
+    //             setSeeMore(false)
+    //         }
+    //     };
 
-            if (width <= 576) {
-                setSeeMore(true)
-            } else {
-                setSeeMore(false)
-            }
-        };
+    //     // Llamar la función inicialmente para establecer la clase correcta
+    //     handleResize();
 
-        // Llamar la función inicialmente para establecer la clase correcta
-        handleResize();
+    //     // Agregar el evento de cambio de tamaño de ventana
+    //     window.addEventListener('resize', handleResize);
 
-        // Agregar el evento de cambio de tamaño de ventana
-        window.addEventListener('resize', handleResize);
-
-        // Limpiar el evento al desmontar el componente
-        return () => {
-            window.removeEventListener('resize', handleResize);
-        };
-    }, []);
+    //     // Limpiar el evento al desmontar el componente
+    //     return () => {
+    //         window.removeEventListener('resize', handleResize);
+    //     };
+    // }, []);
 
     return (
         <section className='container text-center card-aboutus' id='AboutUs' >
@@ -45,34 +41,20 @@ const AboutUs = () => {
                     </div>
                     <div className="col-12 col-md-5 col-lg-5 my-md-0">
                         <div className='row align-items-center justify-content-center h-100 text-center text-md-start text-white'>
-                            <h2 className='fs-our-company mb-4 mb-md-4'>Our Company</h2>
+                            <h2 className='fs-our-company mb-4 mb-md-4'>{translation.about.title}</h2>
                             <div className='pl-5'>
-                                <p>ZUANY GROUP is a shipchandler company , dedicated to supply from the most varied to even the most basic products and services required for proper human and technical functioning of merchant vessels transiting across chilean ports.
-
-                                    <br /><br />
-                                    Since its inception in San Antonio port 1992, ZUANY GROUP has been in proximity, understanding the needs of its customers with responsibility and honesty, which has led win through the years the prestige necessary to position ZUANY GROUP on the market.
+                                <p style={{ fontSize: '.8rem' }}>
+                                    {translation.about.text1}
                                     <br />
+                                    <br />
+                                    {translation.about.text2}
+                                    <br />
+                                    <br />
+                                    {translation.about.text3}
+                                    <br />
+                                    <br />
+                                    {translation.about.text4}
                                 </p>
-                                <p>In 30 years of experience, efficiency is reached through the implementation of a modern adequate infrastructure and the formation of a team of professionals committed to the satisfaction of those who prefer ZUANY GROUP.
-                                    <br />
-                                    <br />
-                                    The ZUANY GROUP concern is its customers receive the services and products according to the formality request, considering the quality, weight and prompt delivery, supplying 365 days a year, 24/7 a week.
-                                </p>
-                                {/* {seeMore ? (
-                                    <div>
-                                        <div onClick={() => setShow(!show)}>See More {show ? (<i className="fa-solid fa-angle-down"></i>) : (<i className="fa-solid fa-angle-up"></i>)} </div>
-                                        <p className={`${show ? '' : 'd-none'}`}>In 20 years of experience, efficiency is reached through the implementation of a modern adequate infrastructure and the formation of a team of professionals committed to the satisfaction of those who prefer ZUANY GROUP.
-                                            <br />
-                                            <br />
-                                            The ZUANY GROUP concern is its customers receive the services and products according to the formality request, considering the quality, weight and prompt delivery, supplying 365 days a year, 24/7 a week.
-                                        </p>
-                                    </div>
-                                ) : (
-                                    <p>In 20 years of experience, efficiency is reached through the implementation of a modern adequate infrastructure and the formation of a team of professionals committed to the satisfaction of those who prefer ZUANY GROUP.
-                                        <br />
-                                        <br />
-                                        The ZUANY GROUP concern is its customers receive the services and products according to the formality request, considering the quality, weight and prompt delivery, supplying 365 days a year, 24/7 a week.
-                                    </p>)} */}
                             </div>
                             <div className='d-flex justify-content-center py-2'>
                                 <a href='https://shipsupply.org/' target="_blank" className="img-fluid">
@@ -89,7 +71,9 @@ const AboutUs = () => {
                                     duration={100}
                                     type='button'
                                     className='btn-zg-lg btn_white_zg'
-                                >Contact Us!</Link>
+                                >
+                                    {translation.buttons.contacts2}
+                                </Link>
                             </div>
                         </div>
                     </div>
