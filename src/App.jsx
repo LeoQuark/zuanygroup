@@ -10,6 +10,7 @@ import ProductPage from './Pages/ProductPage'
 import Auth from './Pages/Auth'
 import Login from './Pages/Login'
 import Dashboard from './Pages/Dashboard'
+import Maintenance from './Pages/Maintenance'
 
 function App() {
 
@@ -21,22 +22,14 @@ function App() {
     <UserState>
       <Routes>
         {/* RUTAS PUBLICAS */}
-        <Route path='/' element={<LandingPage />} />
+        <Route path='/zg' element={<LandingPage />} />
         <Route path='/all-products' element={<ProductPage />} />
+        <Route path='/maintenance' element={<Maintenance />} />
         {/* RUTAS PRIVADAS */}
-        <Route
-          path='/admin'
-          element={
-            <Login />
-          }
-        />
-        <Route
-          path='/admin/dashboard'
-          element={
-            <Dashboard />
-          }
-        />
-        {/* <Route path='*' element={<h1>NOT FOUND</h1>} /> */}
+        <Route path='/admin' element={<Login />} />
+        <Route path='/admin/dashboard' element={<Dashboard />} />
+        <Route path='*' element={<h1>NOT FOUND</h1>} />
+        <Route path="/" element={<Navigate to="/maintenance" />} />
       </Routes>
     </UserState>
   )

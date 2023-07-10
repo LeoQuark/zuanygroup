@@ -22,14 +22,14 @@ const Footer = ({ translation }) => {
                             <p className='fst-italic text-center'>“{translation.footer.text1}”</p>
                         </div>
                         <div className="d-flex justify-content-around my-4">
-                            <a href="/#Services" className='btn-zg-md btn_pink_zg'>
+                            <a href="/zg#Services" className='btn-zg-md btn_pink_zg'>
                                 {translation.buttons.services}
                             </a>
                             <Link
                                 to="/all-products"
                                 className='btn-zg-md btn_pink_zg'
                             >{translation.buttons.products}</Link>
-                            <a href="/#AboutUs" className='btn-zg-md btn_pink_zg'>
+                            <a href="/zg#AboutUs" className='btn-zg-md btn_pink_zg'>
                                 {translation.buttons.contacts1}
                             </a>
                         </div>
@@ -43,16 +43,16 @@ const Footer = ({ translation }) => {
                             <div className="col-5">
                                 <ul className='footer-menu'>
                                     <li>
-                                        <a href="/#Home">{translation.buttons.home}</a>
+                                        <a href="/zg#Home">{translation.buttons.home}</a>
                                     </li>
                                     <li>
-                                        <a href="/#AboutUs">{translation.buttons.company}</a>
+                                        <a href="/zg#AboutUs">{translation.buttons.company}</a>
                                     </li>
                                     <li>
-                                        <a href="/#Logistics">{translation.buttons.logistics}</a>
+                                        <a href="/zg#Logistics">{translation.buttons.logistics}</a>
                                     </li>
                                     <li>
-                                        <a href="/#Contacts">{translation.buttons.contacts1}</a>
+                                        <a href="/zg#Contacts">{translation.buttons.contacts1}</a>
                                     </li>
                                 </ul>
                             </div>

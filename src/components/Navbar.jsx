@@ -62,17 +62,17 @@ const Navbar = ({ translation }) => {
 
                     <ul className="navbar-nav gap-2 pt-4 pt-lg-0">
                         <li className="nav-item btn-zg-nav">
-                            <a href="/#Home" className='nav-link btn-zg-nav text-center'>
+                            <a href="/zg#Home" className='nav-link btn-zg-nav text-center'>
                                 {translation.buttons.home}
                             </a>
                         </li>
                         <li className="nav-item btn-zg-nav">
-                            <a href="/#AboutUs" className='nav-link btn-zg-nav text-center'>
+                            <a href="/zg#AboutUs" className='nav-link btn-zg-nav text-center'>
                                 {translation.buttons.company}
                             </a>
                         </li>
                         <li className="nav-item btn-zg-nav">
-                            <a href="/#Logistics" className='nav-link btn-zg-nav text-center'>
+                            <a href="/zg#Logistics" className='nav-link btn-zg-nav text-center'>
                                 {translation.buttons.logistics}
                             </a>
                         </li>
@@ -85,12 +85,12 @@ const Navbar = ({ translation }) => {
                             </Link>
                         </li>
                         <li className="nav-item btn-zg-nav">
-                            <a href="/#Services" className='nav-link btn-zg-nav text-center'>
+                            <a href="/zg#Services" className='nav-link btn-zg-nav text-center'>
                                 {translation.buttons.services}
                             </a>
                         </li>
                         <li className="nav-item btn-zg-nav">
-                            <a href="/#Contacts" className='nav-link btn-zg-nav text-center'>
+                            <a href="/zg#Contacts" className='nav-link btn-zg-nav text-center'>
                                 {translation.buttons.contacts1}
                             </a>
                         </li>

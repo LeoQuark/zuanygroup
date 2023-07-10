@@ -949,6 +949,21 @@ a.active:hover {
   font-size: 1.5rem;
 }
 
+/* MANTENCION */
+.maintenance-div {
+  height: 100vh;
+  width: 100%;
+}
+
+.title-maintenance {
+  font-size: 3rem;
+  font-weight: lighter;
+}
+
+.img-maintenance {
+  width: 40rem;
+  height: 40rem;
+}
 
 /* ---------------------------- */
 /* RESPONSIVE SM ≥576px */
@@ -1037,6 +1052,16 @@ a.active:hover {
     position: relative;
     z-index: 1;
     margin: 1rem !important;
+  }
+
+  .title-maintenance {
+    font-size: 1.5rem;
+    font-weight: lighter;
+  }
+
+  .img-maintenance {
+    width: 20rem;
+    height: 20rem;
   }
 
 }
