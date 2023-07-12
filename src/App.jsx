@@ -9,8 +9,9 @@ import ProductPage from './Pages/ProductPage'
 
 import Auth from './Pages/Auth'
 import Login from './Pages/Login'
-import Dashboard from './Pages/Dashboard'
+import AdminPage from './Pages/AdminPage'
 import Maintenance from './Pages/Maintenance'
+import Dashboard from './components/Admin/Dashboard/Dashbard';
 
 function App() {
 
@@ -27,7 +28,7 @@ function App() {
         <Route path='/maintenance' element={<Maintenance />} />
         {/* RUTAS PRIVADAS */}
         <Route path='/admin' element={<Login />} />
-        <Route path='/admin/dashboard' element={<Dashboard />} />
+        <Route path='/auth/*' element={<AdminPage />} />
         <Route path='*' element={<h1>NOT FOUND</h1>} />
         <Route path="/" element={<Navigate to="/maintenance" />} />
       </Routes>
