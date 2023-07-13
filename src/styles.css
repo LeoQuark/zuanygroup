@@ -952,16 +952,16 @@ a.active:hover {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  border: 3px solid var(--gray-dark);
+  border: 3px solid var(--gray-normal);
   object-fit: cover;
 }
 
-.navbar-user-name {
+/* .navbar-user-name {
   font-size: 1rem;
   font-weight: bold;
   color: var(--gray-dark);
   margin-left: 10px;
-}
+} */
 
 .page-admin {
   position: relative;
@@ -1059,7 +1059,7 @@ a.active:hover {
   object-fit: cover;
 }
 
-.title-user {
+.title-admin {
   font-size: 1.5rem;
   font-weight: bold;
 }
@@ -1070,6 +1070,60 @@ a.active:hover {
 
 .user-form div label {
   font-size: .8rem;
+}
+
+.btn-setting-user {
+  position: relative;
+}
+
+.btn-setting-user-modal {
+  position: absolute;
+  background: white;
+  top: 70px;
+  right: 10px;
+  width: 12rem;
+  height: 12rem;
+  border-radius: 10px;
+  border: 2px solid var(--gray-normal);
+  z-index: 10;
+}
+
+.btn-setting-user-modal::after {
+  position: absolute;
+  content: '';
+  bottom: 80px;
+  right: 20px;
+  border-top: 14px solid transparent;
+  border-bottom: 14px solid transparent;
+  border-left: 14px solid white;
+  transform: rotate(270deg);
+}
+
+.btn-setting-user-modal ul {
+  padding: 6px 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  /* background: #001243; */
+}
+
+.btn-setting-user-modal ul li a {
+  width: 100%;
+  background: white;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  color: #444444;
+  padding: 8px 14px;
+}
+
+.btn-setting-user-modal ul li a:hover {
+  background: var(--gray-normal);
+  /* color: ; */
+}
+
+.btn-setting-user-modal ul li a p {
+  margin: 0 8px;
 }
 
 

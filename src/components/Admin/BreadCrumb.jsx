@@ -8,7 +8,7 @@ const BreadCrumb = ({ section }) => {
         <div aria-label="breadcrumb">
             <ol className="breadcrumb">
                 <li className="breadcrumb-item">
-                    <Link to='/auth' className='text-dark'>
+                    <Link to='/auth/dashboard' className='text-dark'>
                         <strong>Home</strong>
                     </Link>
                 </li>

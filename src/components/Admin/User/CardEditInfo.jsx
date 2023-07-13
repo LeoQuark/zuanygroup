@@ -5,7 +5,7 @@ const CardEditInfo = () => {
 
     return (
         <div className='shadow-sm rounded p-4 h-100'>
-            <p className='title-user'>Edit Your Personal Information</p>
+            <p className='title-admin'>Edit Your Personal Information</p>
             <form className='user-form'>
                 <div className='d-flex justify-content-between w-100 gap-4'>
                     <div className='w-50'>

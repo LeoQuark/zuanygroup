@@ -12,7 +12,6 @@ const SidebarAdmin = ({ openSidebar }) => {
         >
             <div className='d-block justify-content-center py-5 w-100'>
                 <div className='d-flex justify-content-center pb-2'>
-                    {/* <img src={Logo} alt="" /> */}
                 </div>
                 <p className='sidebar-title text-center'>Zuany Group</p>
             </div>

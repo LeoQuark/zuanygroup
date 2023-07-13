@@ -6,7 +6,7 @@ const CardEditPhoto = () => {
 
     return (
         <div className='row d-flex justify-content-center shadow-sm rounded h-100 p-4'>
-            <p className='title-user'>Edit Your Photo</p>
+            <p className='title-admin'>Edit Your Photo</p>
             <div className='d-flex justify-content-center w-100'>
                 <img src={User} className='img-user-setting ' />
             </div>
