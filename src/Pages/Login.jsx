@@ -58,7 +58,7 @@ const Login = () => {
                     // setErrorLogin(false)
                     setUserContext(data.user)
                     setUserSessionStorage(data.token, data.user)
-                    navigate('/admin/dashboard')
+                    navigate('/auth')
                 } else {
                     // error 400 usuario o contraseña incorrecta
                     setErrorLogin(true)
@@ -96,7 +96,7 @@ const Login = () => {
         <div className='background-login'>
             <div className="container-fluid p-0 h-100">
                 <div className="d-flex justify-content-center align-items-center h-100">
-                    <div className="col-11 col-md-10 col-lg-4 container-login">
+                    <div className="col-11 col-md-6 col-lg-4 container-login">
                         <form onSubmit={handleSubmit}>
                             <div className="d-flex justify-content-center my-5">
                                 <h2 className='title-login'>Zuany Group</h2>

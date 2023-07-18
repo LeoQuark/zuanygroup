@@ -45,6 +45,7 @@ const NavbarAdmin = ({ openSidebar, handleOpenSidebar }) => {
             <div className="container-fluid">
                 <div className="d-flex justify-content-between w-100">
                     <button
+                        type='button'
                         className='sidebar-btn'
                         onClick={() => handleOpenSidebar()}
                     >

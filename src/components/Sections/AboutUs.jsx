@@ -6,32 +6,8 @@ import Certification from '../../assets/img/certificacion.png'
 
 const AboutUs = ({ translation }) => {
 
-    // useEffect(() => {
-    //     const handleResize = () => {
-    //         const width = window.innerWidth;
-    //         // console.log(width)
-
-    //         if (width <= 576) {
-    //             setSeeMore(true)
-    //         } else {
-    //             setSeeMore(false)
-    //         }
-    //     };
-
-    //     // Llamar la función inicialmente para establecer la clase correcta
-    //     handleResize();
-
-    //     // Agregar el evento de cambio de tamaño de ventana
-    //     window.addEventListener('resize', handleResize);
-
-    //     // Limpiar el evento al desmontar el componente
-    //     return () => {
-    //         window.removeEventListener('resize', handleResize);
-    //     };
-    // }, []);
-
     return (
-        <section className='container text-center card-aboutus' id='AboutUs' >
+        <section className='container text-center card-aboutus animate__animated animate__fadeIn' id='AboutUs' >
             <div className="row align-items-center justify-content-center">
                 <div className="row d-flex justify-content-center py-5 gap-4">
                     <div className="col-12 col-md-5 col-lg-5">

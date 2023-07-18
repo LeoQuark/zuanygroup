@@ -81,9 +81,10 @@ const AdminPage = () => {
                         <Route path='/dashboard' element={<Dashboard />} />
                         <Route path='/inventory' element={<Inventory />} />
                         <Route path='/load-data' element={<LoadData />} />
+                        <Route path="/" element={<Navigate to="/auth/dashboard" />} />
                     </Routes>
                 </div>
-                <div className='footer-admin'>asa</div>
+                {/* <div className='footer-admin'>asa</div> */}
             </div>
         </div>
     )
