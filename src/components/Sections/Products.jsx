@@ -60,7 +60,6 @@ const Products = ({ translation }) => {
                 <div className="row justify-content-center align-items-center mt-4 mx-2 mx-md-0">
                     {ProductMockup && ProductMockup.map((product, index) => (
                         <DivProduct key={index} product={product} />
-                        // console.log(product, index)
                     ))}
                 </div>
                 <div className="d-flex justify-content-center mt-5">

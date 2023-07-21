@@ -34,7 +34,7 @@ body {
   position: relative;
   padding: 0;
   margin: 0;
-  overflow-x: hidden !important;
+  /* overflow-x: hidden !important; */
   scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
   scroll-snap-stop: always;
@@ -45,6 +45,12 @@ body {
   width: 100vw !important;
   padding: 0px !important;
   margin: 0px !important;
+}
+
+.img-language {
+  height: 20px;
+  width: 20px;
+  object-fit: cover;
 }
 
 /* ---------------------------- */
@@ -226,19 +232,9 @@ a.active:hover {
   background: var(--purple-normal);
 }
 
-.img-certification-content {
-  background: white;
-  border-radius: 50%;
-  height: 8rem;
-  width: 8rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .img-certification {
-  height: 6rem;
-  width: 6rem;
+  height: 7rem;
+  width: 7rem;
 }
 
 /* ---------------------------- */
@@ -800,6 +796,8 @@ a.active:hover {
 
 .modal-text {
   font-size: 14px;
+  /* text-align: justify; */
+  /* text-justify: inter-word; */
 }
 
 .modal-body {
@@ -1027,6 +1025,8 @@ a.active:hover {
   height: 100%;
   transition: left .4s ease-in-out;
   padding: 20px;
+  background: green;
+  z-index: 10;
 }
 
 .page-expand {
@@ -1294,6 +1294,12 @@ a.active:hover {
     font-size: .8rem;
   }
 
+  .img-company {
+    margin: 6px;
+    width: 40%;
+    height: 40%;
+  }
+
   /* LOGISTICS */
   /* LOGISTICS */
   .carrusel-item img {
@@ -1354,6 +1360,12 @@ a.active:hover {
 
 /* RESPONSIVE LARGE ≥992px */
 @media (max-width: 992px) {
+
+  .img-company {
+    margin: 6px;
+    width: 40%;
+    height: 40%;
+  }
 
   .text-contact {
     font-size: .8rem;

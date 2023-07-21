@@ -8,7 +8,6 @@ import RepairsImg from '../../assets/img/repairs_service.jpg'
 import LaundryImg from '../../assets/img/laundry_service.jpg'
 import ChemicalImg from '../../assets/img/chemical_service.jpg'
 
-
 const Services = ({ translation }) => {
 
     return (
@@ -25,31 +24,41 @@ const Services = ({ translation }) => {
             </div>
             <div className="row bg-white justify-content-center justify-content-md-start mt-4 mx-0">
                 <CircleService
-                    title="Provisions"
+                    type='provision'
+                    title={translation.services.provision.title}
                     imgUrl={ProvisionImg}
-                    translation={translation}
+                    information={translation.services.provision}
+                    infoButton={translation}
                 />
                 <CircleService
-                    title="Engines"
+                    type='engine'
+                    title={translation.services.engines.title}
                     imgUrl={EngineImg}
-                    translation={translation}
+                    information={translation.services.engines}
+                    infoButton={translation}
                 />
                 <CircleService
+                    type='repair'
                     title="Repairs"
                     imgUrl={RepairsImg}
-                    translation={translation}
+                    information={translation.services.repairs}
+                    infoButton={translation}
                 />
             </div>
             <div className="row bg-white justify-content-center mx-md-2 mx-0">
                 <CircleService
+                    type='laundry'
                     title="Laundry"
                     imgUrl={LaundryImg}
-                    translation={translation}
+                    information={translation.services.laundry}
+                    infoButton={translation}
                 />
                 <CircleService
+                    type='chemical'
                     title="Chemical"
                     imgUrl={ChemicalImg}
-                    translation={translation}
+                    information={translation.services.chemical}
+                    infoButton={translation}
                 />
             </div>
         </section>

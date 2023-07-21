@@ -24,7 +24,72 @@
         "text": "Por más de 30 años, trabajamos exclusivamente en el abastecimiento de las requisiciones de buques en áreas portuarias a lo largo de Chile, entregando provisiones, repuestos y servicios varios.",
         "provision": {
             "title": "Provisiones",
-            "text": "Las provisiones son los recursos que se almacenan en un buque para garantizar su funcionamiento y el bienestar de la tripulación y los pasajeros durante un viaje.\nLas provisiones incluyen alimentos, bebidas, medicinas, ropa, herramientas, repuestos, equipos de emergencia y otros artículos necesarios.\nLas provisiones deben ser suficientes para cubrir las necesidades de todos los que viajan a bordo, teniendo en cuenta la duración y el destino del viaje, las condiciones climáticas y las posibles contingencias.\nLas provisiones también deben ser adecuadas para el tipo de buque y la carga que transporta, respetando las normas de seguridad, higiene y calidad. Las provisiones deben estar bien organizadas, etiquetadas y distribuidas en el buque, de forma que se facilite su acceso, control y uso.\nLas provisiones deben revisarse periódicamente para verificar su estado y vigencia, y reponerse o desecharse según corresponda."
+            "text1": [
+                "Las provisiones son los recursos que se almacenan en un buque para garantizar su funcionamiento y el bienestar de la tripulación y los pasajeros durante un viaje.",
+                "Las provisiones incluyen alimentos, bebidas, medicinas, ropa, herramientas, repuestos, equipos de emergencia y otros artículos necesarios.",
+                "Las provisiones deben ser suficientes para cubrir las necesidades de todos los que viajan a bordo, teniendo en cuenta la duración y el destino del viaje, las condiciones climáticas y las posibles contingencias.",
+                "Las provisiones también deben ser adecuadas para el tipo de buque y la carga que transporta, respetando las normas de seguridad, higiene y calidad. Las provisiones deben estar bien organizadas, etiquetadas y distribuidas en el buque, de forma que se facilite su acceso, control y uso.",
+                "Las provisiones deben revisarse periódicamente para verificar su estado y vigencia, y reponerse o desecharse según corresponda."
+            ]
+        },
+        "engines": {
+            "title": "Motores",
+            "text1": [
+                "Los motores marítimos son los que se utilizan para propulsar o generar energía en los buques y otras embarcaciones. Los motores marítimos pueden ser de diferentes tipos, como diesel, gasolina, eléctricos, híbridos o de gas natural. Los motores marítimos deben cumplir con ciertos requisitos de rendimiento, eficiencia, seguridad y protección ambiental.",
+                "Los repuestos para motores marítimos son las piezas o componentes que se necesitan para reparar, mantener o mejorar el funcionamiento de los motores marítimos. Los repuestos para motores marítimos pueden ser originales, alternativos o genéricos, según su procedencia y calidad. Los repuestos para motores marítimos deben ser compatibles con el tipo y la marca del motor marítimo al que se destinan."
+            ],
+            "list": [
+                "Algunos ejemplos de repuestos para motores marítimos son:",
+                "Filtros de aire, aceite y combustible.",
+                "Bombas de agua, aceite y combustible.",
+                "Turbocompresores, intercoolers y válvulas de descarga",
+                "Inyectores, bombas inyectoras y boquillas.",
+                "Pistones, camisas, anillos y bielas.",
+                "Cigüeñales, cojinetes y volantes.",
+                "Culatas, válvulas y juntas.",
+                "Árboles de levas, balancines y taqués.",
+                "Correas, poleas y tensores.",
+                "Alternadores, arrancadores y reguladores.",
+                "Bujías, cables y bobinas.",
+                "Sensores, actuadores y módulos electrónicos."
+            ],
+            "text2": "Existen empresas especializadas en la venta de repuestos para motores marítimos,  que ofrecen una amplia gama de productos y servicios para satisfacer las necesidades de los clientes del sector marítimo. Estas empresas cuentan con personal calificado, instalaciones adecuadas y certificaciones de calidad que garantizan la confiabilidad y durabilidad de sus repuestos para motores marítimos. En Zuany Group nos encargamos de generar el nexo para satisfacer las necesidades de nuestros clientes."
+        },
+        "repairs": {
+            "title": "Reparaciones",
+            "text1": "Las reparaciones en un buque son las acciones técnicas, administrativas y de gestión que se realizan para conservar o devolver a un buque a un estado en el que pueda desempeñar la función requerida.",
+            "list": [
+                "Las reparaciones en un buque pueden ser de diferentes tipos, según el momento, el lugar y la causa que las originan:",
+                "Reparaciones preventivas: son las que se ejecutan con la intención de reducir la probabilidad de fallo, manteniendo un nivel de servicio determinado en los equipos, programando las intervenciones en el momento más oportuno.",
+                "Reparaciones predictivas: son las que se realizan en función del estado real del equipo o instalación, mediante la medición y el análisis de determinados parámetros que indican el grado de deterioro o desgaste.",
+                "Reparaciones correctivas: son las que se efectúan después de un fallo o avería, para restablecer el funcionamiento normal del equipo o instalación."
+            ],
+            "text2": "Las reparaciones en un buque pueden realizarse a flote o en muelles, con contratistas altamente calificados y certificados; o en diques secos o flotantes, en astilleros especializados². Las reparaciones a flote o en muelles suelen ser más económicas y rápidas, pero tienen limitaciones de espacio, equipamiento y seguridad. Las reparaciones en diques secos o flotantes permiten una mayor accesibilidad, comodidad y calidad, pero implican mayores costes y tiempos.",
+            "text3": "Las reparaciones en un buque deben cumplir con las normas de seguridad, higiene y calidad establecidas por las autoridades competentes, los fabricantes y los armadores. Las reparaciones en un buque deben contar con personal calificado, herramientas adecuadas, repuestos originales o compatibles, y documentación técnica actualizada. Las reparaciones en un buque deben registrarse y certificarse debidamente."
+        },
+        "laundry": {
+            "title": "Lavandería",
+            "text1": "La lavandería para un buque es el servicio que se encarga de lavar, secar, planchar y reparar la ropa de la tripulación, los pasajeros y el buque. La lavandería para un buque puede ser propia o externa, según el tipo y el tamaño del buque.",
+            "list": [
+                "La lavandería propia es la que se realiza a bordo del buque, con maquinaria y personal especializado. La lavandería propia puede ser de dos tipos:",
+                "Lavandería automática: es la que utiliza máquinas de lavado y secado que funcionan con monedas o fichas, y que están disponibles para el uso de la tripulación y los pasajeros. La lavandería automática suele estar ubicada en un espacio común del buque, como el salón o el pasillo.",
+                "Lavandería profesional: es la que utiliza máquinas de lavado y secado industriales, y que está a cargo de personal cualificado. La lavandería profesional suele estar ubicada en un espacio reservado del buque, como la bodega o el entrepuente."
+            ],
+            "text2": "La lavandería externa es la que se contrata con empresas especializadas en tierra, que recogen, lavan, secan, planchan y entregan la ropa del buque. La lavandería externa suele ser más costosa y demorada que la propia, pero puede ofrecer mayor calidad y variedad de servicios. La lavandería externa se utiliza cuando el buque no dispone de maquinaria o personal adecuados, o cuando la cantidad o el tipo de ropa lo requieren.",
+            "text3": "La lavandería para un buque debe cumplir con las normas de higiene, seguridad y calidad establecidas por las autoridades competentes, los fabricantes y los armadores. La lavandería para un buque debe contar con maquinaria eficiente, ecológica y adaptada al entorno marino. La lavandería para un buque debe disponer de detergentes, suavizantes y desinfectantes apropiados para cada tipo de ropa. La lavandería para un buque debe clasificar, etiquetar y almacenar correctamente la ropa limpia y sucia."
+        },
+        "chemical": {
+            "title": "Chemical",
+            "text1": "Los químicos para un buque son las sustancias o productos que se utilizan para el funcionamiento, la limpieza, la conservación o la protección del buque y sus equipos. Los químicos para un buque pueden ser de diferentes tipos, según su finalidad y su forma de aplicación.",
+            "list": [
+                "Algunos ejemplos de químicos para un buque son:",
+                "Combustibles y lubricantes: son los que se emplean para alimentar y lubricar los motores y las máquinas del buque, como el gasóleo, el fueloil, el aceite o la grasa.",
+                "Refrigerantes y anticongelantes: son los que se usan para mantener la temperatura adecuada de los sistemas de refrigeración y calefacción del buque, como el agua, el glicol o el amoníaco.",
+                "Pinturas y recubrimientos: son los que se aplican sobre las superficies metálicas del buque para protegerlas de la corrosión, el desgaste o el fuego, como la pintura epoxi, la pintura alquídica o el recubrimiento ignífugo.",
+                "Limpiadores y desinfectantes: son los que se emplean para limpiar y desinfectar las diferentes zonas y equipos del buque, como el detergente, el jabón, el cloro o el ácido.",
+                "Aditivos y tratamientos: son los que se añaden al agua o al combustible para mejorar sus propiedades o evitar problemas, como el biocida, el anticorrosivo, el antiespumante o el antifouling."
+            ],
+            "text2": "Los químicos para un buque deben ser almacenados, manipulados y utilizados con precaución, siguiendo las instrucciones del fabricante y las normas de seguridad. Los químicos para un buque deben estar etiquetados correctamente y disponer de las fichas de datos de seguridad. Los químicos para un buque deben ser compatibles entre sí y con los materiales del buque. Los químicos para un buque deben ser eliminados adecuadamente, evitando la contaminación del medio ambiente marino."
         }
     },
     "contact": {

@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
-import ModalService from './ModalService'
+
+import ModalService from './ModalService';
 
 const CircleService = ({
+    type,
     title,
     imgUrl,
-    translation
+    information,
+    infoButton
 }) => {
 
     const [show, setShow] = useState(false);
@@ -17,15 +20,20 @@ const CircleService = ({
                 <button className='circle-service shadow' onClick={() => setShow(true)}>
                     <div>
                         <img src={imgUrl} className='img-circle-service' />
-                        <h5 className='text-circle-services'>{translation.services.title}</h5>
+                        <h5 className='text-circle-services'>
+                            {title}
+                        </h5>
                     </div>
                 </button>
             </div>
             <ModalService
+                type={type}
                 show={show}
                 onHide={handleClose}
                 title={title}
                 imageUrl={imgUrl}
+                information={information}
+                infoButton={infoButton}
             />
         </div>
     )

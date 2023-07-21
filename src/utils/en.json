@@ -24,7 +24,73 @@
         "text": "For more than 30 years, we work exclusively in the supply of ship requisitions in port areas throughout Chile, delivering provisions, spare parts and various services.",
         "provision": {
             "title": "Provisions",
-            "text": "Provisions are the resources that are stored on a ship to ensure its operation and the well-being of the crew and passengers during a voyage.\nSupplies include food, beverages, medicine, clothing, tools, spare parts, emergency equipment and other necessary items.\nProvisions should be sufficient to cover the needs of all those travelling on board, taking into account the duration and destination of the journey, weather conditions and possible contingencies.\nProvisions must also be adequate for the type of vessel and the cargo it carries, respecting safety, hygiene and quality standards. Provisions must be well organised, labelled and distributed on the ship in such a way as to facilitate access, control and use.\nProvisions should be reviewed periodically for condition and validity, and replenished or discarded as appropriate."
+            "text1": [
+                "Provisions are the resources that are stored on a ship to ensure its operation and the well-being of the crew and passengers during a voyage.",
+                "Supplies include food, beverages, medicine, clothing, tools, spare parts, emergency equipment and other necessary items.",
+                "Provisions should be sufficient to cover the needs of all those travelling on board, taking into account the duration and destination of the journey, weather conditions and possible contingencies.",
+                "Provisions must also be adequate for the type of vessel and the cargo it carries, respecting safety, hygiene and quality standards. Provisions must be well organised, labelled and distributed on the ship in such a way as to facilitate access, control and use.",
+                "Provisions should be reviewed periodically for condition and validity, and replenished or discarded as appropriate."
+            ]
+        },
+        "engines": {
+            "title": "Engines",
+            "text1": [
+                "Marine engines are those used to propel or generate power on ships and other vessels. Marine engines can be of different types, such as diesel, gasoline, electric, hybrid or natural gas. Marine engines must meet certain requirements for performance, efficiency, safety and environmental protection.",
+                "Marine engine spare parts are the parts or components needed to repair, maintain or improve the operation of marine engines. Spare parts for marine engines can be original, alternative or generic, depending on their origin and quality. Spare parts for marine engines must be compatible with the type and make of the marine engine for which they are intended."
+            ],
+            "list": [
+                "Some examples of spare parts for marine engines are:",
+                "Air, oil and fuel filters.",
+                "Water, oil and fuel pumps.",
+                "Turbochargers, intercoolers and waste valves.",
+                "Injectors, injection pumps and nozzles.",
+                "Pistons, shirts, rings and connecting rods.",
+                "Crankshafts, bearings and flywheels.",
+                "Cylinder heads, valves and gaskets.",
+                "Camshafts, rockers and tappets.",
+                "Belts, pulleys and tensioners.",
+                "Alternators, starters and regulators.",
+                "Spark plugs, cables and coils.",
+                "Sensors, actuators and electronic modules."
+            ],
+            "text2": "There are companies specialized in the sale of spare parts for marine engines, which offer a wide range of products and services to meet the needs of customers in the maritime sector. These companies have qualified personnel, adequate facilities and quality certifications that guarantee the reliability and durability of their spare parts for marine engines. In Zuany Group we take care of generating the nexus to meet the needs of our customers."
+        },
+        "repairs": {
+            "title": "Repairs",
+            "text1": "Repairs on a ship are the technical, administrative and managerial actions that are carried out to preserve or return a ship to a state in which it can perform the required function.",
+            "list": [
+                "Repairs on a ship can be of different types, depending on the time, place and cause that originate them.",
+                "Some types of repairs on a ship are",
+                "Preventive repairs: are those that are executed with the intention of reducing the probability of failure, maintaining a certain level of service in the equipment, programming the interventions at the most opportune moment",
+                "Predictive repairs: are those that are carried out according to the real state of the equipment or installation, through the measurement and analysis of certain parameters that indicate the degree of deterioration or wear",
+                "Corrective repairs: are those carried out after a failure or breakdown, to restore the normal operation of the equipment or installation."
+            ],
+            "text2": "Repairs on a vessel can be carried out afloat or on docks, with highly qualified and certified contractors; or in dry or floating docks, in specialized shipyards². Afloat or dock repairs are usually cheaper and faster, but have limitations in space, equipment and safety. Repairs in dry or floating docks allow greater accessibility, comfort and quality, but involve higher costs and times.",
+            "text3": "Repairs on a ship must comply with safety, hygiene and quality standards set by the competent authorities, manufacturers and shipowners. Repairs on a ship must have qualified personnel, appropriate tools, original or compatible spare parts, and up-to-date technical documentation. Repairs on a ship must be duly recorded and certified."
+        },
+        "laundry": {
+            "title": "Laundry",
+            "text1": "Laundry for a ship is the service that is responsible for washing, drying, ironing and repairing the clothes of the crew, passengers and the ship. The laundry for a vessel can be own or external, depending on the type and size of the vessel.",
+            "list": [
+                "The own laundry is the one that is carried out on board the ship, with machinery and specialized personnel. The own laundry can be of two types:",
+                "Laundromat: it is the one that uses washing and drying machines that work with coins or tokens, and that are available for the use of the crew and passengers. The launderette is usually located in a common space of the ship, such as the lounge or hallway.",
+                "Professional laundry: it is the one that uses industrial washing and drying machines, and that is in charge of qualified personnel. The professional laundry is usually located in a reserved space of the ship, such as the hold or the mezzanine."
+            ],
+            "text2": "The external laundry is the one that is contracted with companies specialized on land, which collect, wash, dry, iron and deliver the ship's clothes. The external laundry is usually more expensive and time-consuming than your own, but can offer higher quality and variety of services. External laundry is used when the ship does not have adequate machinery or personnel, or when the quantity or type of clothing requires it.",
+            "text3": "Laundry for a ship must comply with hygiene, safety and quality standards set by the competent authorities, manufacturers and shipowners. The laundry for a ship must have efficient, ecological machinery adapted to the marine environment. The laundry for a ship must have detergents, fabric softeners and disinfectants appropriate for each type of clothing. The laundry for a ship must properly classify, label and store clean and dirty clothes."
+        },
+        "chemical": {
+            "title": "Chemical",
+            "text1": "Chemicals for a ship are substances or products that are used for the operation, cleaning, maintenance or protection of the ship and its equipment. Chemicals for a ship can be of different types, depending on their purpose and their form of application.",
+            "list": [
+                "Some examples of chemicals for a ship are:",
+                "Fuels and lubricants: are those used to feed and lubricate the engines and machines of the ship, such as diesel, fuel oil, oil or grease.",
+                "Refrigerants and antifreeze: are those used to maintain the proper temperature of the ship's cooling and heating systems, such as water, glycol or ammonia.",
+                "Paints and coatings: are those that are applied on the metal surfaces of the ship to protect them from corrosion, wear or fire, such as epoxy paint, alkyd paint or fireproof coating.",
+                "Cleaners and disinfectants: are those used to clean and disinfect the different areas and equipment of the ship, such as detergent, soap, chlorine or acid.",
+                "Additives and treatments: are those that are added to water or fuel to improve their properties or avoid problems, such as biocide, anticorrosive, antifoaming or antifouling."
+            ],
+            "text2": "Chemicals for a ship should be stored, handled and used with caution, following the manufacturer's instructions and safety regulations. Chemicals for a ship must be correctly labelled and safety data sheets must be available. The chemicals for a ship must be compatible with each other and with the materials of the vessel. Chemicals for a ship must be disposed of properly, avoiding pollution of the marine environment."
         }
     },
     "contact": {
