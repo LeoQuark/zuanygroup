@@ -31,7 +31,7 @@ const Contacts = ({ translation }) => {
                             <div className="row">
                                 <div className="col-2 col-lg-4">
                                     <div className="d-flex justify-content-center pt-2">
-                                        <i class="fa-solid fa-location-dot text-white fa-2x"></i>
+                                        <i className="fa-solid fa-location-dot text-white fa-2x"></i>
                                     </div>
                                 </div>
                                 <div className="col-10 col-lg-8">
@@ -44,7 +44,7 @@ const Contacts = ({ translation }) => {
                             <div className="row">
                                 <div className="col-2 col-lg-4">
                                     <div className="d-flex justify-content-center pt-2">
-                                        <i class="fa-solid fa-phone text-white fa-2x"></i>
+                                        <i className="fa-solid fa-phone text-white fa-2x"></i>
                                     </div>
                                 </div>
                                 <div className="col-10 col-lg-8">
@@ -61,7 +61,7 @@ const Contacts = ({ translation }) => {
                             <div className="row">
                                 <div className="col-2">
                                     <div className="d-flex justify-content-center pt-2">
-                                        <i class="fa-solid fa-envelope text-white fa-2x"></i>
+                                        <i className="fa-solid fa-envelope text-white fa-2x"></i>
                                     </div>
                                 </div>
                                 <div className="col-10">
@@ -127,7 +127,7 @@ const Contacts = ({ translation }) => {
                 </div>
                 <div className="col-12 col-md-6 col-lg-6">
                     <div className="d-flex justify-content-center align-items-center h-100 w-100 ">
-                        <iframe src="https://maps.google.cl/maps?q=-33.592927,-71.611596&num=1&t=h&ie=UTF8&ll=-33.592449,-71.61365&spn=0.004022,0.009645&z=17&output=embed" frameborder="0" className='iframe-gmaps'></iframe>
+                        <iframe src="https://maps.google.cl/maps?q=-33.592927,-71.611596&num=1&t=h&ie=UTF8&ll=-33.592449,-71.61365&spn=0.004022,0.009645&z=17&output=embed" frameBorder="0" className='iframe-gmaps'></iframe>
                     </div>
                 </div>
             </div>

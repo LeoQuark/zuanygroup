@@ -1025,7 +1025,7 @@ a.active:hover {
   height: 100%;
   transition: left .4s ease-in-out;
   padding: 20px;
-  background: green;
+  /* background: green; */
   z-index: 10;
 }
 

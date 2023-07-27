@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { Link, useLocation } from 'react-router-dom'
 import LanguageContext from '../context/language/LanguageContext.js';
+import axios from 'axios';
+import { getAllProducts } from '../utils/requestsApi.js'
 
 // TRANSLATION
 import enTranslation from '../utils/en.json'
@@ -107,6 +109,7 @@ const ProductPage = () => {
 
     // nav products state
     const [searchProduct, setSearchProduct] = useState('')
+    const [allProducts, setAllProducts] = useState(false)
     const [categories, setCategories] = useState(['Select Categories', 'Category 1', 'Category 2', 'Category 3'])
     const [orderBy, setOrderBy] = useState(['Order By', 'Most Popular', 'A-Z', 'Z-A'])
 
@@ -118,6 +121,14 @@ const ProductPage = () => {
     const translation = lang.language === 'es' ? enTranslation : esTranslation
 
     // API lectura de los productos aquiiiii
+    const getAllProductsFunction = async () => {
+        const response = await getAllProducts()
+        setAllProducts(response)
+    }
+
+    useEffect(() => {
+        getAllProductsFunction()
+    }, [])
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -138,7 +149,7 @@ const ProductPage = () => {
                 <div className='breadcumb-product pt-3 mx-3 mx-md-5' aria-label="breadcrumb">
                     <ol className="breadcrumb m-0">
                         <li className="breadcrumb-item">
-                            <Link to='/'>
+                            <Link to='/zg'>
                                 Home
                             </Link>
                         </li>

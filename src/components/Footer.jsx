@@ -97,7 +97,7 @@ const Footer = ({ translation }) => {
                 </div>
             </div>
             <div className="d-flex justify-content-center mt-5">
-                <p className='text-center font-sm'>Copyright <i class="fa-regular fa-copyright"></i> {getDateYear()}  - {translation.footer.rights} <strong>Zuany Group</strong></p>
+                <p className='text-center font-sm'>Copyright <i className="fa-regular fa-copyright"></i> {getDateYear()}  - {translation.footer.rights} <strong>Zuany Group</strong></p>
             </div>
         </footer >
     )
