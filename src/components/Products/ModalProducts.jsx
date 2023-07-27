@@ -2,6 +2,10 @@ import React, { useState, useEffect } from 'react';
 import Modal from 'react-bootstrap/Modal';
 import Spinner from 'react-bootstrap/Spinner';
 
+// IMG
+import Product1 from '../../assets/img/Product1.png'
+import Product2 from '../../assets/img/product2.png'
+
 const LoadSpinner = () => {
     return (
         <div className='d-flex justify-content-center mx-5'>
@@ -74,16 +78,16 @@ const ModalProducts = (props) => {
                     <div className="row">
                         <div className="col-12 col-lg-5">
                             <div className="d-flex justify-content-center">
-                                <img src={props.product.image} className='img-product-modal' />
+                                <img src={Product1} className='img-product-modal' />
                             </div>
                         </div>
                         <div className="col-12 col-lg-7">
                             <div className='modal-body-information'>
                                 <div className="div-info d-block justify-content-start my-4">
-                                    <h5 className='modal-tittle'>{props.product.title}</h5>
+                                    <h5 className='modal-tittle'>{props.product.name}</h5>
                                     <p className='modal-text'> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non purus feugiat, lacinia ex eget, lacinia risus. Curabitur cursus vehicula volutpat. Nam lacus nibh, tincidunt vitae nibh a, suscipit fringilla turpis. Vivamus mollis imperdiet sem in tempor.
                                     </p>
-                                    <p>Category: <strong>{props.product.category}</strong></p>
+                                    <p>Category: <strong>{props.product.category_id}</strong></p>
                                 </div>
                                 <div className="div-buttons">
                                     <div className='d-flex justify-content-between'>

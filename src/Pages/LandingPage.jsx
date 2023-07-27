@@ -59,7 +59,7 @@ const LandingPage = () => {
             <Services translation={translation} />
             <Contacts translation={translation} />
             <Footer translation={translation} />
-            <ButtonUp />
+            <ButtonUp to='#Home' />
         </>
     )
 }

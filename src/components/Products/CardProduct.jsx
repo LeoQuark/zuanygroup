@@ -3,6 +3,10 @@ import CartContext from '../../context/cart/CartContext'
 
 import ModalProducts from './ModalProducts'
 
+// IMG
+import Product1 from '../../assets/img/Product1.png'
+import Product2 from '../../assets/img/product2.png'
+
 const CardProduct = ({
     product
 }) => {
@@ -21,15 +25,15 @@ const CardProduct = ({
             >
                 <div className='d-block'>
                     <div className="d-flex justify-content-center">
-                        <img src={product.image} alt="" className='img-product-card' />
+                        <img src={Product1} alt="" className='img-product-card' />
                     </div>
                     <div className='my-2'>
-                        <h5 className='tittle-product-card'><strong>{product.title}</strong></h5>
+                        <h5 className='tittle-product-card'><strong>{product.name}</strong></h5>
                         <hr />
                     </div>
                     <div className='w-100'>
                         <p className='card-description p-0 m-0'>
-                            {product.description}
+                            {/* {product.description} */}
                         </p>
                     </div>
                     <div className='d-flex justify-content-center mt-2 mt-md-3'>

@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
-const ButtonUp = () => {
+const ButtonUp = ({ to }) => {
     const [showButton, setShowButton] = useState(false);
-    // const [prevPageY, setPrevPageY] = useState(window.pageYOffset || document.documentElement.scrollTop)
 
     useEffect(() => {
         const handleScroll = () => {
@@ -20,9 +19,11 @@ const ButtonUp = () => {
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
+
     return (
         <a
-            href="#Home"
+            // href="#Home"
+            href={to}
             className={`button-zg-up text-white scroll-button ${showButton ? 'show' : ''}`}
         >
             <i className="fa-solid fa-chevron-up"></i>
@@ -31,11 +32,3 @@ const ButtonUp = () => {
 }
 
 export default ButtonUp
-
-{/* <Link
-            to="Home"
-            spy={true}
-            smooth={true}
-            duration={100}
-            className={`button-zg-up text-white scroll-button ${showButton ? 'show' : ''}`}
-        ><i class="fa-solid fa-chevron-up"></i></Link> */}

@@ -11,6 +11,7 @@ import esTranslation from '../utils/es.json'
 import Navbar from '../components/Navbar'
 import NavProduct from '../components/Products/NavProduct'
 import ProductsContent from '../components/Products/ProductsContent'
+import ButtonUp from '../components/ButtonUp.jsx'
 
 // IMG
 import Product1 from '../assets/img/Product1.png'
@@ -106,6 +107,8 @@ const ProductMockup = [
 const ProductPage = () => {
 
     const { lang } = useContext(LanguageContext)
+    const { hash } = useLocation()
+
 
     // nav products state
     const [searchProduct, setSearchProduct] = useState('')
@@ -134,6 +137,27 @@ const ProductPage = () => {
         window.scrollTo(0, 0);
     }, [])
 
+    useEffect(() => {
+        if (hash) {
+            // Remover el símbolo '#' del ID
+            const id = hash.substring(1);
+
+            // Realizar el scrolling automático al elemento con el ID correspondiente
+            const targetElement = document.getElementById(id);
+
+            if (targetElement) {
+
+                // controlar la duración del scroll
+                setTimeout(() => {
+                    targetElement.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
+                }, 250);
+            }
+        } else {
+            // Si no hay hash en la URL, hacer scroll al inicio de la página
+            window.scrollTo(0, 0);
+        }
+    }, [location])
+
     return (
         <div>
             <Navbar translation={translation} />
@@ -158,10 +182,12 @@ const ProductPage = () => {
                 </div>
                 <div className="container">
                     <ProductsContent
-                        ProductMockup={ProductMockup}
+                        allProducts={allProducts}
+                    // ProductMockup={ProductMockup}
                     />
                 </div>
             </div >
+            <ButtonUp to='/all-products' />
         </div>
     )
 }

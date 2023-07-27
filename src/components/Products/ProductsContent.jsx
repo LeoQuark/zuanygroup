@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Pagination from 'react-bootstrap/Pagination';
+// import Pagination from 'react-bootstrap/Pagination';
 
 import CardProduct from './CardProduct'
 
@@ -12,12 +12,12 @@ const DivProduct = ({ product }) => {
 }
 
 const ProductsContent = ({
-    ProductMockup
+    allProducts
 }) => {
 
-    const totalProduct = ProductMockup.length
+    const totalProduct = allProducts.length
     const [productos, setProductos] = useState([])
-    const [pageSize, setPageSize] = useState(8)
+    const [pageSize, setPageSize] = useState(24)
     const [currentPage, setCurrentPage] = useState(1)
 
     const lastIndex = currentPage * pageSize
@@ -39,8 +39,8 @@ const ProductsContent = ({
     }
 
     const filterData = () => {
-        console.log(ProductMockup.slice(firstIndex, lastIndex))
-        return ProductMockup.slice(firstIndex, lastIndex)
+        console.log(allProducts.slice(firstIndex, lastIndex))
+        return allProducts.slice(firstIndex, lastIndex)
     }
 
     let items = [];
@@ -63,7 +63,7 @@ const ProductsContent = ({
     return (
         <div className='p-0'>
             <div className="row d-flex justify-content-around justify-content-md-center my-0 mx-0 px-0">
-                {ProductMockup && filterData().map((product, index) => (
+                {allProducts.length > 0 && filterData().map((product, index) => (
                     <DivProduct key={index} product={product} />
                 ))}
             </div>
