@@ -39,7 +39,7 @@ const ProductsContent = ({
     }
 
     const filterData = () => {
-        console.log(allProducts.slice(firstIndex, lastIndex))
+        // console.log(allProducts.slice(firstIndex, lastIndex))
         return allProducts.slice(firstIndex, lastIndex)
     }
 

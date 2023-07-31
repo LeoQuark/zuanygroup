@@ -2,7 +2,8 @@ import React, { useState, useEffect, useContext } from 'react';
 import { Link, useLocation } from 'react-router-dom'
 import LanguageContext from '../context/language/LanguageContext.js';
 import axios from 'axios';
-import { getAllProducts } from '../utils/requestsApi.js'
+import { getAllProducts, getAllCategory } from '../utils/requestsApi.js'
+import { formatText } from '../utils/functionFormat.js'
 
 // TRANSLATION
 import enTranslation from '../utils/en.json'
@@ -111,31 +112,87 @@ const ProductPage = () => {
 
 
     // nav products state
-    const [searchProduct, setSearchProduct] = useState('')
+    const [search, setSearch] = useState('')
     const [allProducts, setAllProducts] = useState(false)
-    const [categories, setCategories] = useState(['Select Categories', 'Category 1', 'Category 2', 'Category 3'])
-    const [orderBy, setOrderBy] = useState(['Order By', 'Most Popular', 'A-Z', 'Z-A'])
-
-    const [selectCategories, setSelectcategories] = useState('')
-
-    const handleSearch = (event) => setSearchProduct(event.target.value)
-    const handleCategory = (event) => setSelectcategories(event.target.value)
+    const [allProductsInit, setAllProductsInit] = useState(false)
+    // const [categories, setCategories] = useState(['Select Categories', 'Category 1', 'Category 2', 'Category 3'])
+    const [categories, setCategories] = useState(false)
+    const [selectCategories, setSelectCategories] = useState(false)
+    const [orderBy, setOrderBy] = useState(false)
 
     const translation = lang.language === 'es' ? enTranslation : esTranslation
 
-    // API lectura de los productos aquiiiii
+    const handleSearch = (event) => setSearch(formatText(event.target.value))
+    const handleCategory = (event) => setSelectCategories(event.target.value)
+    const handleOrder = (event) => setOrderBy(event.target.value)
+
     const getAllProductsFunction = async () => {
         const response = await getAllProducts()
+        console.log('products', response)
         setAllProducts(response)
+        setAllProductsInit(response)
+    }
+
+    const getAllCategoryFunction = async () => {
+        const response = await getAllCategory()
+        console.log('categories', response)
+        setCategories(response)
+    }
+
+    const filterProduct = (nameProduct) => allProductsInit.filter(
+        element => element.name.includes(nameProduct) || element.category.name.includes(nameProduct))
+
+    const filterCategory = (category) => {
+        if (selectCategories == 'reset')
+            return allProductsInit
+
+        return allProductsInit.filter(element => element.category.id == category)
+    }
+
+    const filterOrderBy = (orderBy) => {
+        if (orderBy == 'reset') {
+            return allProductsInit
+        } else if (orderBy === 'popular') {
+            console.log(orderBy)
+            // return allProductsInit.sort((a, b) => a.nombre.localeCompare(b.nombre));
+        } else if (orderBy === 'asc') {
+            console.log(orderBy, 'asencente')
+            return allProductsInit.sort((a, b) => (a.name > b.name ? 1 : a.name < b.name ? -1 : 0))
+        } else if (orderBy === 'desc') {
+            console.log(orderBy)
+            // return allProductsInit.sort((a, b) => a.nombre.localeCompare(b.nombre));
+        }
     }
 
     useEffect(() => {
+        window.scrollTo(0, 0);
         getAllProductsFunction()
+        getAllCategoryFunction()
     }, [])
 
+    // useEffect(() => {
+    //     console.log('l;eo')
+    // }, [allProducts])
+
     useEffect(() => {
-        window.scrollTo(0, 0);
-    }, [])
+        console.log('search', search, selectCategories, orderBy)
+        if (search) {
+            const filter = filterProduct(search)
+            console.log(filter)
+            setAllProducts(filter)
+        }
+        else if (selectCategories) {
+            console.log('selectCategories', selectCategories)
+            const filter = filterCategory(selectCategories)
+            setAllProducts(filter)
+        }
+        else if (orderBy) {
+            console.log('orderBy', orderBy)
+            const filter = filterOrderBy(orderBy)
+            console.log('filter', filter)
+            setAllProducts(filter)
+        }
+    }, [search, selectCategories, orderBy])
 
     useEffect(() => {
         if (hash) {
@@ -146,14 +203,11 @@ const ProductPage = () => {
             const targetElement = document.getElementById(id);
 
             if (targetElement) {
-
-                // controlar la duración del scroll
                 setTimeout(() => {
                     targetElement.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
                 }, 250);
             }
         } else {
-            // Si no hay hash en la URL, hacer scroll al inicio de la página
             window.scrollTo(0, 0);
         }
     }, [location])
@@ -163,12 +217,13 @@ const ProductPage = () => {
             <Navbar translation={translation} />
             <div className='all-products container-fluid mt-2 mt-md-0'>
                 <NavProduct
-                    searchProduct={searchProduct}
+                    searchProduct={search}
                     handleSearch={handleSearch}
                     categories={categories}
                     orderBy={orderBy}
                     selectCategories={selectCategories}
                     handleCategory={handleCategory}
+                    handleOrder={handleOrder}
                 />
                 <div className='breadcumb-product pt-3 mx-3 mx-md-5' aria-label="breadcrumb">
                     <ol className="breadcrumb m-0">
@@ -181,10 +236,7 @@ const ProductPage = () => {
                     </ol>
                 </div>
                 <div className="container">
-                    <ProductsContent
-                        allProducts={allProducts}
-                    // ProductMockup={ProductMockup}
-                    />
+                    <ProductsContent allProducts={allProducts} />
                 </div>
             </div >
             <ButtonUp to='/all-products' />

@@ -3,13 +3,35 @@ import CartContext from '../../context/cart/CartContext';
 
 import ShoppingCart from './ShoppingCart'
 
+// ['Order By', 'Most Popular', 'A-Z', 'Z-A']
+
+const selectOrder = [
+    {
+        name: 'Order By',
+        value: 'reset'
+    },
+    {
+        name: 'Most Popular',
+        value: 'popular'
+    },
+    {
+        name: 'A-Z',
+        value: 'asc'
+    },
+    {
+        name: 'Z-A',
+        value: 'desc'
+    }
+]
+
 const NavProduct = ({
     searchProduct,
     handleSearch,
     categories,
     orderBy,
     selectCategories,
-    handleCategory
+    handleCategory,
+    handleOrder
 }) => {
 
     const { cart, clearCart, deleteProduct } = useContext(CartContext)
@@ -33,8 +55,10 @@ const NavProduct = ({
     }, []);
 
     useEffect(() => {
-        console.log('CAMBIOSSS', cart.shoppingCart)
+        // console.log('CAMBIOSSS', cart.shoppingCart)
     }, [cart])
+
+
 
     return (
         <div className='container-fluid nav-product p-0 m-0'>
@@ -49,23 +73,32 @@ const NavProduct = ({
                     />
                 </div>
                 <div className="item-2">
-                    <select className='form-select'>
-                        {categories.length != 0 ? (
+                    <select
+                        className='form-select'
+                        value={selectCategories}
+                        onChange={(event) => handleCategory(event)}
+                    >
+                        <option value='reset'>
+                            Select a Category
+                        </option>
+                        {categories && categories.length != 0 && (
                             categories.map((category, index) => (
-                                <option key={index}>
-                                    {category}
+                                <option key={index} value={category.id}>
+                                    {category.name}
                                 </option>
                             ))
-                        ) : (
-                            <li><a className="dropdown-item" href="#">Action</a></li>
                         )}
                     </select>
                 </div>
                 <div className="item-3">
-                    <select className='form-select'>
-                        {orderBy && orderBy.map((order, index) => (
-                            <option key={index}>
-                                {order}
+                    <select
+                        className='form-select'
+                        value={orderBy}
+                        onChange={(event) => handleOrder(event)}
+                    >
+                        {selectOrder && selectOrder.map((order, index) => (
+                            <option key={index} value={order.value}>
+                                {order.name}
                             </option>
                         ))}
                     </select>

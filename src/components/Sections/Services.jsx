@@ -39,7 +39,7 @@ const Services = ({ translation }) => {
                 />
                 <CircleService
                     type='repair'
-                    title="Repairs"
+                    title={translation.services.repairs.title}
                     imgUrl={RepairsImg}
                     information={translation.services.repairs}
                     infoButton={translation}
@@ -48,14 +48,14 @@ const Services = ({ translation }) => {
             <div className="row bg-white justify-content-center mx-md-2 mx-0">
                 <CircleService
                     type='laundry'
-                    title="Laundry"
+                    title={translation.services.laundry.title}
                     imgUrl={LaundryImg}
                     information={translation.services.laundry}
                     infoButton={translation}
                 />
                 <CircleService
                     type='chemical'
-                    title="Chemical"
+                    title={translation.services.chemical.title}
                     imgUrl={ChemicalImg}
                     information={translation.services.chemical}
                     infoButton={translation}
