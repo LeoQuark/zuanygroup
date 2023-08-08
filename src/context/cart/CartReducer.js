@@ -8,20 +8,10 @@ export default (state, action) => {
         case types.ADD_TO_CART:
             return {
                 shoppingCart: [...state.shoppingCart, action.payload]
-                // id,
-                // name,
-                // description,
-                // category,
-                // amount,
             };
         case types.CLEAR_CART:
             return {
                 shoppingCart: []
-                // id: '',
-                // name: '',
-                // description: '',
-                // category: '',
-                // amount: '',
             };
         case type.REMOVE_ONE_FROM_CART:
             return {

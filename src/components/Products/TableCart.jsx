@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import Table from 'react-bootstrap/Table';
 
 const TableCart = ({ cart, deleteProduct }) => {
-
+    console.log(cart)
     return (
         <Table className='cart-table'>
             <thead>
@@ -16,6 +16,7 @@ const TableCart = ({ cart, deleteProduct }) => {
             <tbody>
                 {cart.shoppingCart.map((product, index) => (
                     <tr key={product.id}>
+                        {console.log('product:', product)}
                         <td>
                             <div className='h-100 d-flex justify-content-center align-items-center pt-3'>
                                 <p>{index + 1}</p>
@@ -23,9 +24,9 @@ const TableCart = ({ cart, deleteProduct }) => {
                         </td>
                         <td>
                             <div className="d-flex justify-content-start h-100">
-                                <img src={product.image} />
+                                <img src={product.image_url} style={{ borderRadius: '10px' }} />
                                 <div className='d-flex align-items-center mx-2 mx-md-4'>
-                                    <p>{product.title}</p>
+                                    <p>{product.name}</p>
                                 </div>
                             </div>
                         </td>
@@ -40,7 +41,7 @@ const TableCart = ({ cart, deleteProduct }) => {
                                     className='btn-delete-item'
                                     onClick={() => deleteProduct(product.id)}
                                 >
-                                    <i class="fa-solid fa-xmark"></i>
+                                    <i className="fa-solid fa-xmark"></i>
                                 </button>
                             </div>
                         </td>

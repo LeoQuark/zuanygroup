@@ -55,10 +55,9 @@ const Navbar = ({ translation }) => {
         };
     }, []); //
 
-    useEffect(() => {
-        console.log('Ancho de la ventana/pantalla:', widthPage);
-    }, [widthPage]); // El useEffect se ejecutará cada vez que windowWidth cambie
-
+    // useEffect(() => {
+    //     console.log('Ancho de la ventana/pantalla:', widthPage);
+    // }, [widthPage]); // El useEffect se ejecutará cada vez que windowWidth cambie
 
     return (
         <nav className={`navbar navbar-expand-lg bg-zg-blue py-3 navbar-zg fixed-top ${isNavbarVisible ? 'navbar-visible' : 'navbar-hidden'}`}>

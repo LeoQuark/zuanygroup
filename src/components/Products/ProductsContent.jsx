@@ -30,18 +30,11 @@ const ProductsContent = ({
         }
     }
 
-    const onNextPage = () => {
-        setCurrentPage(currentPage + 1)
-    }
+    const onNextPage = () => setCurrentPage(currentPage + 1)
 
-    const onSpecificPage = (page) => {
-        setCurrentPage(page)
-    }
+    const onSpecificPage = (page) => setCurrentPage(page)
 
-    const filterData = () => {
-        // console.log(allProducts.slice(firstIndex, lastIndex))
-        return allProducts.slice(firstIndex, lastIndex)
-    }
+    const filterData = () => allProducts.slice(firstIndex, lastIndex)
 
     let items = [];
     for (let number = 1; number <= Math.ceil(totalProduct / pageSize); number++) {

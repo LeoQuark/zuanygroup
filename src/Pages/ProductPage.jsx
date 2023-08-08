@@ -139,8 +139,14 @@ const ProductPage = () => {
         setCategories(response)
     }
 
-    const filterProduct = (nameProduct) => allProductsInit.filter(
-        element => element.name.includes(nameProduct) || element.category.name.includes(nameProduct))
+    const filterProduct = (nameProduct) => {
+        if (!nameProduct) {
+            console.log('a')
+        }
+
+        return allProductsInit.filter(
+            element => element.name.includes(nameProduct) || element.category.name.includes(nameProduct))
+    }
 
     const filterCategory = (category) => {
         if (selectCategories == 'reset')
@@ -169,10 +175,6 @@ const ProductPage = () => {
         getAllProductsFunction()
         getAllCategoryFunction()
     }, [])
-
-    // useEffect(() => {
-    //     console.log('l;eo')
-    // }, [allProducts])
 
     useEffect(() => {
         console.log('search', search, selectCategories, orderBy)

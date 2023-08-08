@@ -8,9 +8,6 @@ export const getAllProducts = async () => {
 
     if (!data || data == undefined)
         return false
-
-    // console.log('all products', data)
-
     return data
 }
 
@@ -21,8 +18,23 @@ export const getAllCategory = async () => {
 
     if (!data || data == undefined)
         return false
-
-    // console.log('all categories', data)
-
     return data
+}
+
+export const getRandomProduct = async () => {
+    const response = await axios.get(`${APIURL}/products/getRandom`)
+    const data = response.data.data
+
+    if (!data || data == undefined)
+        return false
+    return data
+}
+
+// SEND MAIL
+export const sendMail = async (data) => {
+    const send = await axios.post(`${APIURL}/email/send`, data)
+
+    const response = send.msg
+
+    console.log('response send mail: ', response)
 }

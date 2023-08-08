@@ -38,6 +38,7 @@ const LoadData = () => {
         event.preventDefault()
         const formData = new FormData()
 
+        console.log('leo', excelData)
         formData.append('file', excelData)
         // console.log(formData)
 
@@ -107,8 +108,18 @@ const LoadData = () => {
                             </div>
                             <div className='col-12 col-md-5 card p-4'>
                                 <p className='text-center title-admin'>Load Bonded</p>
-                                <input type="file" className='form-control my-4' />
-                                <button className='btn btn-success'>Upload File Bonded</button>
+                                <input
+                                    type="file"
+                                    className='form-control my-4'
+                                    onChange={handleFileUpload}
+                                    accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+                                />
+                                <button
+                                    type='submit'
+                                    className='btn btn-success'
+                                >
+                                    Upload File Bonded
+                                </button>
                                 <p className='text-muted m-0 mt-3'>* Remember that the <strong>Bonded</strong> file must maintain the defined structure</p>
                             </div>
                         </div>

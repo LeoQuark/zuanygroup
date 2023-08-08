@@ -455,6 +455,8 @@ a.active:hover {
 .img-product-card {
   width: 100% !important;
   height: 100% !important;
+  border-radius: 20px;
+  padding: 10px 10px;
 }
 
 .btn-pagination-move {

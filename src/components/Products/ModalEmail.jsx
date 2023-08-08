@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Modal from 'react-bootstrap/Modal';
+import { sendMailSubmit } from '../../utils/functionFormat'
 
 const ModalEmail = (props) => {
 
@@ -7,18 +8,33 @@ const ModalEmail = (props) => {
     const [email, setEmail] = useState('')
     const [phone, setPhone] = useState('')
     const [message, setMessage] = useState('')
+    // const [file, setFile] = useState(false)
 
     const handleName = (event) => setName(event.target.value)
     const handleEmail = (event) => setEmail(event.target.value)
     const handlePhone = (event) => setPhone(event.target.value)
     const handleMessage = (event) => setMessage(event.target.value)
 
+    console.log(props.cart)
 
-    const sendEmail = () => {
+    const handleSubmit = async () => {
         event.preventDefault()
         console.log('send email')
         console.log(name, email, phone, message)
+
+        const customerData = { name, email, phone, message }
+        const productData = props.cart
+
+        sendMailSubmit(customerData, productData)
     }
+
+    useEffect(() => {
+        console.log('correo')
+
+    }, [])
+
+
+
 
     return (
         <Modal
@@ -33,7 +49,7 @@ const ModalEmail = (props) => {
             </Modal.Header>
             <Modal.Body>
                 <div className="container modal-body">
-                    <form onSubmit={sendEmail}>
+                    <form onSubmit={handleSubmit}>
                         <div className="row">
                             <div className="col-6">
                                 <div className="mb-3">
@@ -80,7 +96,9 @@ const ModalEmail = (props) => {
                             <button
                                 type='submit'
                                 className='btn-zg-lg btn_pink_zg py-2 py-sm-1'
-                            >Send <i class="fa-solid fa-paper-plane text-white"></i></button>
+                            >
+                                Send <i class="fa-solid fa-paper-plane text-white"></i>
+                            </button>
                         </div>
                     </form>
                 </div>

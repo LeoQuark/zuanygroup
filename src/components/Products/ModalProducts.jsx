@@ -36,6 +36,8 @@ const ModalProducts = (props) => {
     const btnAddProduct = (product, amount) => {
         setLoading(true)
 
+        // console.log('producto: ', product)
+
         const dataProduct = {
             ...product,
             amount
@@ -78,7 +80,7 @@ const ModalProducts = (props) => {
                     <div className="row">
                         <div className="col-12 col-lg-5">
                             <div className="d-flex justify-content-center">
-                                <img src={Product1} className='img-product-modal' />
+                                <img src={props.product.image_url} className='img-product-modal' />
                             </div>
                         </div>
                         <div className="col-12 col-lg-7">

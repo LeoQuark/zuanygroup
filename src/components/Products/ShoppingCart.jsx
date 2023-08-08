@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import * as XLSX from 'xlsx'
 import { saveAs } from 'file-saver';
+import { getCartLocalStorage, setCartLocalStorage } from '../../utils/storage'
 
 // COMPONENT
 import ModalEmail from './ModalEmail';
@@ -17,24 +18,30 @@ const ShoppingCart = ({
     show,
     onHide,
     deleteProduct,
-    clearCart
+    cleanCart
 }) => {
 
     const [existData, setExistData] = useState(false)
     const [showModal, setShowModal] = useState(false)
+    // const [cartProduct, setCartProduct] = useState(cart.shoppingCart)
+    // console.log('CART PRODUCT', cartProduct)
 
     const handleShow = () => setShowModal(!showModal)
     const handleClose = () => setShowModal(false)
+
+    const handleExistData = () => cart.shoppingCart.length != 0 ? setExistData(true) : setExistData(false)
+
 
     // funcion para obtener los datos relevantes de cada producto
     const formatDataCartShopping = (data) => {
         let newData = []
         for (const product of data) {
-            newData.push({
-                'Name Product': product.title,
-                'Category': product.category,
-                'Amount': product.amount
-            })
+            // newData.push({
+            //     'Name Product': product.title,
+            //     'Category': product.category,
+            //     'Amount': product.amount
+            // })
+            newData.push(product)
         }
         return newData
     }
@@ -57,12 +64,15 @@ const ShoppingCart = ({
     }
 
 
+
     useEffect(() => {
-        const handleExistData = () => {
-            if (cart.shoppingCart.length != 0) setExistData(true)
-        }
-        console.log('ACTUALIZA PLS', cart.shoppingCart)
+        // console.log('ACTUALIZA PLS', cart.shoppingCart)
         handleExistData()
+
+        const cartShopping = JSON.stringify(cart.shoppingCart)
+        setCartLocalStorage(cartShopping)
+        // console.log(getCartLocalStorage())
+        // console.log('aquiiii')
 
     }, [cart.shoppingCart])
 
@@ -85,7 +95,7 @@ const ShoppingCart = ({
                         (
                             <button
                                 className='btn-zg-cart-remove btn_gray_zg_inverse'
-                                onClick={() => clearCart()}
+                                onClick={() => cleanCart()}
                             >
                                 Remove All <i className="fa-solid fa-trash-can"></i>
                             </button>
@@ -127,6 +137,7 @@ const ShoppingCart = ({
             <ModalEmail
                 show={showModal}
                 onHide={handleClose}
+                cart={formatDataCartShopping(cart.shoppingCart)}
             />
         </Offcanvas>
     )

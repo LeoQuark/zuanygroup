@@ -25,7 +25,7 @@ const CardProduct = ({
             >
                 <div className='d-block'>
                     <div className="d-flex justify-content-center">
-                        <img src={Product1} alt="" className='img-product-card' />
+                        <img src={product.image_url} alt="" className='img-product-card' />
                     </div>
                     <div className='my-2'>
                         <h5 className='tittle-product-card'><strong>{product.name}</strong></h5>

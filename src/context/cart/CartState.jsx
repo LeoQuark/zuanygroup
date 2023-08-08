@@ -25,7 +25,7 @@ export const CartState = (props) => {
         });
     };
 
-    const clearCart = () => {
+    const cleanCart = () => {
         dispatch({
             type: types.CLEAR_CART,
             payload: initialState,
@@ -45,7 +45,7 @@ export const CartState = (props) => {
             value={{
                 cart,
                 addProduct,
-                clearCart,
+                cleanCart,
                 deleteProduct
             }}
         >

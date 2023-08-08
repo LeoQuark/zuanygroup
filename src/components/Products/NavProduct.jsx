@@ -34,7 +34,7 @@ const NavProduct = ({
     handleOrder
 }) => {
 
-    const { cart, clearCart, deleteProduct } = useContext(CartContext)
+    const { cart, cleanCart, deleteProduct } = useContext(CartContext)
 
     const [showCanvas, setShowCanvas] = useState(false)
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
@@ -102,6 +102,9 @@ const NavProduct = ({
                             </option>
                         ))}
                     </select>
+                    {/* <button className='btn btn-secondary'>
+                        <i className="fa-solid fa-delete-left"></i>
+                    </button> */}
                 </div>
                 <div className="item-4">
                     <div className="d-flex justify-content-end">
@@ -134,7 +137,7 @@ const NavProduct = ({
                 show={showCanvas}
                 onHide={handleClose}
                 deleteProduct={deleteProduct}
-                clearCart={clearCart}
+                cleanCart={cleanCart}
             />
         </div >
     )
