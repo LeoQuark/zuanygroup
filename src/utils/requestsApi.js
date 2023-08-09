@@ -36,5 +36,5 @@ export const sendMail = async (data) => {
 
     const response = send.msg
 
-    console.log('response send mail: ', response)
+    console.log('response send mail: ', send)
 }

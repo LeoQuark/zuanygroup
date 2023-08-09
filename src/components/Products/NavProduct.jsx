@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext } from 'react';
 import CartContext from '../../context/cart/CartContext';
 
 import ShoppingCart from './ShoppingCart'
+import { getCartLocalStorage, setCartLocalStorage } from '../../utils/storage'
 
 // ['Order By', 'Most Popular', 'A-Z', 'Z-A']
 
@@ -34,7 +35,7 @@ const NavProduct = ({
     handleOrder
 }) => {
 
-    const { cart, cleanCart, deleteProduct } = useContext(CartContext)
+    const { cart, cleanCart, deleteProduct, addFromLocalStorage } = useContext(CartContext)
 
     const [showCanvas, setShowCanvas] = useState(false)
     const [screenWidth, setScreenWidth] = useState(window.innerWidth);
@@ -55,10 +56,34 @@ const NavProduct = ({
     }, []);
 
     useEffect(() => {
-        // console.log('CAMBIOSSS', cart.shoppingCart)
+
+        console.log(cart)
+
+        if (cart.shoppingCart.length > 0) {
+            const cartShopping = JSON.stringify(cart.shoppingCart)
+            setCartLocalStorage(cartShopping)
+            // console.log(getCartLocalStorage())
+            console.log('localstorage entra')
+        }
+        else if (cart.shoppingCart.length === 0) {
+            console.log('vamoss', cart.shoppingCart.length)
+            // const cartShopping = JSON.stringify(cart.shoppingCart)
+            // setCartLocalStorage(cartShopping)
+        }
     }, [cart])
 
+    useEffect(() => {
+        console.log('CAMBIOSSS', cart.shoppingCart)
+        const dataLS = getCartLocalStorage()
+        console.log('Local Storage: ', dataLS)
 
+        console.log('data cart:', cart)
+
+        addFromLocalStorage(dataLS)
+
+    }, [])
+
+    console.log('CARTRT', cart)
 
     return (
         <div className='container-fluid nav-product p-0 m-0'>

@@ -8,11 +8,6 @@ import ModalEmail from './ModalEmail';
 import TableCart from './TableCart';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 
-// IMG
-import Product1 from '../../assets/img/Product1.png'
-import Product2 from '../../assets/img/Product2.png'
-
-
 const ShoppingCart = ({
     cart,
     show,
@@ -68,11 +63,6 @@ const ShoppingCart = ({
     useEffect(() => {
         // console.log('ACTUALIZA PLS', cart.shoppingCart)
         handleExistData()
-
-        const cartShopping = JSON.stringify(cart.shoppingCart)
-        setCartLocalStorage(cartShopping)
-        // console.log(getCartLocalStorage())
-        // console.log('aquiiii')
 
     }, [cart.shoppingCart])
 

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { sendMailSubmit } from '../../utils/functionFormat'
 
 const Contacts = ({ translation }) => {
 
@@ -12,11 +13,15 @@ const Contacts = ({ translation }) => {
     const handlePhone = (event) => setPhone(event.target.value)
     const handleMessage = (event) => setMessage(event.target.value)
 
-
-    const sendEmail = () => {
+    // FUNCION PARA ENVIAR CORREO POR MEDIO DE FORMULARIO
+    const handleSubmit = async () => {
         event.preventDefault()
         console.log('send email')
         console.log(name, email, phone, message)
+
+        const customerData = { name, email, phone, message }
+
+        sendMailSubmit(customerData)
     }
 
     return (
@@ -77,7 +82,7 @@ const Contacts = ({ translation }) => {
                         </div>
                     </div>
                     <div className="row my-md-5 mx-2">
-                        <form onSubmit={sendEmail}>
+                        <form onSubmit={handleSubmit}>
                             <div className="mb-3">
                                 <input
                                     type="text"
@@ -114,9 +119,8 @@ const Contacts = ({ translation }) => {
                             </div>
                             <div className="d-flex justify-content-center mt-4">
                                 <button
-                                    type='button'
+                                    type='submit'
                                     className='btn-zg-lg btn_pink_zg'
-                                // onClick={()=>}
                                 >
                                     {translation.buttons.send}
                                     <i className="fa-solid fa-paper-plane text-white mx-2"></i>

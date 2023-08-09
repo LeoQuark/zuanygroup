@@ -8,15 +8,15 @@ const ModalEmail = (props) => {
     const [email, setEmail] = useState('')
     const [phone, setPhone] = useState('')
     const [message, setMessage] = useState('')
-    // const [file, setFile] = useState(false)
 
     const handleName = (event) => setName(event.target.value)
     const handleEmail = (event) => setEmail(event.target.value)
     const handlePhone = (event) => setPhone(event.target.value)
     const handleMessage = (event) => setMessage(event.target.value)
 
-    console.log(props.cart)
+    // console.log(props.cart)
 
+    // FUNCION PARA ENVIAR CORREO POR MEDIO DE FORMULARIO
     const handleSubmit = async () => {
         event.preventDefault()
         console.log('send email')
@@ -27,14 +27,6 @@ const ModalEmail = (props) => {
 
         sendMailSubmit(customerData, productData)
     }
-
-    useEffect(() => {
-        console.log('correo')
-
-    }, [])
-
-
-
 
     return (
         <Modal

@@ -49,10 +49,6 @@ const ProductsContent = ({
         );
     }
 
-    useEffect(() => {
-
-    }, [])
-
     return (
         <div className='p-0'>
             <div className="row d-flex justify-content-around justify-content-md-center my-0 mx-0 px-0">

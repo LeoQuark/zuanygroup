@@ -13,8 +13,8 @@ export const sendMailSubmit = async (customerData, productCart = false) => {
     if (!productCart || productCart.length == 0) {
         const data = { customerData }
         console.log('llegara')
-        await sendMail(data)
-
+        const res = await sendMail(data)
+        console.log('res:', res)
         return true
     }
 

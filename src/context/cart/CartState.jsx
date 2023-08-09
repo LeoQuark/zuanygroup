@@ -39,6 +39,14 @@ export const CartState = (props) => {
         });
     };
 
+    const addFromLocalStorage = (data) => {
+        console.log('dataa LS state:', data)
+        dispatch({
+            type: types.ADD_FROM_LOCALSTORAGE,
+            payload: data,
+        });
+    }
+
     //Se retorna el CarritoContext.Provider para que los hijos de este componente puedan acceder a los valores del state global carrito y sus metodos o funciones.
     return (
         <CartContext.Provider
@@ -46,7 +54,8 @@ export const CartState = (props) => {
                 cart,
                 addProduct,
                 cleanCart,
-                deleteProduct
+                deleteProduct,
+                addFromLocalStorage
             }}
         >
             {props.children}

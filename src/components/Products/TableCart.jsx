@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import Table from 'react-bootstrap/Table';
 
 const TableCart = ({ cart, deleteProduct }) => {
-    console.log(cart)
+    // console.log(cart)
     return (
         <Table className='cart-table'>
             <thead>

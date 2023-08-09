@@ -2,8 +2,7 @@ import { types } from "./types.js";
 
 export default (state, action) => {
     const { payload, type } = action;
-    const { id, name, description, category, amount } = payload
-    console.log('PAYLOAD', [...state.shoppingCart.filter(product => product.id !== action.payload)])
+    console.log('payload: ', payload)
     switch (type) {
         case types.ADD_TO_CART:
             return {
@@ -13,9 +12,13 @@ export default (state, action) => {
             return {
                 shoppingCart: []
             };
-        case type.REMOVE_ONE_FROM_CART:
+        case types.REMOVE_ONE_FROM_CART:
             return {
                 shoppingCart: [...state.shoppingCart.filter(product => product.id !== action.payload)]
+            }
+        case types.ADD_FROM_LOCALSTORAGE:
+            return {
+                shoppingCart: action.payload
             }
         default:
             return state;

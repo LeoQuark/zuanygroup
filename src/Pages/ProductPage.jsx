@@ -110,7 +110,6 @@ const ProductPage = () => {
     const { lang } = useContext(LanguageContext)
     const { hash } = useLocation()
 
-
     // nav products state
     const [search, setSearch] = useState('')
     const [allProducts, setAllProducts] = useState(false)
