@@ -285,7 +285,7 @@ a.active:hover {
 
 .card-product:hover {
   box-shadow: 1px 2px 14px var(--gray-normal);
-  transform: scale(1.05)
+  transform: scale(1.01)
 }
 
 .tittle-product-card {
@@ -294,6 +294,14 @@ a.active:hover {
   overflow-y: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+}
+
+.product-table-cart {
+  /* font-size: 1rem; */
+  /* overflow-x: none !important; */
+  /* overflow-y: hidden; */
+  /* white-space: nowrap; */
+  /* text-overflow: ellipsis; */
 }
 
 .card-product p {
@@ -815,7 +823,7 @@ a.active:hover {
 
 .modal-body-information {
   position: relative;
-  height: 100%;
+  height: 100% !important;
   /* height: 100rem; */
 }
 
@@ -861,7 +869,7 @@ a.active:hover {
 
 .img-product-modal {
   height: 100% !important;
-  width: 100vw !important;
+  width: 80vw !important;
   background-size: cover;
   background-position: center;
   border-radius: 2rem;
@@ -1197,7 +1205,6 @@ a.active:hover {
   }
 
   /* SERVICES */
-
   .circle-service {
     border-radius: 50%;
     position: relative;
@@ -1230,6 +1237,7 @@ a.active:hover {
   }
 
   /* PRODUCT */
+
   .tittle-product-card {
     font-size: 18px;
   }
@@ -1307,17 +1315,16 @@ a.active:hover {
   }
 
   /* LOGISTICS */
-  /* LOGISTICS */
   .carrusel-item img {
     width: 40rem !important;
     height: 24rem !important;
     object-fit: cover;
   }
 
-  /* .img-product-modal {
-    width: 80% !important;
-    height: 100% !important;
-  } */
+  .img-product-modal {
+    width: 100% !important;
+    height: 60% !important;
+  }
 
   .nav-product {
     background: white;

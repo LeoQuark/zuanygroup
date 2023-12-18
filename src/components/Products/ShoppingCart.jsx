@@ -59,7 +59,6 @@ const ShoppingCart = ({
     }
 
 
-
     useEffect(() => {
         // console.log('ACTUALIZA PLS', cart.shoppingCart)
         handleExistData()
@@ -73,6 +72,7 @@ const ShoppingCart = ({
             placement={'end'}
             scroll={false}
             backdrop={true}
+            className='bg-danger'
         >
             <Offcanvas.Header closeButton>
                 <Offcanvas.Title>My Order <span className="badge bg-danger text-bg-secondary">{cart.shoppingCart.length}</span></Offcanvas.Title>

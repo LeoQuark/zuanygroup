@@ -9,7 +9,7 @@ const ModalService = (props) => {
     const [existText1, setExistText1] = useState(props.information.text1 ? true : false)
     const [existList, setExistList] = useState(props.information.list ? true : false)
 
-    console.log(props.information.title, existText1, existList)
+    // console.log(props.information.title, existText1, existList)
 
     return (
         <Modal

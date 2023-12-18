@@ -29,3 +29,34 @@ export const sendMailSubmit = async (customerData, productCart = false) => {
     return true
 
 }
+
+// OBTENER NUMEROS RANDOM
+export const getRandomInt = (max) => {
+    return Math.floor(Math.random() * max);
+}
+
+// OBTENER 4 NUMEROS RANDOM DEL TOTAL DE UN ARRAY
+export const getFourNumber = (amount) => {
+    const result = [];
+    const max = amount;
+
+    for (let i = 0; i < 4; i++) {
+        const randomNum = getRandomInt(max);
+        result.push(randomNum);
+    }
+
+    return result;
+}
+
+// OBTENER PRODUCTOS RANDOM
+export const getRandomProducts = (listaIndices, listaObjetos) => {
+    const productosEncontrados = [];
+
+    for (const indice of listaIndices) {
+        if (indice >= 0 && indice < listaObjetos.length) {
+            productosEncontrados.push(listaObjetos[indice]);
+        }
+    }
+
+    return productosEncontrados;
+}

@@ -2,9 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Modal from 'react-bootstrap/Modal';
 import Spinner from 'react-bootstrap/Spinner';
 
-// IMG
-import Product1 from '../../assets/img/Product1.png'
-import Product2 from '../../assets/img/product2.png'
+import ListInfo from './ListInfo'
 
 const LoadSpinner = () => {
     return (
@@ -86,11 +84,13 @@ const ModalProducts = (props) => {
                         <div className="col-12 col-lg-7">
                             <div className='modal-body-information'>
                                 <div className="div-info d-block justify-content-start my-4">
-                                    <p className='text-muted'>ID: {props.product.id}</p>
+                                    <p className='text-muted modal-text m-0'>ID: {props.product.id}</p>
                                     <h5 className='modal-tittle'>{props.product.name}</h5>
-                                    <p className='modal-text'> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non purus feugiat, lacinia ex eget, lacinia risus. Curabitur cursus vehicula volutpat. Nam lacus nibh, tincidunt vitae nibh a, suscipit fringilla turpis. Vivamus mollis imperdiet sem in tempor.
+                                    <p className='modal-text m-0'>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non purus feugiat, lacinia ex eget, lacinia risus.
                                     </p>
-                                    <p className=''>Category: <strong>{props.product.category.name}</strong></p>
+                                    <p className='modal-text mb-1'>Additional Information</p>
+                                    <ListInfo product={props.product} />
                                 </div>
                                 <div className="div-buttons">
                                     <div className='d-flex justify-content-between'>
@@ -137,7 +137,7 @@ const ModalProducts = (props) => {
                     </div>
                 </div>
             </Modal.Body>
-        </Modal>
+        </Modal >
     )
 }
 

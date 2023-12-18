@@ -23,9 +23,9 @@ const TableCart = ({ cart, deleteProduct }) => {
                             </div>
                         </td>
                         <td>
-                            <div className="d-flex justify-content-start h-100">
+                            <div className="d-flex justify-content-start product-table-cart">
                                 <img src={product.image_url} style={{ borderRadius: '10px' }} />
-                                <div className='d-flex align-items-center mx-2 mx-md-4'>
+                                <div className='d-flex align-items-center mx-2 mx-md-4 '>
                                     <p>{product.name}</p>
                                 </div>
                             </div>

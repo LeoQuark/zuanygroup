@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useContext } from 'react';
 import CartContext from '../../context/cart/CartContext';
+import { getCartLocalStorage, setCartLocalStorage } from '../../utils/storage'
 
 import ShoppingCart from './ShoppingCart'
-import { getCartLocalStorage, setCartLocalStorage } from '../../utils/storage'
 
 // ['Order By', 'Most Popular', 'A-Z', 'Z-A']
 
@@ -44,18 +44,6 @@ const NavProduct = ({
     const handleShow = () => setShowCanvas(true);
 
     useEffect(() => {
-        // Función para actualizar las dimensiones de la pantalla cuando se cambia el tamaño de la ventana
-        const handleResize = () => {
-            setScreenWidth(window.innerWidth);
-        };
-
-        window.addEventListener('resize', handleResize);
-        return () => {
-            window.removeEventListener('resize', handleResize);
-        };
-    }, []);
-
-    useEffect(() => {
 
         console.log(cart)
 
@@ -83,7 +71,19 @@ const NavProduct = ({
 
     }, [])
 
-    console.log('CARTRT', cart)
+    // console.log('CARTRT', cart)
+
+    useEffect(() => {
+        // Función para actualizar las dimensiones de la pantalla cuando se cambia el tamaño de la ventana
+        const handleResize = () => {
+            setScreenWidth(window.innerWidth);
+        };
+
+        window.addEventListener('resize', handleResize);
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
 
     return (
         <div className='container-fluid nav-product p-0 m-0'>
@@ -150,20 +150,20 @@ const NavProduct = ({
                                         )
                                 }
                                 <span className="badge bg-danger text-bg-secondary">
-                                    {cart.shoppingCart.length}
+                                    {/* {cart.shoppingCart.length != null ? 'aa' : 'ff'} */}
                                 </span>
                             </button>
                         </div>
                     </div>
                 </div>
             </div>
-            <ShoppingCart
+            {/* <ShoppingCart
                 cart={cart}
                 show={showCanvas}
                 onHide={handleClose}
                 deleteProduct={deleteProduct}
                 cleanCart={cleanCart}
-            />
+            /> */}
         </div >
     )
 }
