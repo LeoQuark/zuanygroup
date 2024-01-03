@@ -29,7 +29,7 @@ const Footer = ({ translation }) => {
                                 to="/all-products"
                                 className='btn-zg-md btn_pink_zg'
                             >{translation.buttons.products}</Link>
-                            <a href="/zg#AboutUs" className='btn-zg-md btn_pink_zg'>
+                            <a href="/zg#Contacts" className='btn-zg-md btn_pink_zg'>
                                 {translation.buttons.contacts1}
                             </a>
                         </div>

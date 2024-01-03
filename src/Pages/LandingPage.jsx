@@ -59,7 +59,8 @@ const LandingPage = () => {
             <Services translation={translation} />
             <Contacts translation={translation} />
             <Footer translation={translation} />
-            <ButtonUp to='#Home' />
+            <ButtonUp to='https://wa.me/56999237917' icon="wsp" />
+            <ButtonUp to='#Home' icon="up" />
         </>
     )
 }

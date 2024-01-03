@@ -396,6 +396,36 @@ a.active:hover {
   padding: 50px 0px !important;
 }
 
+.btn-wsp {
+  background: #25D366;
+  color: white;
+  padding: 10px 50px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center !important;
+}
+
+.btn-wsp:hover {
+  transform: scale(1.05);
+  transition: .1s ease-in-out;
+}
+
+.btn-wsp p {
+  padding: 0 0 0 10px;
+  /* margin: 0; */
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.icon-wsp {
+  color: white;
+  height: 2rem;
+  width: 2rem;
+  font-size: 20px;
+}
+
 .fs-contact {
   font-size: 2rem;
   font-weight: bold;
@@ -622,7 +652,7 @@ a.active:hover {
 /* BOTTON UP */
 /* ---------------------------- */
 .scroll-button {
-  bottom: 2rem;
+  /* bottom: 2rem; */
   right: 2.5rem;
   opacity: 0;
   transform: translateY(20px);
@@ -655,6 +685,39 @@ a.active:hover {
 }
 
 .button-zg-up:hover {
+  color: white;
+  transition: .1s ease-in-out;
+  transform: scale(1.1);
+}
+
+.scroll-button-wsp {
+  bottom: 4rem;
+  right: 2.5rem;
+  opacity: 0;
+  transform: translateY(20px);
+  /* Mueve el botón hacia abajo 20px */
+  transition: opacity 0.5s ease-in-out, transform 0.3s ease-in-out;
+  /* Transiciones para opacidad y transform */
+}
+
+.button-wsp-up {
+  position: fixed;
+  z-index: 10;
+  border-radius: 50%;
+  background: #25D366;
+  ;
+  /* margin: 1rem; */
+  border-style: none;
+  height: 4.5rem;
+  width: 4.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  box-shadow: 2px 2px 10px #13402B;
+}
+
+.button-wsp-up:hover {
   color: white;
   transition: .1s ease-in-out;
   transform: scale(1.1);

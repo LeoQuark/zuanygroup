@@ -3,6 +3,10 @@ import React, { useState, useEffect } from 'react';
 
 import CardProduct from './CardProduct'
 
+
+// ininite scroll
+import InfiniteScroll from 'react-infinite-scroll-component';
+
 const DivProduct = ({ product }) => {
     return (
         <div className='col-6 col-sm-6 col-md-3 col-lg-3 my-3 my-lg-4'>
@@ -10,6 +14,51 @@ const DivProduct = ({ product }) => {
         </div>
     )
 }
+
+// const ProductsContent = ({
+//     allProducts
+// }) => {
+//     const totalProduct = allProducts.length
+//     const [products, setProducts] = useState(allProducts)
+
+
+//     console.log(allProducts)
+//     console.log("products", products)
+
+
+//     return (
+//         <div className='p-0'>
+//             <div
+//                 id="scrollableDiv"
+//                 style={{
+//                     height: 300,
+//                     overflow: 'auto',
+//                     display: 'flex',
+//                     flexDirection: 'column-reverse',
+//                 }}
+//             >
+//                 {/*Put the scroll bar always on the bottom*/}
+//                 {/* <InfiniteScroll
+//                     dataLength={30}
+//                     // next={this.fetchMoreData}
+//                     style={{ display: 'flex', flexDirection: 'column-reverse' }} //To put endMessage and loader to the top.
+//                     inverse={true} //
+//                     hasMore={true}
+//                     loader={<h4>Loading...</h4>}
+//                     scrollableTarget="scrollableDiv"
+//                 >
+//                     {allProducts.map((_, index) => (
+//                         <div style={style} key={index}>
+//                             div - #{index}
+//                         </div>
+//                     ))}
+//                 </InfiniteScroll> */}
+//             </div>
+//         </div>
+
+
+//     )
+// }
 
 const ProductsContent = ({
     allProducts
@@ -72,7 +121,6 @@ const ProductsContent = ({
                 >
                     <i className="fa-solid fa-angle-right"></i>
                 </button>
-
             </div>
         </div>
     )

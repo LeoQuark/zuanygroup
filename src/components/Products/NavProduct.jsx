@@ -47,13 +47,13 @@ const NavProduct = ({
 
         console.log(cart)
 
-        if (cart.shoppingCart.length > 0) {
+        if (!cart.shoppingCart) {
             const cartShopping = JSON.stringify(cart.shoppingCart)
             setCartLocalStorage(cartShopping)
             // console.log(getCartLocalStorage())
             console.log('localstorage entra')
         }
-        else if (cart.shoppingCart.length === 0) {
+        else {
             console.log('vamoss', cart.shoppingCart.length)
             // const cartShopping = JSON.stringify(cart.shoppingCart)
             // setCartLocalStorage(cartShopping)
@@ -131,7 +131,7 @@ const NavProduct = ({
                         <i className="fa-solid fa-delete-left"></i>
                     </button> */}
                 </div>
-                <div className="item-4">
+                {/* <div className="item-4">
                     <div className="d-flex justify-content-end">
                         <div>
                             <button
@@ -150,12 +150,12 @@ const NavProduct = ({
                                         )
                                 }
                                 <span className="badge bg-danger text-bg-secondary">
-                                    {/* {cart.shoppingCart.length != null ? 'aa' : 'ff'} */}
+                                    {cart.shoppingCart.length != null ? 'aa' : 'ff'}
                                 </span>
                             </button>
                         </div>
                     </div>
-                </div>
+                </div> */}
             </div>
             {/* <ShoppingCart
                 cart={cart}

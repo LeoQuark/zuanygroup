@@ -10,6 +10,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import "bootstrap/dist/js/bootstrap"
 import "bootstrap-icons/font/bootstrap-icons.css";
 
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+
+import './styles.css';
+
+
 import { HashRouter, BrowserRouter } from 'react-router-dom';
 import CartState from './context/cart/CartState'
 import LanguageState from './context/language/LanguageState'

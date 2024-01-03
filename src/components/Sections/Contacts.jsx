@@ -82,7 +82,15 @@ const Contacts = ({ translation }) => {
                         </div>
                     </div>
                     <div className="row my-md-5 mx-2">
-                        <form onSubmit={handleSubmit}>
+                        <div className="col">
+                            <div className='d-flex justify-content-center aling-item-center'>
+                                <a className="btn-wsp" aria-label="Chat on WhatsApp" href="https://wa.me/56999237917">
+                                    <i className="icon-wsp fa-brands fa-whatsapp fa-2x"></i>
+                                    <p>Chat on WhatsApp</p>
+                                </a>
+                            </div>
+                        </div>
+                        {/* <form onSubmit={handleSubmit}>
                             <div className="mb-3">
                                 <input
                                     type="text"
@@ -126,7 +134,7 @@ const Contacts = ({ translation }) => {
                                     <i className="fa-solid fa-paper-plane text-white mx-2"></i>
                                 </button>
                             </div>
-                        </form>
+                        </form> */}
                     </div>
                 </div>
                 <div className="col-12 col-md-6 col-lg-6">

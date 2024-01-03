@@ -34,7 +34,10 @@ const ProductPage = () => {
     const handleCategory = (event) => setSelectCategories(event.target.value)
     const handleOrder = (event) => setOrderBy(event.target.value)
 
+
+
     const getAllProductsFunction = async () => {
+        // const response = await getAllProducts()
         const response = await getAllProducts()
         console.log('products', response)
         setAllProducts(response)
@@ -149,6 +152,7 @@ const ProductPage = () => {
                     <ProductsContent allProducts={allProducts} />
                 </div>
             </div >
+            <ButtonUp to='https://wa.me/56999237917' icon="wsp" />
             <ButtonUp to='/all-products' />
         </div>
     )

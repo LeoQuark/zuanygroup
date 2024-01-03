@@ -1,9 +1,15 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+// import required modules
+import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
 // IMG
 import CarruselImg1 from '../../assets/img/carrusel1.png'
 import CarruselImg2 from '../../assets/img/carrusel2.jpg'
 import CarruselImg3 from '../../assets/img/carrusel3.jpg'
+
+
 
 const Logistics = ({ translation }) => {
 
@@ -11,10 +17,17 @@ const Logistics = ({ translation }) => {
 
     const images = [CarruselImg1, CarruselImg2, CarruselImg3]
 
+    const progressCircle = useRef(null);
+    const progressContent = useRef(null);
+    const onAutoplayTimeLeft = (s, time, progress) => {
+        progressCircle.current.style.setProperty('--progress', 1 - progress);
+        progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
+    };
+
     useEffect(() => {
         const interval = setInterval(() => {
             setActiveIndex((prevIndex) => (prevIndex + 1) % images.length);
-        }, 3000); // Cambia la imagen cada 3 segundos
+        }, 2000); // Cambia la imagen cada 3 segundos
         return () => clearInterval(interval);
     }, []);
 
@@ -32,6 +45,35 @@ const Logistics = ({ translation }) => {
                     </div>
                 </div>
                 <div className="d-flex justify-content-center mx-4 py-5">
+                    {/* <Swiper
+                        spaceBetween={30}
+                        centeredSlides={true}
+                        autoplay={{
+                            delay: 2000,
+                            disableOnInteraction: false,
+                        }}
+                        pagination={{
+                            clickable: true,
+                        }}
+                        navigation={true}
+                        modules={[Autoplay, Pagination, Navigation]}
+                        onAutoplayTimeLeft={onAutoplayTimeLeft}
+                        className="mySwiper"
+                    >
+                        {
+                            images.map((image, index) => (
+                                <SwiperSlide key={index}>
+                                    <img src={image} height="18rem" width="30rem" />
+                                </SwiperSlide>
+                            ))
+                        }
+                        <div className="autoplay-progress" slot="container-end">
+                            <svg viewBox="0 0 48 48" ref={progressCircle}>
+                                <circle cx="24" cy="24" r="20"></circle>
+                            </svg>
+                            <span ref={progressContent}></span>
+                        </div>
+                    </Swiper> */}
                     <div className='carrusel-zg'>
                         <div id="carouselExampleAutoplaying" className="carousel slide" data-bs-ride="carousel">
                             <div className="carousel-inner">
@@ -39,19 +81,11 @@ const Logistics = ({ translation }) => {
                                     images.map((image, index) => (
                                         <div key={index} className={`carousel-item carrusel-item ${index === activeIndex ? 'active' : ''}`}
                                         >
-                                            <img src={image} className="d-block w-100 img-carrusel img-fluid" />
+                                            <img src={image} className="d-block w-100 img-carrusel img-fluid rounded-4" />
                                         </div>
                                     ))
                                 }
                             </div>
-                            {/* <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Next</span>
-                            </button> */}
                         </div>
                     </div>
                 </div>
