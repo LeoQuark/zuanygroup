@@ -1,24 +1,26 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { Link } from 'react-router-dom'
 import { getRandomProduct } from '../../utils/requestsApi'
-
-// IMG
-import Product1 from '../../assets/img/Product1.png'
-import Product2 from '../../assets/img/Product2.png'
+import LanguageContext from '../../context/language/LanguageContext';
 
 import CardProduct from '../Products/CardProduct'
 
-const DivProduct = ({ product }) => {
+const DivProduct = ({ product, isTranslation }) => {
     return (
         <div className='col-5 col-sm-6 col-md-3 col-lg-2 my-3 my-lg-0'>
-            <CardProduct product={product} />
+            <CardProduct product={product} isTranslation={isTranslation} />
         </div>
     )
 }
 
 const Products = ({ translation }) => {
 
+    const { lang } = useContext(LanguageContext)
     const [productRandom, setProductRandom] = useState(false)
+
+
+    const isTranslation = lang.language === 'es' ? true : false
+    console.log(isTranslation)
 
     const getAllProductsFunction = async () => {
         const response = await getRandomProduct()
@@ -29,7 +31,6 @@ const Products = ({ translation }) => {
     useEffect(() => {
         getAllProductsFunction()
     }, [])
-
 
     return (
         <section className="container-fluid" id='Products-section'>
@@ -46,7 +47,7 @@ const Products = ({ translation }) => {
                 </div>
                 <div className="row justify-content-center align-items-center mt-4 mx-2 mx-md-0">
                     {productRandom && productRandom.map((product, index) => (
-                        <DivProduct key={index} product={product} />
+                        <DivProduct key={index} product={product} isTranslation={isTranslation} />
                     ))}
                 </div>
                 <div className="d-flex justify-content-center mt-5">

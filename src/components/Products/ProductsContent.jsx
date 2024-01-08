@@ -7,10 +7,10 @@ import CardProduct from './CardProduct'
 // ininite scroll
 import InfiniteScroll from 'react-infinite-scroll-component';
 
-const DivProduct = ({ product }) => {
+const DivProduct = ({ product, isTranslation }) => {
     return (
         <div className='col-6 col-sm-6 col-md-3 col-lg-3 my-3 my-lg-4'>
-            <CardProduct product={product} />
+            <CardProduct product={product} isTranslation={isTranslation} />
         </div>
     )
 }
@@ -61,7 +61,8 @@ const DivProduct = ({ product }) => {
 // }
 
 const ProductsContent = ({
-    allProducts
+    allProducts,
+    isTranslation
 }) => {
 
     const totalProduct = allProducts.length
@@ -71,7 +72,6 @@ const ProductsContent = ({
 
     const lastIndex = currentPage * pageSize
     const firstIndex = lastIndex - pageSize
-
 
     const onPreviusPage = () => {
         if (currentPage != 1) {
@@ -102,7 +102,7 @@ const ProductsContent = ({
         <div className='p-0'>
             <div className="row d-flex justify-content-around justify-content-md-center my-0 mx-0 px-0">
                 {allProducts.length > 0 && filterData().map((product, index) => (
-                    <DivProduct key={index} product={product} />
+                    <DivProduct key={index} product={product} isTranslation={isTranslation} />
                 ))}
             </div>
             <div className='d-flex justify-content-center py-5'>

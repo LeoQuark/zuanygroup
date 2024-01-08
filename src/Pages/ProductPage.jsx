@@ -23,18 +23,19 @@ const ProductPage = () => {
     const [search, setSearch] = useState('')
     const [allProducts, setAllProducts] = useState(false)
     const [allProductsInit, setAllProductsInit] = useState(false)
-    // const [categories, setCategories] = useState(['Select Categories', 'Category 1', 'Category 2', 'Category 3'])
     const [categories, setCategories] = useState(false)
     const [selectCategories, setSelectCategories] = useState(false)
     const [orderBy, setOrderBy] = useState(false)
 
     const translation = lang.language === 'es' ? enTranslation : esTranslation
 
+    // variable para traducir la descripcion de los productos
+    const isTranslation = lang.language === 'es' ? true : false
+    console.log(isTranslation)
+
     const handleSearch = (event) => setSearch(formatText(event.target.value))
     const handleCategory = (event) => setSelectCategories(event.target.value)
     const handleOrder = (event) => setOrderBy(event.target.value)
-
-
 
     const getAllProductsFunction = async () => {
         // const response = await getAllProducts()
@@ -88,21 +89,21 @@ const ProductPage = () => {
     }, [])
 
     useEffect(() => {
-        console.log('search', search, selectCategories, orderBy)
+        // console.log('search', search, selectCategories, orderBy)
         if (search) {
             const filter = filterProduct(search)
-            console.log(filter)
+            // console.log(filter)
             setAllProducts(filter)
         }
         else if (selectCategories) {
-            console.log('selectCategories', selectCategories)
+            // console.log('selectCategories', selectCategories)
             const filter = filterCategory(selectCategories)
             setAllProducts(filter)
         }
         else if (orderBy) {
-            console.log('orderBy', orderBy)
+            // console.log('orderBy', orderBy)
             const filter = filterOrderBy(orderBy)
-            console.log('filter', filter)
+            // console.log('filter', filter)
             setAllProducts(filter)
         }
     }, [search, selectCategories, orderBy])
@@ -149,7 +150,7 @@ const ProductPage = () => {
                     </ol>
                 </div>
                 <div className="container">
-                    <ProductsContent allProducts={allProducts} />
+                    <ProductsContent allProducts={allProducts} isTranslation={isTranslation} />
                 </div>
             </div >
             <ButtonUp to='https://wa.me/56999237917' icon="wsp" />

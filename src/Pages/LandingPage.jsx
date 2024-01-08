@@ -27,7 +27,6 @@ const LandingPage = () => {
 
     const translation = lang.language === 'es' ? enTranslation : esTranslation
 
-
     useEffect(() => {
         if (hash) {
             // Remover el símbolo '#' del ID

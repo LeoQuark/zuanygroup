@@ -34,8 +34,6 @@ const ModalProducts = (props) => {
     const btnAddProduct = (product, amount) => {
         setLoading(true)
 
-        // console.log('producto: ', product)
-
         const dataProduct = {
             ...product,
             amount
@@ -86,13 +84,13 @@ const ModalProducts = (props) => {
                                 <div className="div-info d-block justify-content-start my-4">
                                     <p className='text-muted modal-text m-0'>ID: {props.product.id}</p>
                                     <h5 className='modal-tittle'>{props.product.name}</h5>
-                                    <p className='modal-text m-0'>
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer non purus feugiat, lacinia ex eget, lacinia risus.
+                                    <p className='modal-text m-0 mb-3'>
+                                        {props.descriptionProduct != undefined ? props.descriptionProduct : "Not found"}
                                     </p>
                                     <p className='modal-text mb-1'>Additional Information</p>
                                     <ListInfo product={props.product} />
                                 </div>
-                                <div className="div-buttons">
+                                {/* <div className="div-buttons">
                                     <div className='d-flex justify-content-between'>
                                         <div className='d-flex'>
                                             <button
@@ -131,7 +129,7 @@ const ModalProducts = (props) => {
                                             </button>
                                         </div>
                                     </div>
-                                </div>
+                                </div> */}
                             </div>
                         </div>
                     </div>

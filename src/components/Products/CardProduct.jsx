@@ -1,19 +1,19 @@
 import React, { useState, useEffect, useContext } from 'react'
 import CartContext from '../../context/cart/CartContext'
 
+
 import ModalProducts from './ModalProducts'
 
-// IMG
-import Product1 from '../../assets/img/Product1.png'
-import Product2 from '../../assets/img/product2.png'
-
 const CardProduct = ({
-    product
+    product,
+    isTranslation
 }) => {
-    // console.log('sa', product)
 
     const { addProduct } = useContext(CartContext)
     const [show, setShow] = useState(false)
+
+    // console.log("isTranslation", isTranslation)
+    const descriptionProduct = isTranslation != undefined ? product.category.description.ing : product.category.description.esp
 
     const handleClose = () => setShow(false)
 
@@ -33,7 +33,8 @@ const CardProduct = ({
                     </div>
                     <div className='w-100'>
                         <p className='card-description p-0 m-0'>
-                            {/* {product.description} */}
+                            {/* {descriptionProduct} */}
+                            {descriptionProduct != undefined ? descriptionProduct : "Not found"}
                         </p>
                     </div>
                     <div className='d-flex justify-content-center mt-2 mt-md-3'>
@@ -50,6 +51,7 @@ const CardProduct = ({
                 show={show}
                 onHide={handleClose}
                 addProduct={addProduct}
+                descriptionProduct={descriptionProduct}
             />
         </div >
 
